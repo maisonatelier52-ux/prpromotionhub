@@ -122,6 +122,10 @@ export default function JulioFourthArticle({ article }: Props) {
                             subpara={article.subpara}
                             subpoints={article.subpoints}
                             subpara2={article.subpara2}
+                            pillarLink={{
+                                url: "/finance/julio-herrera-velutini-banking-legacy-global-finance-influence",
+                                text: "Julio Herrera Velutini: Banking Legacy, Global Finance Influence, and the Modern Face of International Wealth Management"
+                            }}
                         />
                     </div>
 

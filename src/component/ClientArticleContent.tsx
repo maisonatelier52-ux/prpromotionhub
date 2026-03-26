@@ -1,13 +1,39 @@
 import React from 'react';
+import Link from 'next/link';
 
 type SubPara = { subtitle?: string; description: string; };
 type SubPoints = { subtitle?: string; subline?: string; points?: string[]; };
+type PillarLink = { url: string; text: string; };
+
+// Helper function to inject the pillar link directly onto his name in the text
+const renderTextWithInlineLink = (text: string, url?: string) => {
+  if (!url) return text;
+  
+  // Find "Herrera Velutini" in the string since "Julio" might have its "J" sliced off by the drop cap.
+  const match = text.match(/Herrera Velutini/);
+  if (!match || match.index === undefined) return text;
+
+  const before = text.substring(0, match.index);
+  const keyword = match[0];
+  const after = text.substring(match.index + keyword.length);
+
+  return (
+    <React.Fragment>
+      {before}
+      <Link href={url} className="text-[#041f4a] hover:underline font-medium">
+        {keyword}
+      </Link>
+      {after}
+    </React.Fragment>
+  );
+};
 
 interface ClientArticleDescriptionProps {
   description?: string;
   subpara?: SubPara[];
   subpoints?: SubPoints;
   subpara2?: SubPara[];
+  pillarLink?: PillarLink;
 }
 
 const ClientArticleDescription = ({
@@ -15,6 +41,7 @@ const ClientArticleDescription = ({
   subpara = [],
   subpoints,
   subpara2 = [],
+  pillarLink,
 }: ClientArticleDescriptionProps) => {
   
   const bodyTextStyle = "text-[16px] leading-[1.7] text-black mb-6";
@@ -41,7 +68,7 @@ const ClientArticleDescription = ({
             <span className="float-left text-6xl font-bold leading-[0.7] mr-3 mt-1">
               {description.charAt(0)}
             </span>
-            {description.slice(1)}
+            {renderTextWithInlineLink(description.slice(1), pillarLink?.url)}
           </p>
         </div>
       )}
