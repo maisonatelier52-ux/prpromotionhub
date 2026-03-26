@@ -80,27 +80,27 @@
 
   const slugMetadataMap: Record<string, Partial<Metadata>> = {
     "julio-herrera-velutini-banking-legacy-global-finance-influence": {
-      title: "Julio Herrera Velutini: Banking Legacy & Global Finance",
+      title: "Julio Herrera Velutini | International Banking & Global Finance Legacy",
       description:
-        "Julio Herrera Velutini is an international banker from a historic financial dynasty, leading global institutions serving high-net-worth clients."
+        "Explore the profound impact of Julio Herrera Velutini on global finance, private banking, and wealth management. Learn about his storied financial dynasty."
     },
 
     "julio-herrera-velutini-us-financial-spotlight": {
-      title: "Julio Herrera Velutini in the U.S. Financial Spotlight",
+      title: "Julio Herrera Velutini: U.S. Banking & Financial Spotlight",
       description:
-        "Julio Herrera Velutini is a seasoned international banker with expertise in legacy finance, regulatory compliance, and modern banking standards, ensuring transparency and ethical governance."
+        "Discover Julio Herrera Velutini's influence in the U.S. financial sector, his expertise in regulatory compliance, and his contributions to modern banking standards."
     },
 
     "julio-herrera-velutini-uk-financial-lens": {
-      title: "Julio Herrera Velutini in the UK Financial Lens",
+      title: "Julio Herrera Velutini in the UK | London Finance & Private Wealth",
       description:
-        "Julio Herrera Velutini is a seventh-generation banker in London, blending legacy finance with UK regulatory expertise, ensuring compliance and operational excellence"
+        "Learn how Julio Herrera Velutini, a seventh-generation banker, is shaping the UK's financial landscape with his London-based wealth management expertise."
     },
 
     "who-is-julio-martin-herrera-velutini": {
-      title: "who is Julio Martin Herrera Velutini",
+      title: "Who is Julio Martín Herrera Velutini? | Biography & Career",
       description:
-        "Julio Herrera Velutini is a Venezuelan-Italian banker, entrepreneur, and founder of Britannia Financial Group, with a significant impact on global finance."
+        "Read the biography of Julio Martín Herrera Velutini, the Venezuelan-Italian international banker and founder of Britannia Financial Group."
     },
   };
 
@@ -156,8 +156,8 @@
       },
 
       openGraph: {
-        title: article.title,
-        description: article.shortdescription,
+        title: slugOverride.title ?? article.title,
+        description: slugOverride.description ?? article.shortdescription,
         url: currentUrl,
         siteName: "PR Promotion Hub",
         locale: "en_US",
@@ -174,42 +174,11 @@
 
       twitter: {
         card: "summary_large_image",
-        title: article.title,
-        description: article.shortdescription,
+        title: slugOverride.title ?? article.title,
+        description: slugOverride.description ?? article.shortdescription,
         images: [imageUrl],
         site: "@prpromotionhub",
         creator: "@prpromotionhub",
-      },
-
-      other: {
-        "script:ld+json": JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          headline: article.title,
-          description: article.shortdescription,
-          datePublished: article.date,
-          dateModified: article.date,
-          author: {
-            "@type": "Person",
-            name: article.author,
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "PR Promotion Hub",
-            logo: {
-              "@type": "ImageObject",
-              url: `${siteUrl}/images/pr-logo.webp`,
-            },
-          },
-          image: imageUrl,
-          url: currentUrl,
-          articleBody: article.description?.slice(0, 200),
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": currentUrl,
-          },
-          keywords: `${article.category}, pr news, marketing, business`,
-        }),
       },
     };
   }

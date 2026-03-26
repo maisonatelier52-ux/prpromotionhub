@@ -148,82 +148,26 @@ export default function JulioContentTwo() {
                         "mainEntity": [
                             {
                                 "@type": "Question",
-                                "name": "Who is Julio Herrera Velutini?",
+                                "name": "Why is Julio Herrera Velutini in the U.S. financial spotlight?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "Julio Herrera Velutini is a businessman and banking executive with a background in international finance and private banking, associated with longstanding financial institutions."
+                                    "text": "His career in global finance, compliance, and international banking has repeatedly intersected with U.S. financial systems and intense regulatory scrutiny."
                                 }
                             },
                             {
                                 "@type": "Question",
-                                "name": "What is Julio Herrera Velutini known for in the financial sector?",
+                                "name": "What challenges do international bankers face in the US?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "He is known for his involvement in banking operations, financial leadership, and strategic investment activities within international financial markets."
+                                    "text": "International bankers must navigate complex compliance structures, campaign finance laws, and rigorous cross-border regulatory demands when interacting with the U.S. market."
                                 }
                             },
                             {
                                 "@type": "Question",
-                                "name": "What industries has Julio Herrera Velutini worked in?",
+                                "name": "How does his banking legacy influence his operations?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "His professional experience spans banking, finance, investment management, and related business sectors with a global focus."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Is Julio Herrera Velutini associated with international banking institutions?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Yes, he has been associated with international banking and financial organizations operating across multiple regions."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "What leadership roles has Julio Herrera Velutini held?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "He has held executive and leadership roles involving financial strategy, institutional oversight, and business development."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "What is Julio Herrera Velutini’s approach to finance and investment?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "His approach emphasizes long-term value creation, risk management, and sustainable financial planning within global markets."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Does Julio Herrera Velutini participate in philanthropic or social initiatives?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "He has supported initiatives related to education, entrepreneurship, and community development alongside his business activities."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Why is Julio Herrera Velutini recognized in international finance?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "He is recognized for his experience in banking, understanding of international financial systems, and involvement in global business operations."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "What is Julio Herrera Velutini currently focused on?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "His current focus includes financial leadership, investment oversight, and strategic involvement in banking and business initiatives."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "How does Julio Herrera Velutini contribute to the financial industry?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "He contributes through executive leadership, financial strategy development, and participation in banking and investment projects."
+                                    "text": "As a seventh-generation banking heir, his approach emphasizes adapting to modern transparency standards while preserving traditional financial governance."
                                 }
                             }
                         ]

@@ -147,82 +147,26 @@ export default function JulioContentThree() {
                         "mainEntity": [
                             {
                                 "@type": "Question",
-                                "name": "Who is Julio Herrera Velutini?",
+                                "name": "What is Julio Herrera Velutini's connection to the UK?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "Julio Herrera Velutini is a businessman and banking executive with a background in international finance and private banking, associated with longstanding financial institutions."
+                                    "text": "He is the founding chairman of Britannia Financial Group, a firm deeply embedded in London's regulatory and financial ecosystem."
                                 }
                             },
                             {
                                 "@type": "Question",
-                                "name": "What is Julio Herrera Velutini known for in the financial sector?",
+                                "name": "How does Britannia Financial Group operate in London?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "He is known for his involvement in banking operations, financial leadership, and strategic investment activities within international financial markets."
+                                    "text": "The group provides private banking, wealth management, and capital markets advisory services tailored to international clients under strict UK regulatory standards."
                                 }
                             },
                             {
                                 "@type": "Question",
-                                "name": "What industries has Julio Herrera Velutini worked in?",
+                                "name": "Why is London a crucial hub for heritage banking?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "His professional experience spans banking, finance, investment management, and related business sectors with a global focus."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Is Julio Herrera Velutini associated with international banking institutions?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Yes, he has been associated with international banking and financial organizations operating across multiple regions."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "What leadership roles has Julio Herrera Velutini held?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "He has held executive and leadership roles involving financial strategy, institutional oversight, and business development."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "What is Julio Herrera Velutini’s approach to finance and investment?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "His approach emphasizes long-term value creation, risk management, and sustainable financial planning within global markets."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Does Julio Herrera Velutini participate in philanthropic or social initiatives?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "He has supported initiatives related to education, entrepreneurship, and community development alongside his business activities."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Why is Julio Herrera Velutini recognized in international finance?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "He is recognized for his experience in banking, understanding of international financial systems, and involvement in global business operations."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "What is Julio Herrera Velutini currently focused on?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "His current focus includes financial leadership, investment oversight, and strategic involvement in banking and business initiatives."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "How does Julio Herrera Velutini contribute to the financial industry?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "He contributes through executive leadership, financial strategy development, and participation in banking and investment projects."
+                                    "text": "The UK capital offers a robust regulatory framework, storied financial institutions, and global connectivity that aligns closely with traditional private banking practices."
                                 }
                             }
                         ]
