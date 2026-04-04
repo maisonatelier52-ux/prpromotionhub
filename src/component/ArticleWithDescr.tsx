@@ -34,12 +34,12 @@ export default function   ArticleWithDescr({ data }: Props) {
       </p>
 
       {/* Quote Section */}
-      <div className="w-full mx-auto py-5 mb-2 text-center">
-        <FaQuoteLeft className="mx-auto text-red-600 text-2xl md:text-3xl mb-3" />
+      <div className="w-full mx-auto py-2 mb-2 text-center">
+        {/* <FaQuoteLeft className="mx-auto text-red-600 text-2xl md:text-3xl mb-3" /> */}
 
-        <p className="text-[15px] md:text-[20px] font-semibold leading-tight">
+        {/* <p className="text-[15px] md:text-[20px] font-semibold leading-tight">
           “{data.shortdescription}”
-        </p>
+        </p> */}
 
       
       </div>
