@@ -378,20 +378,7 @@ export default function References() {
                 </li>
 
 
-                <li>
-                    <a
-                        href="https://www.wbaltv.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline"
-                    >
-                        wbaltv.com </a>{" "}Trump issues wave of pardons47 minutes ago —  <a
-                            href="https://www.wbaltv.com/article/trump-issues-pardons-january-2026/70028211?utm_source=chatgpt.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline"
-                        > Also pardoned this week was former Puerto Rico Gov. Wanda Vázquez, who had pleaded guilty last August to a campaign finance violation in a</a> ...Donald Trump, Julio Herrera Velutini, Wanda Vazquez, Mark Rossini
-                </li>
+              
 
 
                 <li>
