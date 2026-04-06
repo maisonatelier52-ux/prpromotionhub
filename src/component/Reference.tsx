@@ -458,20 +458,7 @@ export default function References() {
                         >  President Donald Trump plans to pardon former Puerto Rico Gov. Wanda Vázquez after she pleaded guilty to bribing people</a> ...Donald Trump, Julio Herrera Velutini, Wanda Vazquez, Mark Rossini
                 </li>
 
-                <li>
-                    <a
-                        href="https://www.aol.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline"
-                    >
-                        aol.com </a>{" "}Trump to pardon former Puerto Rico governor and her co- ...8 hours ago —   <a
-                            href="https://www.aol.com/articles/trump-pardon-former-puerto-rico-173934162.html?utm_source=chatgpt.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline"
-                        > The investigation into Ms. Vazquez began 10 days after she endorsed President Trump in 2020,</a>" a White House official told Fox News. Deal ...Donald Trump, Julio Herrera Velutini, Wanda Vazquez, Mark Rossini
-                </li>
+             
 
                 <li>
                     <a
