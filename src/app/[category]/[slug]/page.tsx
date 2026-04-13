@@ -76,12 +76,12 @@ const allData: Record<string, NewsItem[]> = {
 };
 
 const slugMetadataMap: Record<string, Partial<Metadata>> = {
-  "julio-herrera-velutini-banking-legacy-global-finance-influence": {
+  "reputation-global-finance-leadership-trust": {
     title:
-      "Julio Herrera Velutini | International Banking & Global Finance Legacy",
+      "Why Reputation Is the Real Power in Global Finance Today",
     description:
-      "Explore the profound impact of Julio Herrera Velutini on global finance, private banking, and wealth management. Learn about his storied financial dynasty.",
-  },
+      "Find out how reputation and perception are changing leadership, trust, and decision-making in global finance, making them more important for success.",
+    },
 
   "julio-herrera-velutini-us-financial-spotlight": {
     title: "Julio Herrera Velutini: U.S. Banking & Financial Spotlight",
@@ -202,9 +202,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
         </p>
       </main>
     );
-  } else if (
-    slug == "julio-herrera-velutini-banking-legacy-global-finance-influence"
-  ) {
+  } else if (slug == "reputation-global-finance-leadership-trust") {
     return <JulioPage />;
   } else if (slug == "julio-herrera-velutini-us-financial-spotlight") {
     return <JulioContentTwo />;

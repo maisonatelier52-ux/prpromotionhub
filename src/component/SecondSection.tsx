@@ -34,11 +34,11 @@ interface Props {
 const manualItem: NewsData = {
   title: "From Legacy Wealth to Global Finance: The Rise of Julio Herrera Velutini",
   image: "/images/julio-herrera-velutini-global-finance.webp",
-  slug: "julio-herrera-velutini-banking-legacy-global-finance-influence",
+  slug: "reputation-global-finance-leadership-trust",
   category: "finance",
-  shortdescription: "",
+  shortdescription: "Find out how reputation and perception are changing leadership, trust, and decision-making in global finance, making them more important for success.",
   description: "",
-  date: "Jan. 6, 2026",
+  date: "April. 13, 2026",
   author: {
     name: "Staff Reporter",
     role: "Business & Economy Desk",

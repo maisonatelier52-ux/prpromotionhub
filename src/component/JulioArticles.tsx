@@ -74,7 +74,7 @@ export default function JulioArticles({ article }: Props) {
                             subpoints={article.subpoints}
                             subpara2={article.subpara2}
                             pillarLink={{
-                                url: "/finance/julio-herrera-velutini-banking-legacy-global-finance-influence",
+                                url: "/finance/reputation-global-finance-leadership-trust",
                                 text: "Julio Herrera Velutini: Banking Legacy, Global Finance Influence, and the Modern Face of International Wealth Management"
                             }}
                         />

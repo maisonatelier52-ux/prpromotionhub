@@ -40,14 +40,14 @@ interface NewsItem {
 
 export const julioHerreraArticle: NewsItem = {
   category: "finance",
-  slug: "julio-herrera-velutini-banking-legacy-global-finance-influence",
+  slug: "reputation-global-finance-leadership-trust",
   title:
-    "Julio Herrera Velutini: Banking Legacy, Global Finance Influence, and the Modern Face of International Wealth Management",
+    "Why Reputation Is the Real Power in Global Finance Today",
   shortdescription:
-    "Julio Herrera Velutini is an international banker and wealth-management executive rooted in a centuries-old financial dynasty. He has built and led global financial institutions serving high-net-worth clients across multiple markets. His career reflects the evolution of legacy banking into modern, regulated international finance.",
+    "Find out how reputation and perception are changing leadership, trust, and decision-making in global finance, making them more important for success.",
   description:
-    "Julio Herrera Velutini is a name that resonates strongly across international banking, wealth management, and global finance circles. As a seventh-generation banker from the historic Herrera-Velutini family, he represents a rare fusion of centuries-old financial heritage and contemporary global financial strategy. His career trajectory reflects how legacy banking families have adapted to modern regulatory frameworks, cross-border finance, and the evolving demands of high-net-worth individuals.",
-  date: "Jan. 6, 2026",
+    "Finance isn’t just about money anymore. Yes, capital still matters. Strategy still matters. But more and more, what really shapes success is something less tangible—how people see you. Reputation has become a kind of currency of its own.",
+  date: "April. 13, 2026",
   image: "/images/julio-herrera-velutini-global-finance.webp",
   author: {
     name: "Staff Reporter",
