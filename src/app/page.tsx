@@ -26,58 +26,100 @@ const todayDate = new Intl.DateTimeFormat("en-CA", {
 export default function Home() {
   return (
     <div>
-      <Script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "PR Promotion Hub",
-            url: "https://www.prpromotionhub.com",
-            datePublished: todayDate,
-            dateModified: todayDate,
-            publisher: {
-              "@type": "Organization",
-              name: "PR Promotion Hub",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://www.prpromotionhub.com/images/pr-logo.webp",
-              },
-            },
-          }),
-        }}
-      />
-
-      <Script
-        id="structured-data-site-navigation"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SiteNavigationElement",
-            "name": [
-              "PR News",
-              "World",
-              "US",
-              "Finance",
-              "Entertainment",
-              "Marketing",
-              "Technology"
-            ],
-            "url": [
-              "https://www.prpromotionhub.com/prnews/",
-              "https://www.prpromotionhub.com/world/",
-              "https://www.prpromotionhub.com/us/",
-              "https://www.prpromotionhub.com/finance/",
-              "https://www.prpromotionhub.com/entertainment/",
-              "https://www.prpromotionhub.com/marketing/",
-              "https://www.prpromotionhub.com/technology/"
-            ]
-          })
-        }}
-      />
-
+  <Script
+  id="structured-data-website"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.prpromotionhub.com/#organization",
+          "name": "PR Promotion Hub",
+          "url": "https://www.prpromotionhub.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.prpromotionhub.com/images/pr-logo.webp"
+          },
+          "sameAs": [
+            "https://www.facebook.com/",
+            "https://www.instagram.com/",
+            "https://www.twitter.com/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.prpromotionhub.com/#website",
+          "url": "https://www.prpromotionhub.com",
+          "name": "PR Promotion Hub",
+          "publisher": {
+            "@id": "https://www.prpromotionhub.com/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.prpromotionhub.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    })
+  }}
+/>
+   <Script
+  id="structured-data-navigation"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "PR News",
+          "url": "https://www.prpromotionhub.com/prnews/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "World",
+          "url": "https://www.prpromotionhub.com/world/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "US",
+          "url": "https://www.prpromotionhub.com/us/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "Finance",
+          "url": "https://www.prpromotionhub.com/finance/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "Entertainment",
+          "url": "https://www.prpromotionhub.com/entertainment/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 6,
+          "name": "Marketing",
+          "url": "https://www.prpromotionhub.com/marketing/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 7,
+          "name": "Technology",
+          "url": "https://www.prpromotionhub.com/technology/"
+        }
+      ]
+    })
+  }}
+/>
       <WhatsHotBar data={usData[7]} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FeaturedEditorialGrid data={[marketingData[2], financeData[4], usData[1]]} />

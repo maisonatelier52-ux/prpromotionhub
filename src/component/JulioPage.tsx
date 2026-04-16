@@ -157,6 +157,25 @@ export default function JulioPage() {
                 }}
             />
 
+       <Script
+  id="structured-data-person"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://www.prpromotionhub.com/#julio-herrera-velutini",
+      "name": "Julio Herrera Velutini",
+      "url": "https://www.prpromotionhub.com/finance/reputation-global-finance-leadership-trust/",
+      "image": "https://www.prpromotionhub.com/images/julio-herrera-velutini.webp",
+      "jobTitle": "International Banker",
+      "description": "Julio Herrera Velutini is an international banker known for his work in private banking, wealth management, and global finance.",
+      "sameAs": [
+        "https://en.wikipedia.org/wiki/Julio_Herrera_Velutini"
+      ]
+    })
+  }}
+/>
             <Script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
@@ -192,6 +211,7 @@ export default function JulioPage() {
                     })
                 }}
             />
+     
 
             <WhatsHotBar data={prnewsData[0]} />
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10'>

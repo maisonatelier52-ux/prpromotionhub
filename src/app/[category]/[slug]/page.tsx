@@ -78,27 +78,30 @@ const allData: Record<string, NewsItem[]> = {
 const slugMetadataMap: Record<string, Partial<Metadata>> = {
   "reputation-global-finance-leadership-trust": {
     title:
-      "Why Reputation Is the Real Power in Global Finance Today",
+      "Reputation in Global Finance: Why Trust & Perception Matter in 2026",
     description:
-      "Find out how reputation and perception are changing leadership, trust, and decision-making in global finance, making them more important for success.",
-    },
+      "Explore how reputation, trust, and perception influence global finance, leadership decisions, and financial success in today’s economy.",
+  },
 
   "julio-herrera-velutini-us-financial-spotlight": {
-    title: "Julio Herrera Velutini: U.S. Banking & Financial Spotlight",
+    title:
+      "Julio Herrera Velutini in US Finance: Banking Influence & Insights",
     description:
-      "Discover Julio Herrera Velutini's influence in the U.S. financial sector, his expertise in regulatory compliance, and his contributions to modern banking standards.",
+      "Learn about Julio Herrera Velutini’s role in the US financial sector, including banking influence, compliance expertise, and leadership in modern finance.",
   },
 
   "julio-herrera-velutini-uk-financial-lens": {
-    title: "Julio Herrera Velutini in the UK | London Finance & Private Wealth",
+    title:
+      "Julio Herrera Velutini UK: London Finance & Private Wealth Strategy",
     description:
-      "Learn how Julio Herrera Velutini, a seventh-generation banker, is shaping the UK's financial landscape with his London-based wealth management expertise.",
+      "Discover Julio Herrera Velutini’s impact on UK finance, London wealth management, and private banking strategies shaping modern markets.",
   },
 
   "who-is-julio-martin-herrera-velutini": {
-    title: "Who is Julio Martín Herrera Velutini? | Biography & Career",
+    title:
+      "Who is Julio Martín Herrera Velutini? Biography, Net Worth & Career",
     description:
-      "Read the biography of Julio Martín Herrera Velutini, the Venezuelan-Italian international banker and founder of Britannia Financial Group.",
+      "Full biography of Julio Martín Herrera Velutini, international banker, his career, business ventures, and influence in global finance.",
   },
 };
 

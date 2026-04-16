@@ -59,44 +59,43 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { category } = await params;
 
-  const categoryMeta: Record<string, { title: string; description: string }> = {
-    prnews: {
-      title: "PR News & Press Release Updates – PR Promotion Hub",
-      description:
-        "Latest PR news, press releases, brand announcements, and media coverage insights to help businesses amplify their reach and visibility.",
-    },
-    world: {
-      title: "World News & Global Affairs – PR Promotion Hub",
-      description:
-        "Breaking world news, international affairs, global business developments, and geopolitical updates shaping today’s world.",
-    },
-    us: {
-      title: "US News & National Updates – PR Promotion Hub",
-      description:
-        "Stay updated with the latest US news, national developments, politics, economy, and business trends across America.",
-    },
-    finance: {
-      title: "Finance News, Markets & Economy – PR Promotion Hub",
-      description:
-        "Track finance news, stock market trends, economic updates, investments, startups, and global financial insights.",
-    },
-    entertainment: {
-      title: "Entertainment News, Celebrities & Media – PR Promotion Hub",
-      description:
-        "Explore entertainment news, celebrity updates, movies, music, streaming trends, and media industry highlights.",
-    },
-    marketing: {
-      title: "Marketing & Branding Insights | PR Promotion Hub",
-      description:
-        "Discover marketing news, digital marketing strategies, branding insights, SEO trends, and growth tactics for modern businesses.",
-    },
-    technology: {
-      title: "Technology News, AI & Innovation | PR Promotion Hub",
-      description:
-        "Discover the latest technology news, AI developments, startups, gadgets, software updates, and innovations shaping the digital world.",
-    },
-
-  };
+const categoryMeta: Record<string, { title: string; description: string }> = {
+  prnews: {
+    title: "Latest PR News, Press Releases & Brand Announcements (2026)",
+    description:
+      "Read the latest PR news, press releases, brand announcements, and media coverage. Stay updated with real-time public relations trends and business PR strategies.",
+  },
+  world: {
+    title: "Breaking World News Today | Global Politics & International Updates",
+    description:
+      "Get breaking world news today, global politics, international conflicts, economic developments, and major global events updated in real time.",
+  },
+  us: {
+    title: "US News Today: Breaking America News, Politics & Economy Updates",
+    description:
+      "Stay updated with US breaking news, politics, economy, business, and national developments across America with real-time updates.",
+  },
+  finance: {
+    title: "Finance News Today: Stock Market, Economy & Investment Updates",
+    description:
+      "Latest finance news, stock market trends, crypto updates, economy insights, startups, and investment strategies from around the world.",
+  },
+  entertainment: {
+    title: "Entertainment News Today: Celebrities, Movies, OTT & Music Updates",
+    description:
+      "Catch the latest entertainment news, celebrity gossip, movie releases, OTT updates, music trends, and media industry insights.",
+  },
+  marketing: {
+    title: "Digital Marketing News & SEO Trends (2026) | Branding Insights",
+    description:
+      "Explore digital marketing news, SEO trends, branding strategies, social media growth tips, and online business insights for 2026.",
+  },
+  technology: {
+    title: "Technology News Today: AI, Startups, Gadgets & Innovation Updates",
+    description:
+      "Latest technology news including AI, startups, gadgets, software updates, and innovations shaping the future of the digital world.",
+  },
+};
 
   const siteUrl = "https://www.prpromotionhub.com";
   const categoryUrl = `${siteUrl}/${category}`;
