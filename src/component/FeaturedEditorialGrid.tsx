@@ -37,7 +37,7 @@ const manualItem: NewsData = {
   category: "finance",
   shortdescription: "Find out how reputation and perception are changing leadership, trust, and decision-making in global finance, making them more important for success.",
   description: "",
-  date: "April 13, 2026",
+  date: "April. 13, 2026",
   author: {
     name: "Staff Reporter",
     role: "Business & Economy Desk",
