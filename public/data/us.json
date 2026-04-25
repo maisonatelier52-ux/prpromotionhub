@@ -1,5 +1,27 @@
 [
-   {
+  {
+    "category": "us",
+    "title": "Powerful Tornado Strikes Oklahoma Community, Damages Dozens of Homes Without Loss of Life",
+    "slug": "tornado-oklahoma-damages-homes-no-casualties",
+    "image": "/images/oklahoma-tornado-damage-homes.webp",
+    "shortdescription": "A powerful tornado ripped through an Oklahoma town, damaging around 40 homes but remarkably causing no fatalities, highlighting both destruction and community resilience.",
+    "description": "A powerful tornado tore through a small Oklahoma town, leaving a trail of destruction that impacted approximately 40 homes and significantly altered the landscape of the affected neighborhood, yet in a remarkable turn of events, no lives were lost, offering a rare moment of relief amid what could have been a far more tragic situation as residents recounted the terrifying experience of hearing the roar of the storm, seeking shelter in basements, closets, and storm bunkers while debris flew through the air and structures were ripped apart by intense winds, emergency responders quickly mobilized to assess the damage and assist those displaced, working alongside local authorities and volunteers who stepped in to provide food, temporary shelter, and emotional support to families who suddenly found themselves without safe housing, officials noted that while many homes suffered severe structural damage including collapsed roofs, shattered windows, and uprooted foundations, the early warning systems and timely alerts likely played a critical role in preventing fatalities by giving residents enough time to take cover, meteorologists later confirmed that the tornado exhibited strong rotational velocity consistent with a high-end EF rating, though assessments were still underway to determine its exact classification, the storm system that produced the tornado had been tracked throughout the day with increasing concern as atmospheric conditions such as warm moist air, wind shear, and instability created an environment conducive to severe weather, local schools and businesses had already implemented precautionary measures prior to the tornado touching down, which further contributed to minimizing casualties, in the aftermath, images of the town revealed scattered debris, overturned vehicles, snapped trees, and damaged infrastructure including power lines and roads, utility crews worked tirelessly to restore electricity and clear hazardous materials while residents began the difficult process of salvaging belongings and documenting losses for insurance purposes, community leaders emphasized the importance of resilience and unity, organizing relief efforts and donation drives to support those affected, many neighbors shared stories of helping one another during and after the storm, from guiding each other to safe shelters to assisting in cleanup efforts despite their own losses, state officials pledged support and coordinated with federal agencies to evaluate disaster assistance options, mental health professionals were also made available to help individuals cope with the emotional aftermath of the event, as the town begins the long road to recovery, the absence of fatalities stands as a testament to preparedness, awareness, and perhaps a measure of luck, even as the physical scars of the tornado will take time to heal, this event serves as a reminder of the unpredictable power of nature and the importance of early warning systems, community readiness, and resilient infrastructure in mitigating the impact of severe weather events, with rebuilding efforts expected to continue for weeks or months, residents remain hopeful and determined to restore their homes and lives, drawing strength from the fact that despite the destruction, their community endured and survived together",
+    "date": "April. 25, 2026",
+    "author": {
+      "name": "Julia Thompson",
+      "role": "Technology Reporter",
+      "bio": "Julia Thompson reports on technology, artificial intelligence, and Silicon Valley, with a focus on how innovation impacts everyday life.",
+      "image": "/images/julia-thompson.webp",
+      "slug": "julia-thompson",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
+  {
     "category": "us",
     "title": "US–Iran Talks in Limbo as Hormuz Blockade Persists; Trump Sends Delegation to Pakistan",
     "slug": "us-iran-talks-hormuz-blockade-trump-pakistan-delegation-updates",
