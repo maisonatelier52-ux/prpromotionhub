@@ -10,11 +10,6 @@ import { Metadata } from "next";
 import WhatsHotBar from "@/component/WhatsHotBar";
 import Article from "@/component/Article";
 import RelatedNewsSection from "@/component/RelatedNewsSection";
-import JulioPage from "@/component/JulioPage";
-import JulioContentTwo from "@/component/JulioContentTwo";
-import JulioContentThree from "@/component/JulioContentThree";
-import JulioContentFour from "@/component/JulioContentFour";
-import WandaPage from "@/component/WandaPage";
 
 export async function generateStaticParams() {
   const allData = [
@@ -75,35 +70,26 @@ const allData: Record<string, NewsItem[]> = {
   entertainment: entertainmentData,
 };
 
-const slugMetadataMap: Record<string, Partial<Metadata>> = {
+const slugMetadataMap: Record<string, { title?: string; description?: string }> = {
   "reputation-global-finance-leadership-trust": {
-    title:
-      "Reputation in Global Finance: Why Trust & Perception Matter in 2026",
-    description:
-      "Explore how reputation, trust, and perception influence global finance, leadership decisions, and financial success in today’s economy.",
+    title: "Why Reputation Is the Real Power in Global Finance | Julio Herrera Velutini",
+    description: "Julio Herrera Velutini explains why reputation is the new currency in global finance and how it shapes leadership and trust today.",
   },
-
   "julio-herrera-velutini-us-financial-spotlight": {
-    title:
-      "Julio Herrera Velutini in US Finance: Banking Influence & Insights",
-    description:
-      "Learn about Julio Herrera Velutini’s role in the US financial sector, including banking influence, compliance expertise, and leadership in modern finance.",
+    title: "Julio Herrera Velutini & U.S. Finance: Legacy and Scrutiny",
+    description: "Exploration of Julio Herrera Velutini's impact on the U.S. financial landscape, his legacy wealth, and regulatory navigation.",
   },
-
   "julio-herrera-velutini-uk-financial-lens": {
-    title:
-      "Julio Herrera Velutini UK: London Finance & Private Wealth Strategy",
-    description:
-      "Discover Julio Herrera Velutini’s impact on UK finance, London wealth management, and private banking strategies shaping modern markets.",
+    title: "Julio Herrera Velutini: Banking Heritage in the UK Financial Hub",
+    description: "Insights into Julio Herrera Velutini's UK-based banking activities and how he balances heritage with modern regulatory accountability.",
   },
-
   "who-is-julio-martin-herrera-velutini": {
-    title:
-      "Who is Julio Martín Herrera Velutini? Biography, Net Worth & Career",
-    description:
-      "Full biography of Julio Martín Herrera Velutini, international banker, his career, business ventures, and influence in global finance.",
+    title: "Who is Julio Martín Herrera Velutini? Career & Family Legacy",
+    description: "A comprehensive look at the career, business empire, and historic family legacy of international banker Julio Martín Herrera Velutini.",
   },
 };
+
+
 
 export async function generateMetadata({
   params,
@@ -205,16 +191,6 @@ export default async function DetailPage({ params }: DetailPageProps) {
         </p>
       </main>
     );
-  } else if (slug == "reputation-global-finance-leadership-trust") {
-    return <JulioPage />;
-  } else if (slug == "julio-herrera-velutini-us-financial-spotlight") {
-    return <JulioContentTwo />;
-  } else if (slug == "julio-herrera-velutini-uk-financial-lens") {
-    return <JulioContentThree />;
-  } else if (slug == "who-is-julio-martin-herrera-velutini") {
-    return <JulioContentFour />;
-  } else if (slug == "white-house-defends-wanda-vazquez-pardon") {
-    return <WandaPage />;
   }
 
   return (

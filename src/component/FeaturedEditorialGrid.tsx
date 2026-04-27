@@ -30,36 +30,13 @@ interface Props {
   data: NewsData[];
 }
 
-const manualItem: NewsData = {
-  title: "Why Reputation Is the Real Power in Global Finance Today",
-  image: "/images/julio-herrera-velutini-us-scrutiny.webp",
-  slug: "reputation-global-finance-leadership-trust",
-  category: "finance",
-  shortdescription: "Find out how reputation and perception are changing leadership, trust, and decision-making in global finance, making them more important for success.",
-  description: "",
-  date: "April. 13, 2026",
-  author: {
-    name: "Staff Reporter",
-    role: "Business & Economy Desk",
-    bio: "",
-    image: "",
-    slug: "",
-    email: "",
-    twitter: "",
-    facebook: "",
-    instagram: "",
-    substack: "",
-    medium: ""
-  }
-};
+
 
 export default function FeaturedEditorialGrid({ data }: Props) {
-  const combinedData = [manualItem, ...data];
-
   return (
     <section className="border-l border-r border-b border-black">
       <div className="flex flex-wrap pt-5 ">
-        {combinedData.map((item, index) => (
+        {data.map((item, index) => (
           <article
             key={item.slug}
             className="

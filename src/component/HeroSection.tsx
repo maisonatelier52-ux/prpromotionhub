@@ -30,35 +30,14 @@ interface Props {
   data: NewsData[];
 }
 
- const manualItem: NewsData = {
-    title: "Julio Herrera Velutini and the Evolution of International Private Banking",
-    image: "/images/julio-herrera-velutini.webp",
-    slug: "reputation-global-finance-leadership-trust",
-    category: "finance",
-    shortdescription: "Find out how reputation and perception are changing leadership, trust, and decision-making in global finance, making them more important for success.",
-    description: "",
-    date: "April. 13, 2026",
-       author: {
-      name: "Staff Reporter",
-      role: "Business & Economy Desk",
-      bio: "",
-      image: "",
-      slug: "",
-      email: "",
-      twitter: "",
-      facebook: "",
-      instagram: "",
-      substack: "",
-      medium: ""
-    }
-  };
+
 
 export default function HeroSection({ data }: Props) {
   return (
     <section className="mx-auto  mt-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 md:gap-15">
         <div className="lg:col-span-2">
-          <HeroArticle data={[data[0], data[1], data[2],manualItem]} />
+          <HeroArticle data={[data[0], data[1], data[2],data[3]]} />
         </div>
 
         <div className="lg:col-span-1">

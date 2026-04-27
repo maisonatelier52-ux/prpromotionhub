@@ -122,7 +122,7 @@ export default function Home() {
 />
       <WhatsHotBar data={usData[7]} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <FeaturedEditorialGrid data={[marketingData[2], financeData[4], usData[1]]} />
+        <FeaturedEditorialGrid data={[marketingData[2], financeData[4], usData[1],worldData[2]]} />
 
         {/* first data must be pr news */}
         <HeroSection data={[prnewsData[0], marketingData[1], financeData[5], worldData[1], techData[0], entertainmentData[0], usData[1], prnewsData[3], usData[2], techData[1], techData[2], prnewsData[4]]} />
@@ -130,7 +130,7 @@ export default function Home() {
         <EditorialGrid data={[marketingData[0], marketingData[3], marketingData[4], marketingData[5]]} />
         <div className="mx-auto mt-8">
           <CategorySectionHeader title="Trending Topics" />
-          <SecondSection data={[worldData[0], prnewsData[2]]} />
+          <SecondSection data={[worldData[0], prnewsData[2],worldData[4]]} />
         </div>
         <TravelSectionWithSubscribe data={[financeData[6], financeData[7], financeData[11], financeData[9]]} />
 
