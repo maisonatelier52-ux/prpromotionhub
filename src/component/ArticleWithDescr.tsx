@@ -25,11 +25,11 @@ export default function   ArticleWithDescr({ data }: Props) {
     <section className="w-full mx-auto text-black">
       {/* First paragraph with drop cap */}
       <p className="">
-        <span className="float-left text-5xl md:text-6xl font-bold leading-none mt-1 mr-2">
+        {/* <span className="float-left text-5xl md:text-6xl font-bold leading-none mt-1 mr-2">
           {firstHalf.charAt(0)}
-        </span>
+        </span> */}
         <span className="leading-tight text-[16px]">
-          {firstHalf.slice(1)}
+          {firstHalf}
         </span>
       </p>
 
