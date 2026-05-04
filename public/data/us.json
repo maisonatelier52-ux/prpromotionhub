@@ -1,6 +1,28 @@
 [
   {
     "category": "us",
+    "title": "Mass Shooting at Lakeside Gathering Near Oklahoma City Leaves 13 Injured",
+    "slug": "lakeside-party-shooting-oklahoma-city-multiple-injured",
+    "image": "/images/lakeside-party-shooting-okc.webp",
+    "shortdescription": "A shooting at a lakeside party near Oklahoma City left at least 13 people injured, prompting a large emergency response and an ongoing investigation.",
+    "description": "A late-night gathering near a lakeside area outside Oklahoma City turned into a scene of chaos and panic when gunfire erupted, leaving at least thirteen individuals injured and sending shockwaves through the local community. According to early reports from law enforcement and emergency responders, the incident occurred during what witnesses described as a crowded social gathering, where dozens of people had come together to enjoy the evening. The atmosphere, initially filled with music, conversation, and celebration, quickly shifted into confusion and fear as multiple shots rang out, causing attendees to scatter in search of safety. Emergency services were alerted shortly after the first reports of gunfire, and responders arrived to find multiple victims suffering from gunshot wounds and other injuries sustained during the frantic attempts to flee the area. Ambulances transported the injured to nearby hospitals, where medical staff worked through the night to stabilize patients, some of whom were reported to be in critical condition. Authorities have not yet confirmed the exact sequence of events that led to the shooting, but preliminary information suggests that an altercation may have escalated into violence. Investigators are currently interviewing witnesses and reviewing any available video footage to piece together what happened and identify those responsible. Law enforcement officials have urged anyone with information about the incident to come forward, emphasizing the importance of community cooperation in solving the case. As news of the shooting spread, concerns about safety at public gatherings and the broader issue of gun violence resurfaced, with community leaders calling for calm and unity while the investigation continues. Residents in the area expressed both shock and frustration, noting that such incidents have become increasingly common and highlighting the need for preventive measures to ensure public safety. Local authorities have increased patrols in surrounding areas as a precaution and to reassure the public. Meanwhile, families of the victims gathered at hospitals, anxiously awaiting updates on their loved ones, underscoring the human toll of the incident. Officials have pledged a thorough and transparent investigation, stating that those responsible will be held accountable under the law. While details remain limited and subject to change as the investigation unfolds, the incident serves as a stark reminder of how quickly situations can escalate and the lasting impact such violence can have on individuals and communities alike. As the community begins to process the event, support services and counseling resources are being made available to those affected, including witnesses and first responders who experienced the traumatic scene. The coming days are expected to bring more clarity as authorities continue their work, but for now, the focus remains on treating the injured, supporting families, and ensuring that justice is pursued diligently.",
+    "date": "May. 4, 2026",
+    "author": {
+      "name": "Julia Thompson",
+      "role": "Technology Reporter",
+      "bio": "Julia Thompson reports on technology, artificial intelligence, and Silicon Valley, with a focus on how innovation impacts everyday life.",
+      "image": "/images/julia-thompson.webp",
+      "slug": "julia-thompson",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
+  {
+    "category": "us",
     "title": "Powerful Tornado Strikes Oklahoma Community, Damages Dozens of Homes Without Loss of Life",
     "slug": "tornado-oklahoma-damages-homes-no-casualties",
     "image": "/images/oklahoma-tornado-damage-homes.webp",
