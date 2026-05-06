@@ -5,51 +5,26 @@ import marketingData from '../../../public/data/marketing.json';
 import financeData from '../../../public/data/finance.json';
 import technologyData from '../../../public/data/technology.json';
 import entertainmentData from '../../../public/data/entertainment.json';
-import LatestNewsWithStickyPromo from '../../component/LatestNewsWithStickyPromo'
 import CategoryHeader from '@/component/CategoryHeader';
 import WhatsHotBar from '@/component/WhatsHotBar';
 import CategoryContent from '@/component/CategoryContent';
 import { Metadata } from 'next';
+import { getSortedNews, Article } from '@/utils/newsUtils';
 
-interface Author {
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  email: string;
-  twitter: string;
-  facebook: string;
-  instagram: string;
-  substack?: string;
-  medium?: string;
-}
-
-interface NewsItem {
-  category: string;
-  title: string;
-  shortdescription: string;
-  description: string;
-  image: string;
-  slug: string;
-  date: string;
-  author: Author;
-}
-
-const allData: Record<string, NewsItem[]> = {
-  prnews: prnewsData,
-  world: worldData,
-  us: usData,
-  finance: financeData,
-  marketing: marketingData,
-  technology: technologyData,
-  entertainment: entertainmentData
+const allData: Record<string, Article[]> = {
+  prnews: prnewsData as Article[],
+  world: worldData as Article[],
+  us: usData as Article[],
+  finance: financeData as Article[],
+  marketing: marketingData as Article[],
+  technology: technologyData as Article[],
+  entertainment: entertainmentData as Article[]
 };
 
 export async function generateStaticParams() {
   return Object.keys(allData).map((category) => ({
     category,
   }));
-
 }
 
 export async function generateMetadata({
@@ -58,44 +33,47 @@ export async function generateMetadata({
   params: Promise<{ category: string }>;
 }): Promise<Metadata> {
   const { category } = await params;
+  
+  // Sort data for this category
+  const data = allData[category] ? getSortedNews([allData[category]]) : [];
 
-const categoryMeta: Record<string, { title: string; description: string }> = {
-  prnews: {
-    title: "Latest PR News, Press Releases & Brand Announcements (2026)",
-    description:
-      "Read the latest PR news, press releases, brand announcements, and media coverage. Stay updated with real-time public relations trends and business PR strategies.",
-  },
-  world: {
-    title: "Breaking World News Today | Global Politics & International Updates",
-    description:
-      "Get breaking world news today, global politics, international conflicts, economic developments, and major global events updated in real time.",
-  },
-  us: {
-    title: "US News Today: Breaking America News, Politics & Economy Updates",
-    description:
-      "Stay updated with US breaking news, politics, economy, business, and national developments across America with real-time updates.",
-  },
-  finance: {
-    title: "Finance News Today: Stock Market, Economy & Investment Updates",
-    description:
-      "Latest finance news, stock market trends, crypto updates, economy insights, startups, and investment strategies from around the world.",
-  },
-  entertainment: {
-    title: "Entertainment News Today: Celebrities, Movies, OTT & Music Updates",
-    description:
-      "Catch the latest entertainment news, celebrity gossip, movie releases, OTT updates, music trends, and media industry insights.",
-  },
-  marketing: {
-    title: "Digital Marketing News & SEO Trends (2026) | Branding Insights",
-    description:
-      "Explore digital marketing news, SEO trends, branding strategies, social media growth tips, and online business insights for 2026.",
-  },
-  technology: {
-    title: "Technology News Today: AI, Startups, Gadgets & Innovation Updates",
-    description:
-      "Latest technology news including AI, startups, gadgets, software updates, and innovations shaping the future of the digital world.",
-  },
-};
+  const categoryMeta: Record<string, { title: string; description: string }> = {
+    prnews: {
+      title: "Latest PR News, Press Releases & Brand Announcements (2026)",
+      description:
+        "Read the latest PR news, press releases, brand announcements, and media coverage. Stay updated with real-time public relations trends and business PR strategies.",
+    },
+    world: {
+      title: "Breaking World News Today | Global Politics & International Updates",
+      description:
+        "Get breaking world news today, global politics, international conflicts, economic developments, and major global events updated in real time.",
+    },
+    us: {
+      title: "US News Today: Breaking America News, Politics & Economy Updates",
+      description:
+        "Stay updated with US breaking news, politics, economy, business, and national developments across America with real-time updates.",
+    },
+    finance: {
+      title: "Finance News Today: Stock Market, Economy & Investment Updates",
+      description:
+        "Latest finance news, stock market trends, crypto updates, economy insights, startups, and investment strategies from around the world.",
+    },
+    entertainment: {
+      title: "Entertainment News Today: Celebrities, Movies, OTT & Music Updates",
+      description:
+        "Catch the latest entertainment news, celebrity gossip, movie releases, OTT updates, music trends, and media industry insights.",
+    },
+    marketing: {
+      title: "Digital Marketing News & SEO Trends (2026) | Branding Insights",
+      description:
+        "Explore digital marketing news, SEO trends, branding strategies, social media growth tips, and online business insights for 2026.",
+    },
+    technology: {
+      title: "Technology News Today: AI, Startups, Gadgets & Innovation Updates",
+      description:
+        "Latest technology news including AI, startups, gadgets, software updates, and innovations shaping the future of the digital world.",
+    },
+  };
 
   const siteUrl = "https://www.prpromotionhub.com";
   const categoryUrl = `${siteUrl}/${category}`;
@@ -105,7 +83,7 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
     description: `Latest ${category} news, updates, and insights from PR Promotion Hub.`,
   };
 
-  const firstArticle = allData?.[category]?.[0];
+  const firstArticle = data[0];
 
   const firstArticleImage =
     firstArticle?.image?.startsWith("http")
@@ -119,51 +97,46 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
       robots: { index: false, follow: false },
     };
   }
-const todayDate = new Intl.DateTimeFormat("en-CA", {
-  timeZone: "America/New_York",
-  year: "numeric",
-  month: "2-digit",
-  day: "2-digit",
-}).format(new Date());
 
+  const todayDate = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
 
-return {
-  title: meta.title,
-  description: meta.description,
-
-  alternates: {
-    canonical: categoryUrl,
-  },
-
-  openGraph: {
-    type: "article", 
+  return {
     title: meta.title,
     description: meta.description,
-    url: categoryUrl,
-    siteName: "PR Promotion Hub",
-    locale: "en_US",
-    publishedTime: todayDate, 
-    modifiedTime: todayDate, 
-
-    images: [
-      {
-        url: firstArticleImage,
-        width: 1200,
-        height: 630,
-        alt: `${category} news – PR Promotion Hub`,
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: meta.title,
-    description: meta.description,
-    images: [firstArticleImage],
-    site: "@prpromotionhub",
-  },
-};
-
+    alternates: {
+      canonical: categoryUrl,
+    },
+    openGraph: {
+      type: "article",
+      title: meta.title,
+      description: meta.description,
+      url: categoryUrl,
+      siteName: "PR Promotion Hub",
+      locale: "en_US",
+      publishedTime: todayDate,
+      modifiedTime: todayDate,
+      images: [
+        {
+          url: firstArticleImage,
+          width: 1200,
+          height: 630,
+          alt: `${category} news – PR Promotion Hub`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: [firstArticleImage],
+      site: "@prpromotionhub",
+    },
+  };
 }
 
 export default async function CategoryPage({
@@ -173,9 +146,7 @@ export default async function CategoryPage({
 }) {
   const { category } = await params;
 
-  const data = allData[category];
-const filteredData = category === "finance" ? data.slice(3) : data;
-  if (!data) {
+  if (!allData[category]) {
     return (
       <main className="max-w-7xl mx-auto h-screen px-6 flex flex-col items-center justify-center text-center">
         <h1 className="text-3xl font-bold">
@@ -188,13 +159,16 @@ const filteredData = category === "finance" ? data.slice(3) : data;
     );
   }
 
+  // Sort data for this category
+  const data = getSortedNews([allData[category]]);
+
   return (
     <>
       <WhatsHotBar data={data[0]} />
       <CategoryHeader category={data[0].category} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <CategoryContent data={filteredData} />
+        <CategoryContent data={data} />
       </div>
     </>
   );
-}
+}

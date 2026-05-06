@@ -1,5 +1,26 @@
 [
- 
+  {
+    "category": "finance",
+    "title": "Wall Street Surges and Oil Prices Crash as China Pushes for Iran-US Ceasefire",
+    "slug": "wall-street-soars-oil-prices-plunge-china-iran-us-ceasefire",
+    "image": "/images/wall-street-oil-prices-china-iran-us-ceasefire.webp",
+    "date": "May. 6, 2026",
+    "shortdescription": "Global financial markets rallied and oil prices dropped sharply after China called for a comprehensive ceasefire in the ongoing Iran-US conflict, boosting investor optimism over easing geopolitical tensions and reduced risks to global energy supplies.",
+    "description": "Global markets rallied sharply after signs emerged that tensions surrounding the Iran conflict may begin to ease. Investors reacted positively after China called for a full ceasefire, boosting hopes that the two-month conflict could move toward a diplomatic resolution. Wall Street futures climbed before the opening bell, with the Dow Jones, S&P 500, and Nasdaq all posting strong gains. The biggest jump came in technology shares, while falling oil prices added to investor optimism. China’s Foreign Minister Wang Yi made the comments after meeting with Iranian Foreign Minister Abbas Araghchi in Beijing. China said it was deeply concerned about the conflict and supported efforts to restore stability in the region. The news also pushed oil prices sharply lower. U.S. crude prices dropped by more than 13%, while Brent crude also fell heavily after recent spikes linked to fears over disruptions in the Strait of Hormuz. Energy company shares declined as oil prices fell, with major firms such as Chevron, Exxon Mobil, and ConocoPhillips losing ground. At the same time, airline stocks surged because lower fuel costs are expected to reduce operating expenses. Shares of Delta, United, and American Airlines all moved higher in premarket trading. Markets were also encouraged by reports that Iranian officials traveled to China ahead of a planned summit between President Donald Trump and Chinese President Xi Jinping. Investors viewed the diplomatic activity as a possible sign that negotiations could intensify. President Trump said the U.S. had paused efforts to escort stranded commercial ships through the Strait of Hormuz while hopes for a deal remained alive. Although tensions continue, a fragile ceasefire has mostly held in recent days. Secretary of State Marco Rubio stated that major U.S. military operations against Iran had ended for now, while emphasizing that the United States still wants Iran to meet demands related to its nuclear program and shipping access through the strait. The Strait of Hormuz remains one of the world’s most important energy routes. Earlier disruptions caused oil and gas prices to soar, creating pressure on global economies and major energy-importing nations. Markets across Europe and Asia also posted strong gains. South Korea’s Kospi index surged past the 7,000 mark for the first time, led by major technology companies such as Samsung Electronics and SK Hynix. Investors expect growing demand for artificial intelligence technology to continue driving chipmakers higher. Meanwhile, stock markets in Australia, Hong Kong, and mainland China all ended the day with solid advances as global confidence improved.",
+    "author": {
+      "name": "Staff Reporter",
+      "role": "Business & Economy Desk",
+      "bio": "",
+      "image": "",
+      "slug": "",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
   {
     "category": "finance",
     "title": "Warsh as Fed Chair Unlikely to Trigger Immediate Rate Cuts or Major Policy Shift",
@@ -22,7 +43,6 @@
       "medium": ""
     }
   },
-
   {
     "category": "finance",
     "title": "Meta Job Cuts Hit Reality Labs, Sales, and Recruiting Teams",
