@@ -4,38 +4,20 @@ import { useRef, useState } from "react";
 import CategoryCard from "./CategoryCard";
 import UpgradePromoCard from "./UpgradePromoCard";
 import Pagination from "./Pagintation";
+import ArticleCard from "./ArticleCard";
 
-interface Author {
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  email: string;
-  twitter: string;
-  facebook: string;
-  instagram: string;
-  substack?: string;
-  medium?: string;
+import { Article } from "@/utils/newsUtils";
+
+export interface Props {
+  data: Article[];
+  popularNews: Article[];
 }
 
-interface NewsData {
-  slug: string;
-  category: string;
-  title: string;
-  shortdescription: string;
-  description: string;
-  date: string;
-  image: string;
-  author:Author;
-}
 
-interface Props {
-  data: NewsData[];
-}
 
 const ITEMS_PER_PAGE = 5;
 
-export default function CategoryContent({ data }: Props) {
+export default function CategoryContent({ data, popularNews }: Props) {
   const leftRef = useRef<HTMLDivElement>(null);
   const stopRef = useRef<HTMLDivElement>(null);
 
@@ -76,7 +58,8 @@ export default function CategoryContent({ data }: Props) {
 
         {/* RIGHT SECTION */}
         <div className="w-full lg:w-1/3">
-          <div className="sticky top-10">
+          <div className="sticky top-10 flex flex-col gap-8">
+            <ArticleCard data={popularNews} />
             <UpgradePromoCard />
           </div>
         </div>
@@ -84,3 +67,4 @@ export default function CategoryContent({ data }: Props) {
     </div>
   );
 }
+

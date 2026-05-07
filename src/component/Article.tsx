@@ -10,35 +10,15 @@ import prnewsData from '../../public/data/prnews.json';
 import UpgradePromoCard from './UpgradePromoCard';
 import FAQ from './FAQ';
 
-interface Author {
-    name: string;
-    role: string;
-    bio: string;
-    image: string;
-    email: string;
-    twitter: string;
-    facebook: string;
-    instagram: string;
-    substack?: string;
-    medium?: string;
-}
-
-interface NewsItem {
-    category: string;
-    title: string;
-    shortdescription: string;
-    description: string;
-    image: string;
-    slug: string;
-    date: string;
-    author: Author;
-}
+import { Article as NewsItem } from '@/utils/newsUtils';
 
 interface Props {
     article: NewsItem;
+    popularNews: NewsItem[];
 }
 
-export default function Article({ article }: Props) {
+
+export default function Article({ article, popularNews }: Props) {
     return (
         <div>
             {/* Article Header and Social Share */}
@@ -71,8 +51,8 @@ export default function Article({ article }: Props) {
 
                 {/* Right Sidebar (Article Cards) */}
                 <div className="w-full lg:w-1/3 lg:pl-8 lg:border-l-2 lg:border-dotted lg:border-gray-200">
-                    <ArticleCard data={[prnewsData[0], prnewsData[1], prnewsData[2], prnewsData[3]]} />
-<FAQ/>
+                    <ArticleCard data={popularNews} />
+                    <FAQ/>
                     <div className="py-5">
                         <UpgradePromoCard />
                     </div>
@@ -81,3 +61,4 @@ export default function Article({ article }: Props) {
         </div>
     );
 }
+

@@ -10,9 +10,10 @@ import { Metadata } from "next";
 import WhatsHotBar from "@/component/WhatsHotBar";
 import Article from "@/component/Article";
 import RelatedNewsSection from "@/component/RelatedNewsSection";
+import { getSortedNews, Article as NewsItem } from "@/utils/newsUtils";
 
 export async function generateStaticParams() {
-  const allData = [
+  const allDataList = [
     { category: "prnews", articles: prnewsData },
     { category: "marketing", articles: marketingData },
     { category: "world", articles: worldData },
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
     { category: "entertainment", articles: entertainmentData },
   ];
 
-  const params = allData.flatMap(({ category, articles }) =>
+  const params = allDataList.flatMap(({ category, articles }) =>
     articles.map((article) => ({
       category,
       slug: article.slug,
@@ -32,42 +33,18 @@ export async function generateStaticParams() {
   return params;
 }
 
-interface Author {
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  email: string;
-  twitter: string;
-  facebook: string;
-  instagram: string;
-  substack?: string;
-  medium?: string;
-}
-
-interface NewsItem {
-  category: string;
-  title: string;
-  shortdescription: string;
-  description: string;
-  image: string;
-  slug: string;
-  author: Author;
-  date: string;
-}
-
 interface DetailPageProps {
   params: Promise<{ category: string; slug: string }>;
 }
 
 const allData: Record<string, NewsItem[]> = {
-  prnews: prnewsData,
-  marketing: marketingData,
-  world: worldData,
-  us: usData,
-  finance: financeData,
-  technology: technologyData,
-  entertainment: entertainmentData,
+  prnews: prnewsData as NewsItem[],
+  marketing: marketingData as NewsItem[],
+  world: worldData as NewsItem[],
+  us: usData as NewsItem[],
+  finance: financeData as NewsItem[],
+  technology: technologyData as NewsItem[],
+  entertainment: entertainmentData as NewsItem[],
 };
 
 const slugMetadataMap: Record<string, { title?: string; description?: string }> = {
@@ -96,17 +73,7 @@ export async function generateMetadata({
 }: DetailPageProps): Promise<Metadata> {
   const { category, slug } = await params;
 
-  const allDataMap: Record<string, NewsItem[]> = {
-    prnews: prnewsData,
-    world: worldData,
-    us: usData,
-    finance: financeData,
-    entertainment: entertainmentData,
-    marketing: marketingData,
-    technology: technologyData,
-  };
-
-  const articles = allDataMap[category] || [];
+  const articles = allData[category] || [];
   const article = articles.find((a) => a.slug === slug);
 
   const siteUrl = "https://www.prpromotionhub.com";
@@ -193,6 +160,25 @@ export default async function DetailPage({ params }: DetailPageProps) {
     );
   }
 
+  // Get sorted news from all categories
+  const allSortedNews = getSortedNews([
+    prnewsData as NewsItem[],
+    marketingData as NewsItem[],
+    worldData as NewsItem[],
+    usData as NewsItem[],
+    financeData as NewsItem[],
+    technologyData as NewsItem[],
+    entertainmentData as NewsItem[],
+  ]);
+
+  // Filter out the current article to avoid duplicates
+  const filteredNews = allSortedNews.filter((item) => item.slug !== slug);
+
+  // Distribute news items
+  const whatsHotItem = filteredNews[0] || article; // Fallback to current article if none else available
+  const popularNews = filteredNews.slice(1, 5); // Next 4 items for "Popular News"
+  const relatedNews = filteredNews.slice(5, 8); // Next 3 items for "Related News"
+
   return (
     <main>
       <Script
@@ -242,12 +228,13 @@ export default async function DetailPage({ params }: DetailPageProps) {
         }}
       />
 
-      <WhatsHotBar data={prnewsData[0]} />
+      <WhatsHotBar data={whatsHotItem} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10">
-        <Article article={article} />
+        <Article article={article} popularNews={popularNews} />
 
-        <RelatedNewsSection data={[prnewsData[0]]} article={article} />
+        <RelatedNewsSection data={relatedNews} article={article} />
       </div>
     </main>
   );
 }
+

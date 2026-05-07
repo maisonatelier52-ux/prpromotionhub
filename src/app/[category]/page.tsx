@@ -160,15 +160,36 @@ export default async function CategoryPage({
   }
 
   // Sort data for this category
-  const data = getSortedNews([allData[category]]);
+  const categoryData = getSortedNews([allData[category]]);
+
+  // Get global sorted news for WhatsHotBar and Popular
+  const allGlobalNews = getSortedNews([
+    prnewsData as Article[],
+    marketingData as Article[],
+    worldData as Article[],
+    usData as Article[],
+    financeData as Article[],
+    technologyData as Article[],
+    entertainmentData as Article[]
+  ]);
+
+  const whatsHotItem = allGlobalNews[0];
+  
+  // Filter out whatsHotItem from category data to avoid duplication in the main list
+  const mainContentData = categoryData.filter(item => item.slug !== whatsHotItem.slug);
+
+  // Get popular news (global, excluding what's hot)
+  const popularNews = allGlobalNews.filter(item => item.slug !== whatsHotItem.slug).slice(0, 4);
 
   return (
     <>
-      <WhatsHotBar data={data[0]} />
-      <CategoryHeader category={data[0].category} />
+      <WhatsHotBar data={whatsHotItem} />
+      <CategoryHeader category={category} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <CategoryContent data={data} />
+        <CategoryContent data={mainContentData} popularNews={popularNews} />
       </div>
     </>
   );
-}
+}
+
+

@@ -1,5 +1,4 @@
 import RelatedNews from "./RelatedNews";
-import financeData from "../../public/data/finance.json";
 
 interface Author {
   name: string;
@@ -32,34 +31,10 @@ interface Props {
 }
 
 export default function RelatedNewsSection({ data, article }: Props) {
-  const relatedArticles: NewsData[] = [];
-  const usedSlugs = new Set<string>();
-
-  const isValid = (item: NewsData) => {
-    if (!item?.slug) return false;
-    
-    if (article && item.slug === article.slug) return false;
-    if (usedSlugs.has(item.slug)) return false;
-    return true;
-  };
-
-  for (const item of financeData.slice(0, 4)) {
-    if (isValid(item)) {
-      relatedArticles.push(item);
-      usedSlugs.add(item.slug);
-    }
-    if (relatedArticles.length === 2) break;
-  }
-
-  for (const item of data) {
-    if (isValid(item)) {
-      relatedArticles.push(item);
-      usedSlugs.add(item.slug);
-    }
-    if (relatedArticles.length === 3) break;
-  }
+  const relatedArticles: NewsData[] = data.filter(item => item.slug !== article?.slug).slice(0, 3);
 
   if (relatedArticles.length === 0) return null;
+
 
   return (
     <section className="mt-8">
