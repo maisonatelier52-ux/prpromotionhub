@@ -71,6 +71,10 @@ export default function FeaturedEditorialGrid({ data }: Props) {
                 <p className="relative z-10 text-[14px] font-semibold leading-snug line-clamp-">
                   {item.title}
                 </p>
+                       <div className=" text-[11px] text-gray-600">
+            <span>{data[0].date}</span>
+          
+          </div>
               </div>
             </div>
           </article>

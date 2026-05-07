@@ -1,6 +1,28 @@
 [
   {
     "category": "prnews",
+    "title": "Global Power Figures Accused of Using Legal Threats to Silence Media Before Publication",
+    "slug": "global-power-figures-legal-threats-media-publication",
+    "image": "/images/global-power-media-legal-threats.webp",
+    "date": "May. 7, 2026",
+    "shortdescription": "Editors and press freedom advocates are raising concerns over a growing trend in which influential political and business figures use legal pressure to challenge journalists and media organisations before investigative stories are published, sparking debate about press freedom and public accountability.",
+    "description": "Powerful individuals are increasingly using legal threats to intimidate media organizations before investigative stories are even published, according to Wall Street Journal editor Emma Tucker. Speaking at the Truth Tellers journalism summit, Tucker warned that the growing use of “lawfare” poses a serious challenge to press freedom and investigative reporting worldwide. Tucker said media outlets are now facing a wave of legal pressure at the reporting stage itself, with wealthy and influential figures deploying lawsuits and legal notices as part of a broader public relations strategy. “One of the biggest challenges to us now isn’t so much what happens afterwards,” Tucker said. “It’s what happens before you even publish. That is a massive challenge for us.” Her comments come as the Wall Street Journal is being sued by former US President Donald Trump over its reporting related to his alleged relationship with the late convicted sex offender Jeffrey Epstein. Tucker described the case as an example of the increasing costs and risks associated with investigative journalism.“The Trump story epitomised how difficult and expensive these stories are,” she said. “But at least the defamation came after we’d published. These days, increasingly, we’re getting legally challenged before we even get to publication.” According to Tucker, pre-publication legal threats are becoming more common because they generate headlines of their own and can discourage further reporting by other journalists and media organizations. The panel discussion focused on the growing pressures facing investigative journalism in both democratic and authoritarian countries. Participants highlighted concerns over declining press freedom, political hostility toward media, and the impact of artificial intelligence on public trust in news. The latest World Press Freedom Index, compiled by Reporters Without Borders (RSF), found that more than half of the world’s countries now fall into the “difficult” or “very serious” categories for press freedom. The report also noted a dramatic decline in global media freedom over the past two decades, with less than 1% of the world’s population now living in countries classified as having “good” press freedom, compared with around 20% in 2002. Investigative journalist Patrick Radden Keefe, known for exposing the Sackler family’s role in the US opioid crisis, said news organizations are facing a complicated relationship with the Trump era. While journalists seek to hold power accountable, he argued that the Trump administration has also become highly profitable for media companies because of the intense public interest it generates. “On the one hand you want to hold power to account and on the other hand this is the most entertaining show on earth,” Radden Keefe said. “This is a reality TV presidency that has turned politics into entertainment by other means.” He added that many media organizations continue to struggle with balancing serious journalism and the commercial pressures of audience engagement and subscriptions. Also speaking at the summit, Guardian editor-in-chief Kath Viner said the rise of artificial intelligence and growing political hostility toward journalism have created a climate in which “reality itself feels fake.” Viner warned that AI-generated misinformation and declining public trust present major challenges for credible journalism, but also opportunities for established news organizations to demonstrate their value through factual and transparent reporting. “If we stay committed to the truth and not fall into the trap of AI slop, then I think we can differentiate ourselves and show our value,” she said. In a separate speech published on Wednesday, Viner emphasized that “transparently funded journalism in the public interest” must remain central to protecting democratic societies and rebuilding public trust in the media.",
+    "author": {
+      "name": "Allison Carter",
+      "role": "Business & Finance Writer",
+      "bio": "Allison Carter covers business, personal finance, and corporate strategy, helping readers understand markets and economic change.",
+      "image": "/images/allison-carter.webp",
+      "slug": "allison-carter",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
+  {
+    "category": "prnews",
     "title": "The New PR Landscape: 3 Major Effects of the Omnicom‑IPG Acquisition on Clients, Staff and Competitors",
     "slug": "new-pr-landscape-omnicom-ipg-acquisition-effects",
     "image": "/images/omnicom-ipg-acquisition-pr-industry.webp",
@@ -21,7 +43,6 @@
       "medium": ""
     }
   },
-
   {
     "category": "prnews",
     "title": "U.S. Consumer Confidence Fell Again in December",
