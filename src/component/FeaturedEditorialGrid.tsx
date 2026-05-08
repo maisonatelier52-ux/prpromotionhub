@@ -72,7 +72,7 @@ export default function FeaturedEditorialGrid({ data }: Props) {
                   {item.title}
                 </p>
                        <div className=" text-[11px] text-gray-600">
-            <span>{data[0].date}</span>
+            <span>{item.date}</span>
           
           </div>
               </div>
