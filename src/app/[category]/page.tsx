@@ -178,8 +178,11 @@ export default async function CategoryPage({
   // Filter out whatsHotItem from category data to avoid duplication in the main list
   const mainContentData = categoryData.filter(item => item.slug !== whatsHotItem.slug);
 
-  // Get popular news (global, excluding what's hot)
-  const popularNews = allGlobalNews.filter(item => item.slug !== whatsHotItem.slug).slice(0, 4);
+  // Get popular news (global, excluding what's hot and excluding anything already in the category list)
+  const categorySlugs = new Set(mainContentData.map(item => item.slug));
+  const popularNews = allGlobalNews
+    .filter(item => item.slug !== whatsHotItem.slug && !categorySlugs.has(item.slug))
+    .slice(0, 4);
 
   return (
     <>
