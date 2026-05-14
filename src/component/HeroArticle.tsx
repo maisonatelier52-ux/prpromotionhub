@@ -40,7 +40,7 @@ export default function HeroArticle({
         title={data[0].title}
       >
 
-        <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-80">
+        <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-100">
           <Image
             src={data[0].image}
             alt={data[0].title}

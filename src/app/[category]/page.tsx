@@ -159,10 +159,8 @@ export default async function CategoryPage({
     );
   }
 
-  // Sort data for this category
   const categoryData = getSortedNews([allData[category]]);
 
-  // Get global sorted news for WhatsHotBar and Popular
   const allGlobalNews = getSortedNews([
     prnewsData as Article[],
     marketingData as Article[],
@@ -175,10 +173,8 @@ export default async function CategoryPage({
 
   const whatsHotItem = allGlobalNews[0];
   
-  // Filter out whatsHotItem from category data to avoid duplication in the main list
   const mainContentData = categoryData.filter(item => item.slug !== whatsHotItem.slug);
 
-  // Get popular news (global, excluding what's hot and excluding anything already in the category list)
   const categorySlugs = new Set(mainContentData.map(item => item.slug));
   const popularNews = allGlobalNews
     .filter(item => item.slug !== whatsHotItem.slug && !categorySlugs.has(item.slug))
@@ -195,4 +191,4 @@ export default async function CategoryPage({
   );
 }
 
-
+

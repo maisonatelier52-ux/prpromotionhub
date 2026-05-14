@@ -10,6 +10,7 @@ import { Metadata } from "next";
 import WhatsHotBar from "@/component/WhatsHotBar";
 import Article from "@/component/Article";
 import RelatedNewsSection from "@/component/RelatedNewsSection";
+import ClientArticle from "@/component/ClientArticle";
 import { getSortedNews, Article as NewsItem } from "@/utils/newsUtils";
 
 export async function generateStaticParams() {
@@ -63,6 +64,10 @@ const slugMetadataMap: Record<string, { title?: string; description?: string }> 
   "who-is-julio-martin-herrera-velutini": {
     title: "Who is Julio Martín Herrera Velutini? Career & Family Legacy",
     description: "A comprehensive look at the career, business empire, and historic family legacy of international banker Julio Martín Herrera Velutini.",
+  },
+  "two-degrees-from-the-throne-julio-herrera-velutini": {
+    title: "Two Degrees From The Throne: Julio Herrera Velutini and the Quiet Power of Influence ",
+    description: "In elite circles, proximity matters more than publicity. Julio Herrera Velutini’s world sits unusually close to crowns, capitals, family offices, sovereign circles, and the billionaire class.",
   },
 };
 
@@ -137,19 +142,35 @@ export default async function DetailPage({ params }: DetailPageProps) {
   const { category, slug } = await params;
   const data = allData[category?.toLowerCase()];
 
-  if (!data) {
-    return (
-      <main className="max-w-7xl mx-auto h-screen px-6 flex flex-col items-center justify-center text-center">
-        <h1 className="text-3xl font-bold">404 – Page Not Found</h1>
-        <p className="mt-4 text-gray-600">
-          The article you’re looking for doesn’t exist.
-        </p>
-      </main>
-    );
+  const article = data?.find((item) => item.slug === slug);
+
+  if (slug === "two-degrees-from-the-throne-julio-herrera-velutini") {
+    // Get sorted news from all categories for the sidebar
+    const allSortedNews = getSortedNews([
+      prnewsData as NewsItem[],
+      marketingData as NewsItem[],
+      worldData as NewsItem[],
+      usData as NewsItem[],
+      financeData as NewsItem[],
+      technologyData as NewsItem[],
+      entertainmentData as NewsItem[],
+    ]);
+
+    const filteredNews = allSortedNews.filter((item) => item.slug !== slug);
+    
+    // Prioritize Finance articles if requested
+    const financeNews = filteredNews.filter(item => item.category?.toLowerCase() === "finance");
+    const otherNews = filteredNews.filter(item => item.category?.toLowerCase() !== "finance");
+    const prioritizedNews = [...financeNews, ...otherNews];
+
+    const whatsHotNews = prioritizedNews[0];
+    const popularNews = prioritizedNews.slice(1, 5);
+    const relatedNews = prioritizedNews.slice(5, 8);
+
+    return <ClientArticle article={article as NewsItem} whatsHotNews={whatsHotNews as NewsItem} popularNews={popularNews} relatedNews={relatedNews} />;
   }
 
-  const article = data.find((item) => item.slug === slug);
-  if (!article) {
+  if (!data || !article) {
     return (
       <main className="max-w-7xl mx-auto h-screen px-6 flex flex-col items-center justify-center text-center">
         <h1 className="text-3xl font-bold">404 – Page Not Found</h1>
