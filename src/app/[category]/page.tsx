@@ -35,9 +35,7 @@ export async function generateMetadata({
   const { category } = await params;
   
   // Sort data for this category
-  const data = allData[category] 
-    ? getSortedNews([allData[category]]).filter(article => article.slug !== "two-degrees-from-the-throne-julio-herrera-velutini") 
-    : [];
+  const data = allData[category] ? getSortedNews([allData[category]]) : [];
 
   const categoryMeta: Record<string, { title: string; description: string }> = {
     prnews: {
@@ -161,7 +159,7 @@ export default async function CategoryPage({
     );
   }
 
-  const categoryData = getSortedNews([allData[category]]).filter(article => article.slug !== "two-degrees-from-the-throne-julio-herrera-velutini");
+  const categoryData = getSortedNews([allData[category]]);
 
   const allGlobalNews = getSortedNews([
     prnewsData as Article[],
@@ -171,7 +169,7 @@ export default async function CategoryPage({
     financeData as Article[],
     technologyData as Article[],
     entertainmentData as Article[]
-  ]).filter(article => article.slug !== "two-degrees-from-the-throne-julio-herrera-velutini");
+  ]);
 
   const whatsHotItem = allGlobalNews[0];
   

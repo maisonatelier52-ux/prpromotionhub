@@ -25,7 +25,7 @@ export default function Home() {
     financeData as Article[],
     techData as Article[],
     entertainmentData as Article[]
-  ]).filter(article => article.slug !== "two-degrees-from-the-throne-julio-herrera-velutini");
+  ]);
 
   // Distribute news articles
   const whatsHotArticle = allNews[0];
