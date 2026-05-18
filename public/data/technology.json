@@ -1,6 +1,28 @@
 [
   {
     "category": "technology",
+    "title": "Pope Forms AI Study Group Ahead of First Vatican Encyclical",
+    "slug": "pope-ai-study-group-first-vatican-encyclical",
+    "image": "/images/pope-ai-study-group-vatican-encyclical.webp",
+    "date": "May. 18, 2026",
+    "shortdescription": "The Pope has established a special artificial intelligence study group as the Vatican prepares to release his first encyclical, signaling growing Church attention to the ethical and societal impact of emerging technologies.",
+    "description": "Pope Leo XIV has established a Vatican study group on artificial intelligence as he prepares to release his first encyclical, a major papal document expected to focus on the ethical challenges posed by rapidly advancing AI technology. The Vatican announced that the pope created the in-house group due to growing concerns over AI’s accelerating use and its potential effects on humanity, emphasizing the church’s commitment to protecting human dignity and promoting peace. The move comes 135 years after Pope Leo XIII issued the landmark encyclical “Rerum Novarum,” which addressed workers’ rights and social justice during the Industrial Revolution and became the foundation of modern Catholic social teaching. Pope Leo XIV has repeatedly drawn parallels between the Industrial Revolution and the current AI revolution, arguing that artificial intelligence raises similarly profound questions about labor, justice, human identity, and society’s moral responsibilities. Experts say the Catholic Church could become a major voice in global debates over AI ethics. Meghan Sullivan, a philosophy professor at the University of Notre Dame, said the church may serve as “the adult in the room” as governments and technology companies struggle to balance innovation with human values. She noted that the pope is expected to strongly advocate for protecting human dignity in discussions surrounding AI development and regulation. Shortly after his election in 2025, Pope Leo told cardinals that the church must offer its “treasury of social teaching” to help address challenges AI poses to justice, labor, and human dignity. His upcoming encyclical is expected to further develop those ideas and could place the Vatican in conflict with the Trump administration, which has prioritized rapid AI development as a key economic and national security strategy. The United States has resisted international efforts to impose stricter AI regulations and has reduced domestic barriers to AI expansion. The Vatican’s renewed focus on AI comes amid increasing global concern over the technology’s risks and influence. Since the launch of ChatGPT and the rapid rise of generative AI systems, governments and international organizations have debated how to regulate the technology while preserving innovation. The Vatican has sought to contribute to the discussion by promoting ethical principles for AI use in healthcare, education, warfare, and business. Church officials insist AI should complement human intelligence rather than replace it. The Vatican has also expressed concern over the environmental impact of AI development, particularly the large amounts of energy and water consumed by data centers and computing systems. In 2020, the Holy See launched the Rome Call for AI Ethics, a pledge signed by major technology companies including Microsoft, IBM, and Cisco. The initiative promotes principles such as accountability, inclusiveness, impartiality, and privacy in AI systems. The late Pope Francis had also become a prominent advocate for international AI regulation, calling for global agreements to ensure the technology remains guided by compassion, morality, and human oversight. In 2024, Francis addressed the Group of Seven summit and warned against allowing lethal autonomous weapons, often referred to as “killer robots,” to make life-and-death decisions without human control. Pope Leo XIV has continued those concerns while adding his own emphasis on truth, peace, and human relationships. The pope, who studied mathematics and is considered technologically aware, has warned clergy against relying on AI to write sermons. He has also spoken about the dangers of misinformation and deepfakes created by generative AI, arguing that such technology threatens humanity’s ability to recognize truth and reality. In recent speeches, Leo acknowledged AI’s potential benefits in healthcare and scientific research but questioned its broader social consequences. He has also warned about the increasing use of AI-powered weapons in conflicts in Ukraine, Gaza, Lebanon, and Iran, describing the growing relationship between warfare and technology as an “inhuman evolution” that risks leading to greater destruction and dehumanization. ",
+    "author": {
+      "name": "Patrick Rowe",
+      "role": "Senior Correspondent",
+      "bio": "Patrick Rowe covers U.S. national affairs, focusing on government policy, elections, and political trends shaping the country.",
+      "image": "/images/patrick-rowe.webp",
+      "slug": "patrick-rowe",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
+  {
+    "category": "technology",
     "title": "Google’s New Fitbit Air Focuses on 24/7 Health Tracking Without a Screen",
     "slug": "google-fitbit-air-ai-health-tracker",
     "image": "/images/google-fitbit-air-ai-health-tracker.webp",
