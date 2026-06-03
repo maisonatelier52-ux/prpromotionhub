@@ -67,8 +67,9 @@ export default function Footer() {
               Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.
             </p>
           </div>
-          <div className="flex flex-row  gap-7 md:gap-20 mr-40 w-full md:w-auto">
+          <div className="flex flex-col sm:flex-row gap-7 md:gap-20 mr-40 w-full md:w-auto">
             <div className="space-y-2 flex-1">
+              <span className="block text-xs uppercase tracking-widest font-bold text-gray-500 mb-3 select-none">Company</span>
               <Link href="/about" title="about" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 About Us
               </Link>
@@ -82,9 +83,27 @@ export default function Footer() {
               >
                 Terms And Conditions
               </Link>
+              <Link href="/legal" title="legal" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
+                Legal
+              </Link>
+              <Link
+                href="/ownership-and-funding"
+                title="ownership and funding"
+                className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap"
+              >
+                Ownership & Funding
+              </Link>
+              <Link
+                href="/right-of-reply-policy"
+                title="right of reply policy"
+                className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap"
+              >
+                Right of Reply Policy
+              </Link>
             </div>
 
             <div className="space-y-2 flex-1">
+              <span className="block text-xs uppercase tracking-widest font-bold text-gray-500 mb-3 select-none">Policies</span>
               <Link
                 href="/editorial"
                 title="editorial"
@@ -96,8 +115,44 @@ export default function Footer() {
               <Link href="/privacy-policy" title="privacy-policy" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 Privacy Policy
               </Link>
+              <Link
+                href="/source-methodology"
+                title="source-methodology"
+                className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap"
+              >
+                Source Methodology
+              </Link>
+              <Link
+                href="/advertising-and-sponsored-content-policy"
+                title="advertising and sponsored content policy"
+                className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap"
+              >
+                Advertising & Sponsored Policy
+              </Link>
               <Link href="/faq" title="faq" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 Faq
+              </Link>
+            </div>
+
+            <div className="space-y-2 flex-1">
+              <span className="block text-xs uppercase tracking-widest font-bold text-gray-500 mb-3 select-none">Sections</span>
+              <Link href="/finance" title="finance" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
+                Finance
+              </Link>
+              <Link href="/marketing" title="marketing" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
+                Marketing
+              </Link>
+              <Link href="/prnews" title="prnews" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
+                PRNews
+              </Link>
+              <Link href="/technology" title="technology" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
+                Technology
+              </Link>
+              <Link href="/us" title="us" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
+                US News
+              </Link>
+              <Link href="/world" title="world" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
+                World
               </Link>
             </div>
           </div>
