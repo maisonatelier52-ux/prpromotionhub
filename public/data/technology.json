@@ -1,6 +1,28 @@
 [
   {
     "category": "technology",
+    "title": "Canadian Prime Minister Mark Carney Says US AI Restrictions Highlight Risks of Technology Dependence",
+    "slug": "canadian-prime-minister-mark-carney-says-us-ai-restrictions-underscore-risks-of-dependence",
+    "image": "/images/mark-carney-us-ai-restrictions-dependence-canada.webp",
+    "date": "June. 15, 2026",
+    "shortdescription": "Canadian Prime Minister Mark Carney warned that recent US restrictions on artificial intelligence technologies highlight the risks countries face when relying heavily on foreign technology infrastructure, stressing the need for greater domestic innovation and technological sovereignty.",
+    "description": "Canadian Prime Minister Mark Carney has said that recent US restrictions affecting artificial intelligence technologies serve as a reminder of the risks associated with excessive dependence on foreign technology providers and infrastructure. Speaking amid growing global competition in the AI sector, Carney emphasized the importance of building domestic capabilities, strengthening innovation ecosystems, and ensuring that countries maintain strategic control over critical technologies. His comments come as governments around the world increasingly view artificial intelligence as a key driver of economic growth, national security, and future competitiveness. Carney argued that restrictions imposed by the United States on the export and access of advanced AI technologies demonstrate how geopolitical decisions can quickly affect businesses, researchers, and governments that rely heavily on foreign suppliers. The Canadian leader noted that nations must invest in their own research, talent development, computing infrastructure, and technology industries to reduce vulnerabilities and improve resilience in an increasingly complex digital landscape. The remarks reflect broader concerns among policymakers about technological sovereignty, supply chain security, and the concentration of advanced AI capabilities within a small number of countries and companies. Canada has long positioned itself as a leader in artificial intelligence research, with world-renowned institutions and experts contributing to breakthroughs in machine learning and related fields. However, access to cutting-edge chips, cloud computing resources, and advanced AI systems remains heavily influenced by global market dynamics and regulatory decisions made outside the country. Carney stressed that while international collaboration remains essential for innovation, countries should also ensure they possess the domestic capacity needed to support critical industries and protect economic interests. Industry analysts say the debate over AI restrictions highlights the growing intersection of technology policy, trade, national security, and economic strategy. Governments across North America, Europe, and Asia are investing billions of dollars in AI development, semiconductor manufacturing, and digital infrastructure as they seek to secure a competitive advantage. Supporters of stronger domestic investment argue that reducing dependence on foreign technologies can improve resilience against supply disruptions and geopolitical tensions. Critics, however, caution that excessive fragmentation of global technology markets could slow innovation and increase costs. Carney’s comments add to a broader international discussion about how countries can balance openness, cooperation, and self-reliance in the rapidly evolving AI era. As artificial intelligence becomes increasingly integrated into business operations, public services, healthcare, education, defense, and scientific research, policymakers are expected to continue examining ways to strengthen domestic capabilities while maintaining access to global innovation networks. The debate underscores the strategic importance of AI and the challenges governments face in navigating a technology landscape shaped by both economic opportunity and geopolitical competition.",
+    "author": {
+      "name": "Patrick Rowe",
+      "role": "Senior Correspondent",
+      "bio": "Patrick Rowe covers U.S. national affairs, focusing on government policy, elections, and political trends shaping the country.",
+      "image": "/images/patrick-rowe.webp",
+      "slug": "patrick-rowe",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
+  {
+    "category": "technology",
     "title": "Nvidia Bets on AI Personal Computers With New Superchip for Windows Laptops",
     "slug": "nvidia-bets-on-ai-personal-computers-with-new-superchip-for-windows-laptops",
     "image": "/images/nvidia-ai-superchip-windows-laptops.webp",
