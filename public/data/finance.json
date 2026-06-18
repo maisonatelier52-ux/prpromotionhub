@@ -1,6 +1,28 @@
 [
   {
     "category": "finance",
+    "title": "City’s Push for Facial Recognition on Public Buses Sparks Security and Privacy Debate",
+    "slug": "facial-recognition-public-buses-privacy-debate",
+    "image": "/images/facial-recognition-public-buses-security-privacy.webp",
+    "date": "June. 18, 2026",
+    "shortdescription": "A city's proposal to install facial recognition technology on public buses is drawing praise from security advocates and criticism from privacy groups, reigniting debate over surveillance and civil liberties.",
+    "description": "A city’s plan to deploy facial recognition technology across its public bus network has ignited a heated debate over the balance between public safety and personal privacy. Supporters argue that the technology could help law enforcement identify criminal suspects, locate missing persons, and improve passenger security, while critics warn that widespread surveillance risks eroding civil liberties and creating new opportunities for misuse. The proposal would involve installing advanced camera systems on buses capable of scanning faces and comparing them against law enforcement databases. City officials say the initiative is intended to enhance safety on public transportation, deter crime, and assist authorities in responding more quickly to potential threats. Advocates point to growing concerns about assaults, thefts, and other incidents on public transit systems as justification for adopting new security tools. They argue that facial recognition technology has become increasingly sophisticated and can serve as an effective complement to existing surveillance measures. However, privacy advocates, civil rights organizations, and some technology experts have raised significant concerns. Critics argue that facial recognition systems can produce false matches, particularly among women, young people, and racial minorities, potentially leading to wrongful questioning or detention. They also question whether constant biometric monitoring of commuters is a proportionate response to public safety challenges. Opponents contend that collecting and analyzing facial data from thousands of passengers each day creates a surveillance environment that could be vulnerable to abuse or unauthorized access. Questions surrounding data storage, retention policies, and oversight have become central to the debate. Privacy groups are calling for greater transparency regarding how the technology would operate, who would have access to the information, and what safeguards would be in place to prevent misuse. Some have urged city leaders to conduct independent audits and public consultations before moving forward. Legal experts note that the deployment of facial recognition technology in public spaces remains a contentious issue worldwide. Several cities and jurisdictions have imposed restrictions or outright bans on certain uses of facial recognition due to concerns about privacy rights and government overreach, while others have embraced the technology as part of broader public safety initiatives. The debate reflects a broader societal challenge: how to harness emerging technologies while protecting fundamental rights. Supporters believe facial recognition can provide valuable security benefits when used responsibly and with proper oversight. Critics argue that once such systems are established, expanding surveillance capabilities may become difficult to control. As city officials continue evaluating the proposal, residents, policymakers, and advocacy groups are expected to play a key role in shaping the outcome. The decision could serve as an important test case for how communities address the competing demands of security, technological innovation, and personal privacy in an increasingly connected world. Whether the initiative moves forward or faces additional scrutiny, the controversy underscores the growing influence of artificial intelligence and biometric technologies on everyday life and the ongoing debate over where the line should be drawn between public safety and individual freedoms.",
+    "author": {
+      "name": "Staff Reporter",
+      "role": "Business & Economy Desk",
+      "bio": "",
+      "image": "",
+      "slug": "",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
+  {
+    "category": "finance",
     "title": "Tokyo’s Nikkei 225 Surges Past 68,000 for the First Time as Global Markets Rally",
     "slug": "tokyo-nikkei-225-tops-68000-wall-street-record-rally",
     "image": "/images/tokyo-nikkei-225-68000-record-rally.webp",
