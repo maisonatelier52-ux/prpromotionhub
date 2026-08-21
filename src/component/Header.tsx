@@ -6,7 +6,6 @@ import {
   FaInstagram,
   FaFacebookF,
   FaMediumM,
-  FaEnvelope,
   FaReddit,
 } from 'react-icons/fa';
 import { SiSubstack } from 'react-icons/si';
@@ -43,39 +42,35 @@ export default function Header() {
 
       {/* ================= DESKTOP HEADER (UNCHANGED) ================= */}
       <div className="hidden lg:block ">
-        <div className="w-full  py-2 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-          {/* Top info bar */}
-          <div className="flex items-center justify-between py-2 text-sm text-gray-600">
-            <div className="flex items-center gap-4">
-                <span className="text-[14.4px] font-outfit font-bold text-black">
-                  {date}
-                </span>
-
-
-              <span className="h-6 w-px bg-gray-300" />
-
-              <span className="flex gap-3">
-                {categories.map((item, index) => (
-                  <Link key={item.name} href={item.href} title={item.name} className="flex items-center gap-3">
-                    {index !== 0 && (
-                      <span className="w-2 h-2 bg-[#041f4a] inline-block" />
-                    )}
-                    <span className="text-[14px] text-black">{item.name}</span>
-                  </Link>
-                ))}
-              </span>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-2 text-xs text-gray-500 font-semibold border-b border-[#88888888]">
+            <div>
+              {date}
             </div>
 
-            <div className="flex items-center gap-4 text-black">
+            <div className="flex items-center gap-6">
+              {categories.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  title={item.name}
+                  className="hover:underline"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-4 text-black text-sm">
               <Link href="https://x.com/promotionh77500" title="twitter" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="text-lg hover:opacity-70" />
+                <FaTwitter className='text-lg hover:opacity-70' />
               </Link>
               <Link href="https://medium.com/@prpromotionhub" title="medium" target="_blank" rel="noopener noreferrer">
-                <FaMediumM className="text-lg hover:opacity-70" />
+                <FaMediumM className='text-lg hover:opacity-70' />
               </Link>
               <Link href="https://substack.com/@prpromotionhub" title="substack" target="_blank" rel="noopener noreferrer">
-                <SiSubstack className="text-lg hover:opacity-70" />
+                <SiSubstack className='text-lg hover:opacity-70' />
               </Link>
               <Link href="https://www.reddit.com/user/PRPromotionHub3009/" title="reddit" target="_blank" rel="noopener noreferrer">
                 <FaReddit className='text-lg hover:opacity-70' />
@@ -97,17 +92,7 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Newsletter – TRUE END */}
-            <div className="flex items-center justify-end justify-self-end text-[15px] font-semibold text-black">
-              <Link
-                href="#"
-                title='newsletter'
-                className="flex items-center gap-2 rounded-md border border-black px-4 py-1 transition"
-              >
-                <FaEnvelope className="text-sm" />
-                Newsletter
-              </Link>
-            </div>
+            <div />
           </div>
         </div>
         <div className='border-b border-[#88888888]'></div>

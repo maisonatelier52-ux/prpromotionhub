@@ -1,4 +1,3 @@
-import SubscribeNewsletter from "./SubscribeNewsletter";
 import CategorySectionHeader from "./CategorySectionHeader";
 import EditorialGrid2x2 from "./EditorialGrid2x2";
 
@@ -32,25 +31,12 @@ interface Props {
 
 export default function TravelSectionWithSubscribe({ data }: Props) {
   return (
-    <section className="mx-auto mt-5">
-      <div className="flex flex-col lg:flex-row gap-15">
-
-        {/* LEFT: Subscribe */}
-        <div className="w-full lg:w-70">
-          <div className="sticky top-10">
-            <SubscribeNewsletter />
-          </div>
-        </div>
-
-        {/* RIGHT: Category */}
-        <div className="w-full">
-          <CategorySectionHeader title="Financial Highlights" />
-          <div className="mt-8">
-            <EditorialGrid2x2
-              data={[data[0], data[1], data[2], data[3]]}
-            />
-          </div>
-        </div>
+    <section className="mx-auto mt-8">
+      <CategorySectionHeader title="Financial Highlights" />
+      <div className="mt-8">
+        <EditorialGrid2x2
+          data={[data[0], data[1], data[2], data[3]]}
+        />
       </div>
     </section>
   );
