@@ -1,6 +1,28 @@
 [
   {
     "category": "technology",
+    "title": "‘Aura Farming’: The Video Game-Inspired Youth Trend Sweeping Latin America",
+    "slug": "aura-farming-video-game-inspired-youth-trend-sweeping-latin-america",
+    "image": "/images/aura-farming-youth-trend-latin-america.webp",
+    "date": "September. 2, 2026",
+    "shortdescription": "A new youth trend called ‘aura farming’ is spreading across Latin America, blending video game culture, social media creativity, and personal branding as young people turn everyday moments into carefully designed displays of confidence and style.",
+    "description": "A new digital culture phenomenon known as ‘aura farming’ is gaining popularity among young people across Latin America, combining elements of video game culture, social media performance, and modern self-expression. Inspired by concepts found in online gaming communities, the trend focuses on creating moments that project confidence, charisma, and a strong personal identity. What began as a phrase connected to gaming has evolved into a broader internet movement where users intentionally create situations designed to increase their perceived social presence or ‘aura’ among online audiences. The trend reflects how younger generations are increasingly influenced by digital platforms, gaming language, and creator culture when shaping their identities. Instead of simply sharing everyday experiences online, participants create highly visual and memorable moments that appear effortless, stylish, or impressive. From carefully planned videos in public spaces to dramatic entrances, fashion choices, and unusual social interactions, aura farming has become a way for young people to build recognition and attention in digital communities. The rise of the trend highlights the growing connection between gaming concepts and real-world behavior, showing how internet culture continues to influence communication, entertainment, and social identity. The concept of aura farming comes from the language of video games, where players often use the word ‘aura’ to describe a character’s presence, reputation, or ability to stand out. In gaming communities, a character with a powerful aura is usually seen as impressive, rare, or dominant. The idea has gradually moved beyond virtual worlds and entered everyday online culture. Young users began applying the term to people who appear confident, creative, or naturally influential. Unlike traditional forms of popularity, aura farming is not only about having achievements or social status. It focuses on creating moments that make someone appear memorable. The trend encourages users to think about how they present themselves, how they move through public spaces, and how their actions are perceived by others. Social media platforms have accelerated this behavior because short-form videos reward creativity, uniqueness, and emotional impact. A simple moment can become widely shared if it creates a strong impression or tells a compelling story. As a result, many young creators are intentionally designing experiences that feel cinematic, humorous, or unexpected.",
+    "author": {
+      "name": "Patrick Rowe",
+      "role": "Senior Correspondent",
+      "bio": "Patrick Rowe covers technology, digital culture, social media trends, artificial intelligence, and emerging online movements shaping modern society.",
+      "image": "/images/patrick-rowe.webp",
+      "slug": "patrick-rowe",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
+  {
+    "category": "technology",
     "title": "OpenAI Launches GPT-Live Voice Models as AI Moves Toward Real-Time Conversations",
     "slug": "openai-gpt-live-voice-models-real-time-ai-conversations-2026",
     "image": "/images/openai-gpt-live-voice-models-real-time-ai-conversations-2026.webp",
