@@ -4,23 +4,50 @@ import { parseDate, toISODate, type Article } from '@/utils/newsUtils';
 
 function dateLabel(value: string) {
   const parsed = parseDate(value);
-  return Number.isNaN(parsed.getTime()) ? value : parsed.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+  return Number.isNaN(parsed.getTime())
+    ? value
+    : parsed.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 }
 
 export default function ArticleHeader({ article }: { article: Article }) {
-  const category = CATEGORY_LABELS[article.category];
+  const category = CATEGORY_LABELS[article.category] ?? article.category;
   const readingMinutes = Math.max(1, Math.ceil(article.description.split(/\s+/).length / 220));
+
   return (
-    <header className="mx-auto mt-5">
-      <div className="flex flex-wrap items-center gap-3 mb-4 text-sm">
-        <Link href={`/${article.category}`} className="bg-[#041f4a] capitalize text-white font-semibold px-3 py-1">{category}</Link>
-        <span className="text-slate-600">Blog post{article.contentType && <> · {article.contentType === "News and analysis" ? "Commentary" : article.contentType}</>}</span>
+    <header className="mx-auto mt-4 mb-3">
+      {/* Category Pill */}
+      <div className="flex flex-wrap items-center gap-2.5 mb-3 text-xs sm:text-sm">
+        <Link
+          href={`/${article.category}`}
+          className="bg-[#041f4a] hover:bg-blue-900 transition-colors capitalize text-white font-semibold px-2.5 py-0.5 rounded-sm shadow-xs"
+        >
+          {category}
+        </Link>
       </div>
-      <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1]">{article.title}</h1>
-      <p className="mt-2 text-[15px] md:text-[18px] text-black font-light tracking-tight leading-snug max-w-6xl">{article.shortdescription}</p>
-      <div className="mt-2 text-[12px] md:text-[14px] text-gray-600 leading-6">
-        <p className="font-semibold text-[#041f4a]">{article.author.name}</p>
-        <p>Published <time dateTime={toISODate(article.date)}>{dateLabel(article.date)}</time> · {readingMinutes} min read</p>
+
+      {/* Main Title */}
+      <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight leading-[1.12] text-slate-950">
+        {article.title}
+      </h1>
+
+      {/* Subtitle / Deck — Minimal & Unique Design with subtle left accent & glass tone */}
+      <div className="mt-3.5 mb-3.5 max-w-4xl group">
+        <div className="relative pl-3.5 py-1 border-l-2 border-[#041f4a] group-hover:border-blue-600 transition-colors duration-300 bg-gradient-to-r from-slate-100/70 via-slate-50/30 to-transparent backdrop-blur-xs rounded-r-md">
+          <p className="text-[14px] sm:text-[15.5px] text-slate-600 font-normal leading-relaxed tracking-tight">
+            {article.shortdescription}
+          </p>
+        </div>
+      </div>
+
+      {/* Author & Publication Meta */}
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs sm:text-[13px] text-slate-500 pt-0.5 pb-1">
+        <span className="font-semibold text-[#041f4a]">{article.author.name}</span>
+        <span className="text-slate-300">·</span>
+        <p>
+          Published <time dateTime={toISODate(article.date)}>{dateLabel(article.date)}</time>
+        </p>
+        <span className="text-slate-300">·</span>
+        <span>{readingMinutes} min read</span>
       </div>
     </header>
   );

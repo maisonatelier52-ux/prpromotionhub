@@ -15,8 +15,6 @@ body {
   font-family: var(--font-system-helvetica);
 }
 
-
-
 .article-copy { max-width: 72ch; font-size: 1.125rem; line-height: 1.7; color: #172537; overflow-wrap: anywhere; }
 .article-copy h2 { font-size: 1.5rem; font-weight: 700; line-height: 1.3; margin: 1.75rem 0 0.75rem; color: #041f4a; }
 .article-copy p { margin-bottom: 0.5rem; }
@@ -35,3 +33,270 @@ body {
 .article-sources li { scroll-margin-top: 6rem; padding: .5rem 0; }
 .article-sources li p { color: #475569; margin: .25rem 0 0; }
 .article-editorial-footer { border-top: 1px solid #cad6e3; padding-top: 1.25rem; margin-top: 2rem; color: #475569; }
+
+/* ═════════════════════════════════════════════════════════
+   Glassy Image & Minimal Animated Detail Page Styles
+   ═════════════════════════════════════════════════════════ */
+
+/* Glass Frame for Article Images */
+.glass-image-wrapper {
+  position: relative;
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 10px 30px -5px rgba(0, 20, 50, 0.07),
+    0 0 0 1px rgba(226, 232, 240, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.glass-image-wrapper:hover {
+  box-shadow:
+    0 20px 40px -10px rgba(0, 30, 80, 0.12),
+    0 0 0 1px rgba(147, 197, 253, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+}
+
+/* Ambient backlight behind the glass frame */
+.glass-ambient-glow {
+  position: absolute;
+  inset: -8px;
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.12) 0%, rgba(99, 102, 241, 0.06) 50%, transparent 75%);
+  border-radius: 1.5rem;
+  filter: blur(16px);
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Diagonal glass gleam animation across image */
+.glass-gleam {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+  animation: glassShimmer 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes glassShimmer {
+  0%, 70% {
+    left: -100%;
+  }
+  85%, 100% {
+    left: 200%;
+  }
+}
+
+/* Minimal Article Container with fade-in animation */
+.hv-article {
+  max-width: 68ch;
+  font-size: 0.8875rem; /* ~14.2px, crisp and reduced size */
+  line-height: 1.8;
+  color: #334155;
+  overflow-wrap: anywhere;
+  animation: fadeInArticle 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeInArticle {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hv-article p {
+  margin-bottom: 0.85rem;
+}
+
+.hv-article strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Minimal Animated Subtitle Design */
+.hv-subtitle-group {
+  margin: 2.25rem 0 0.85rem;
+  display: block;
+}
+
+.hv-subtitle-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  cursor: default;
+}
+
+.hv-subtitle-pill {
+  width: 3.5px;
+  height: 16px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #041f4a 0%, #2563eb 100%);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.2);
+}
+
+.hv-subtitle-group:hover .hv-subtitle-pill {
+  height: 20px;
+  background: linear-gradient(180deg, #2563eb 0%, #38bdf8 100%);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
+
+.hv-subtitle-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.hv-subtitle-group:hover .hv-subtitle-title {
+  color: #041f4a;
+}
+
+.hv-subtitle-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(203, 213, 225, 0.7) 0%, rgba(226, 232, 240, 0.3) 60%, transparent 100%);
+  margin-top: 0.45rem;
+  transition: opacity 0.3s ease;
+}
+
+.hv-subtitle-group:hover .hv-subtitle-divider {
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.4) 0%, rgba(203, 213, 225, 0.4) 60%, transparent 100%);
+}
+
+/* Minimal Opening Hook Card */
+.hv-hook-card {
+  margin: 0.5rem 0 1.5rem;
+  padding: 0.85rem 1.15rem;
+  background: rgba(248, 250, 252, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-left: 3px solid #041f4a;
+  border-radius: 0 10px 10px 0;
+  transition: all 0.3s ease;
+}
+
+.hv-hook-card:hover {
+  border-left-color: #2563eb;
+  background: rgba(248, 250, 252, 0.95);
+  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.04);
+}
+
+.hv-hook-card p {
+  margin-bottom: 0.25rem !important;
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.hv-hook-card p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Minimal Elegant Pull Quote */
+.hv-quote {
+  margin: 1.5rem 0;
+  padding: 0.35rem 0 0.35rem 1.15rem;
+  border-left: 2px solid #cbd5e1;
+  font-style: italic;
+  font-size: 0.925rem;
+  color: #1e293b;
+  line-height: 1.65;
+  transition: all 0.3s ease;
+}
+
+.hv-quote:hover {
+  border-left-color: #2563eb;
+  padding-left: 1.35rem;
+  color: #0f172a;
+}
+
+/* Minimal Contrast Spotlight Pill */
+.hv-spotlight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  background: rgba(241, 245, 249, 0.8);
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.hv-spotlight-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: #2563eb;
+}
+
+/* Minimal Ending Reflection Card */
+.hv-reflection-card {
+  margin-top: 2rem;
+  padding: 1.25rem 1.35rem;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.6) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.hv-reflection-card:hover {
+  border-color: rgba(203, 213, 225, 1);
+  box-shadow: 0 6px 24px -4px rgba(0, 0, 0, 0.06);
+}
+
+.hv-reflection-card p {
+  font-size: 0.8875rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.hv-reflection-card p:last-child {
+  margin-bottom: 0;
+}
+
+.hv-reflection-lead {
+  font-size: 1.05rem !important;
+  font-weight: 700;
+  color: #0f172a !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.hv-reflection-final {
+  margin-top: 0.75rem !important;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  font-weight: 600;
+  color: #041f4a !important;
+  font-style: italic;
+}
