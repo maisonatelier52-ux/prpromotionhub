@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 interface SocialItem {
   id: string;
@@ -13,36 +12,6 @@ interface SocialFollowListProps {
   items: SocialItem[];
 }
 
-const dummyData: SocialItem[] = [
-  {
-    id: '1',
-    label: 'Facebook',
-    count: '1,200',
-    action: 'Follow',
-    icon: <FaFacebook />,
-  },
-  {
-    id: '2',
-    label: 'Twitter',
-    count: '980',
-    action: 'Follow',
-    icon: <FaTwitter />,
-  },
-  {
-    id: '3',
-    label: 'Instagram',
-    count: '2,500',
-    action: 'Follow',
-    icon: <FaInstagram />,
-  },
-  {
-    id: '4',
-    label: 'LinkedIn',
-    count: '1,800',
-    action: 'Follow',
-    icon: <FaLinkedin />,
-  },
-];
 export default function   SocialFollowList({ items }: SocialFollowListProps) {
   return (
     <div className="w-full space-y-6">
@@ -71,7 +40,3 @@ export default function   SocialFollowList({ items }: SocialFollowListProps) {
     </div>
   );
 }
-
-
-
-

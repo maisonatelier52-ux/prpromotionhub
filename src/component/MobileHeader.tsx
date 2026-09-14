@@ -1,18 +1,10 @@
 "use client"
 import Link from 'next/link';
 import { useState } from 'react';
+import { CATEGORY_LABELS } from '@/utils/siteConfig';
 import MobileSidebar from './MobileSidebar';
 
-const categories = [
-  { name: 'PR News', link: '/prnews' },
-  { name: 'Finance', link: '/finance' },
-  { name: 'World', link: '/world' },
-  { name: 'US', link: '/us' },
-  { name: 'Marketing', link: '/marketing' },
-  { name: 'Technology', link: '/technology' },
-  { name: 'Entertainment', link: '/entertainment' },
-
-];
+const categories = Object.keys(CATEGORY_LABELS).map(slug => ({ link: "/" + slug }));
 
 export default function MobileHeader() {
   const [open, setOpen] = useState(false);
@@ -30,7 +22,7 @@ export default function MobileHeader() {
           <button
             onClick={() => setOpen(!open)}
             className="relative w-8 h-8 flex items-center justify-center"
-            aria-label="Menu"
+            aria-label="Blog menu" aria-expanded={open}
           >
             {!open ? (
               <div className="flex flex-col items-end gap-1">
@@ -50,7 +42,7 @@ export default function MobileHeader() {
         <div className="flex gap-6 px-4 py-2 text-[15px] font-bold overflow-x-auto whitespace-nowrap border-t border-white/10">
           {categories.map((item) => (
             <Link key={item.link} href={item.link}>
-              {item.name.toUpperCase()}
+              {CATEGORY_LABELS[item.link.slice(1)]}
             </Link>
           ))}
         </div>

@@ -6,6 +6,7 @@ interface Author {
   role: string;
   bio: string;
   image: string;
+  imageAlt?: string;
   email: string;
   twitter: string;
   facebook: string;
@@ -16,6 +17,7 @@ interface Author {
 
 interface HeroArticleProps {
   image: string;
+  imageAlt?: string;
   category: string;
   title: string;
   author: Author;
@@ -26,6 +28,7 @@ interface HeroArticleProps {
 
 export default function SecondArticle({
   image,
+  imageAlt,
   category,
   title,
   author,
@@ -44,7 +47,7 @@ export default function SecondArticle({
      <div className="relative w-full h-60 sm:h-84 md:h-94 lg:h-110">
             <Image
               src={image}
-              alt={title}
+              alt={imageAlt ?? title}
                    title={title}
               fill
               priority

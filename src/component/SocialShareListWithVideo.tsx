@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { SITE_URL } from "@/utils/siteConfig";
 import {
   FiShare,
   FiMoreHorizontal,
@@ -11,11 +12,7 @@ import { HiLink } from "react-icons/hi2";
 import { SiX } from "react-icons/si";
 
 export default function SocialShareListWithVideo({ title }: { title: string }) {
-  const [url, setUrl] = useState("");
-
-  useEffect(() => {
-    setUrl(window.location.href);
-  }, []);
+  const url = SITE_URL + usePathname();
 
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);

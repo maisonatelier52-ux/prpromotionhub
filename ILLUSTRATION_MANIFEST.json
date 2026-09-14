@@ -1,0 +1,716 @@
+[
+  {
+    "key": "entertainment-00",
+    "image": "/images/illustrations/entertainment-00.webp",
+    "alt": "Illustration of a game controller, open game box with a download voucher, console and storage drive.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. Create one landscape 16:9 editorial raster illustration for a news explainer about GTA VI console preorders, boxed download codes, editions and storage. Scene: a game controller beside an open unbranded game box holding a plain download voucher, with a small console and storage drive behind it. Clear recognizable objects in a balanced still life. Simple flat editorial drawing, crisp substantial shapes, navy and teal with warm ochre accents on a warm very light background, subtle soft shadows, minimal texture, normal visual quality, suitable for 960x540 web use. No written words, lettering, numbers, brand marks, watermark or recognizable game characters. Clearly an illustration, not a photograph or mock evidence of news.",
+    "mode": "built-in image_gen",
+    "bytes": 25012,
+    "width": 960,
+    "height": 540,
+    "sha256": "caf99a570d95967c07594b90bf6c504ab45af9ae331cd434434e52d0c1b8cb84",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "GTA VI preorders: announced prices, editions and the download-code detail"
+  },
+  {
+    "key": "entertainment-01",
+    "image": "/images/illustrations/entertainment-01.webp",
+    "alt": "Illustration of toys beside cinema tickets and a projector.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A toy cowboy hat, plush dinosaur and small toy rocket beside cinema tickets and a projector; a conceptual toy-film box-office illustration, no characters, branded film artwork or sales figures.",
+    "mode": "built-in image_gen",
+    "bytes": 26644,
+    "width": 960,
+    "height": 540,
+    "sha256": "8264938bc8e5803c947100cf9ddc56ae3adab479c58d132d1d52215e02eb4e9e",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Disney estimates a $160 million domestic opening for Toy Story 5"
+  },
+  {
+    "key": "entertainment-02",
+    "image": "/images/illustrations/entertainment-02.webp",
+    "alt": "Illustration of a film reel, closed script and correspondence envelopes.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A film reel, a closed script and two formal correspondence envelopes laid on an editing desk; conceptual resolution of a film consent dispute, no actor likeness or nude imagery.",
+    "mode": "built-in image_gen",
+    "bytes": 27554,
+    "width": 960,
+    "height": 540,
+    "sha256": "d214b187465cb37ddd73e63a15cbe801747cd0b824f47a2f4cac8db949630237",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Wenders and Kinski announce resolution over disputed Wrong Move scene"
+  },
+  {
+    "key": "finance-00",
+    "image": "/images/illustrations/finance-00.webp",
+    "alt": "Illustration of a microchip beside a market screen and coin stack.",
+    "caption": "AI-generated illustration with conceptual chart shapes.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A computer microchip beside a desktop financial screen with simple abstract rising lines and a small coin stack; no real statistics or numbers.",
+    "mode": "built-in image_gen",
+    "bytes": 17574,
+    "width": 960,
+    "height": 540,
+    "sha256": "aaa54724f8a75f00a38bef196e67062736828451ac0823680628917ecbcadbff",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "AI stocks lift Wall Street on July 21 as the rebound continues"
+  },
+  {
+    "key": "finance-01",
+    "image": "/images/illustrations/finance-01.webp",
+    "alt": "Illustration of a city bus beside a facial-scan symbol and privacy lock.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A public city bus beside a simplified facial-scan frame on a separate oversight clipboard, with a small privacy lock; no surveillance of identifiable people.",
+    "mode": "built-in image_gen",
+    "bytes": 24174,
+    "width": 960,
+    "height": 540,
+    "sha256": "63d513197cead4d2b8145bc1a790779d48ee58819d9120e4fb9a7330b7efa963",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Kansas City’s bus facial-recognition plan raises questions about oversight"
+  },
+  {
+    "key": "finance-02",
+    "image": "/images/illustrations/finance-02.webp",
+    "alt": "Illustration of Tokyo buildings beside a microchip and rising market line.",
+    "caption": "AI-generated illustration with conceptual chart shapes.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A Tokyo skyline with a microchip and an abstract rising market chart in the foreground; no numeric record, real data or company logos.",
+    "mode": "built-in image_gen",
+    "bytes": 43932,
+    "width": 960,
+    "height": 540,
+    "sha256": "4c5dba679dca3577a1a9a27b9967cf4254dddd46bfa6cc36ac90a5682f44f6ed",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Nikkei closes above 68,000 on June 3 as AI-linked shares advance"
+  },
+  {
+    "key": "marketing-00",
+    "image": "/images/illustrations/marketing-00.webp",
+    "alt": "Illustration of oil barrels beside a market screen and city skyline.",
+    "caption": "AI-generated illustration with conceptual chart shapes.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre accents, light ivory background, restrained detail and minimal texture, normal quality readable at 960x540. Clearly an illustration, no photo realism, no text, numbers, logos, watermark or frame. Subject: Oil barrels beside a laptop showing abstract unlabeled market lines, with a simplified East Asian city skyline behind them.",
+    "mode": "built-in image_gen",
+    "bytes": 21772,
+    "width": 960,
+    "height": 540,
+    "sha256": "015e66a1839e32963ebcb96ced7e257a8d57eb13cb97fed24859d9bd4a4c0bec",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Asian shares advance as Brent eases toward $95: the September 3 market snapshot"
+  },
+  {
+    "key": "marketing-01",
+    "image": "/images/illustrations/marketing-01.webp",
+    "alt": "Illustration of a microchip, falling market line and oil barrel.",
+    "caption": "AI-generated illustration with conceptual chart shapes.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A microchip beside a market screen with an abstract falling line and oil barrel, suggesting interconnected technology and energy markets; no numeric data.",
+    "mode": "built-in image_gen",
+    "bytes": 21118,
+    "width": 960,
+    "height": 540,
+    "sha256": "73e44fe5ced5bc89a3c12a60fda2ae398e3a28e3706a79bb0d899f661c8db4ac",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "AI stock losses spread across markets: how to read the June 24 sell-off"
+  },
+  {
+    "key": "marketing-02",
+    "image": "/images/illustrations/marketing-02.webp",
+    "alt": "Illustration of a market screen and holiday calendar beside a closed doorway.",
+    "caption": "AI-generated illustration with conceptual chart shapes.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: An Asian market trading screen dimmed beside a blank holiday calendar and a closed exchange doorway; abstract muted price lines without numbers.",
+    "mode": "built-in image_gen",
+    "bytes": 24314,
+    "width": 960,
+    "height": 540,
+    "sha256": "d38b8d93f939870ef578329174278b274e1d3690b785ccd03961c309347258ef",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "June 19 Asian market retreat came during holiday closures"
+  },
+  {
+    "key": "marketing-03",
+    "image": "/images/illustrations/marketing-03.webp",
+    "alt": "Illustration of a bank and small storefront beside a rising market line.",
+    "caption": "AI-generated illustration with conceptual chart shapes.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A bank building and small local storefront beside a financial screen with an abstract rising line; balanced composition, no statistics, numbers or logos.",
+    "mode": "built-in image_gen",
+    "bytes": 28056,
+    "width": 960,
+    "height": 540,
+    "sha256": "9d9d03d17cdb405e7f3964dcb9b0a8dc7c428c5a001ee45ec8ad439acb25cb61",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Dow reaches a record as banks and smaller stocks lead the June 4 rally"
+  },
+  {
+    "key": "marketing-04",
+    "image": "/images/illustrations/marketing-04.webp",
+    "alt": "Illustration of diplomatic chairs, an agreement paper, oil barrels and a ship.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: Two diplomatic chairs and a plain agreement paper beside oil barrels and a cargo ship visible through a window; conceptual trade and peace expectations, no leaders or claimed completed deal.",
+    "mode": "built-in image_gen",
+    "bytes": 24338,
+    "width": 960,
+    "height": 540,
+    "sha256": "c3aafd5efef3fe9fd8c511309904120879f5d32c77676801a9ca0b55162a7d66",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "May 29 market gains reflected hopes for an Iran deal, with supply risks unresolved"
+  },
+  {
+    "key": "prnews-00",
+    "image": "/images/illustrations/prnews-00.webp",
+    "alt": "Illustration of a hand holding an autumn leaf beside a calendar, envelope and blank planning sheet.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. Asset type: featured news blog illustration, landscape 16:9. Primary request: seasonal public relations planning centered on an audience need. Subject: a human hand at a tidy planning desk arranges an autumn leaf, a small blank calendar with a single ochre date circle, a pencil and a blank campaign brief; an envelope with a leaf-shaped insert connects the plan to the reader. Actual recognizable objects and a cohesive scene. Style: polished simple flat editorial raster illustration, crisp navy outlines, large navy and muted teal shapes, warm ochre accents on a light warm ivory background. Spacious central composition, restrained detail, readable at 960x540. Normal visual quality. No typography, numbers, logos, watermark, gradients, photographic texture, generic abstract blobs, tiny clutter, or decorative border.",
+    "mode": "built-in image_gen",
+    "bytes": 33608,
+    "width": 960,
+    "height": 540,
+    "sha256": "3ad1ddddfe179475c27c91328917c56716fd9c2c53bd92462682ed8f6782c5e4",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Plan seasonal PR around an audience need, not just a calendar date"
+  },
+  {
+    "key": "prnews-01",
+    "image": "/images/illustrations/prnews-01.webp",
+    "alt": "Illustration of an empty event stage, microphone and planning clipboard.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: An empty outdoor stage with a microphone stand and a folded event program beside a planning clipboard; no performers, names, flags or claims about a real performance.",
+    "mode": "built-in image_gen",
+    "bytes": 46460,
+    "width": 960,
+    "height": 540,
+    "sha256": "83aad6466f69471680abbb5d921d275b2f6c2dbbd17a3ad7f088c2059831daca",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Freedom 250 performer withdrawals show why event positioning must be explicit"
+  },
+  {
+    "key": "sponsor",
+    "image": "/images/illustrations/sponsor.webp",
+    "alt": "Illustration of a document, laptop and message envelopes.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A press release document beside a laptop, with small message envelopes suggesting distribution; no words, product claims, metrics, logos or endorsements.",
+    "mode": "built-in image_gen",
+    "bytes": 17560,
+    "width": 960,
+    "height": 540,
+    "sha256": "cfe8987e48a1480e8d02a015629427616537e7923293c92b5b681dc13e861582",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Advertisement illustration"
+  },
+  {
+    "key": "sponsor-mirrorstandard",
+    "image": "/images/illustrations/sponsor-mirrorstandard.webp",
+    "alt": "Illustration of a folded newspaper, tablet and coffee cup.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A folded newspaper beside a reading tablet on a desk with a cup of coffee; no words, logos or actual headlines.",
+    "mode": "built-in image_gen",
+    "bytes": 32220,
+    "width": 960,
+    "height": 540,
+    "sha256": "7d8e50c4d57153ec6038c767b760f9cb1ecb2318f68f28e17a5ea85a1282789d",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Advertisement illustration"
+  },
+  {
+    "key": "technology-00",
+    "image": "/images/illustrations/technology-00.webp",
+    "alt": "Illustration of a dancer performing in a plaza as another person watches.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre accents, light ivory background, restrained detail and minimal texture, normal quality readable at 960x540. Clearly an illustration, no photo realism, no text, numbers, logos, watermark or frame. Subject: A young adult performing a confident dance pose in a public plaza, with another adult watching; casual modest clothing, no real person's likeness.",
+    "mode": "built-in image_gen",
+    "bytes": 31508,
+    "width": 960,
+    "height": 540,
+    "sha256": "37de07b351f88918a4d12f1b85b134c12f3726970561f53b47f23b6e99ed1999",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "How ‘aura farming’ moved from online slang to public dance contests"
+  },
+  {
+    "key": "technology-01",
+    "image": "/images/illustrations/technology-01.webp",
+    "alt": "Illustration of a microphone, speaker and laptop linked by sound waves.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A tabletop microphone and speaker facing a laptop, with two simple flowing sound-wave ribbons suggesting simultaneous listening and speaking; no text or product logos.",
+    "mode": "built-in image_gen",
+    "bytes": 24808,
+    "width": 960,
+    "height": 540,
+    "sha256": "5cf63b87f158c1916c5649932b631f11a4bed072db9af5f1d8210c36468c23b5",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "OpenAI’s GPT-Live brings simultaneous listening and speaking to ChatGPT Voice"
+  },
+  {
+    "key": "technology-02",
+    "image": "/images/illustrations/technology-02.webp",
+    "alt": "Illustration of a foldable-phone concept beside shipping boxes and a calendar.",
+    "caption": "AI-generated illustration of a generic foldable-phone concept.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A generic hinged foldable smartphone partly open beside a small stack of shipping boxes and a blank planning calendar; speculative concept without brand marks or claimed product details.",
+    "mode": "built-in image_gen",
+    "bytes": 22060,
+    "width": 960,
+    "height": 540,
+    "sha256": "694f86d4e33fd57b288dfd74aa6ef391cbe5671108caf831ba0c0dc095385d66",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Foldable iPhone supply forecast: what Ming-Chi Kuo actually predicted"
+  },
+  {
+    "key": "technology-03",
+    "image": "/images/illustrations/technology-03.webp",
+    "alt": "Illustration of a memoir book, case folder and legal scales.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A closed memoir book beside an arbitration case folder and scales of justice on a desk; no faces, accusation symbols or writing.",
+    "mode": "built-in image_gen",
+    "bytes": 24766,
+    "width": 960,
+    "height": 540,
+    "sha256": "640bcda18f74e7911adf76fbaf9e190b3b12fea9a420bbc87eefdd5c86ba6615",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Wynn-Williams and Meta: what the September arbitration ruling decided"
+  },
+  {
+    "key": "technology-04",
+    "image": "/images/illustrations/technology-04.webp",
+    "alt": "Illustration of a laptop shield, software patch and magnifying glass.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A laptop with a protective shield and a small patch being fitted into a software window, beside a magnifying glass; no readable code or company logos.",
+    "mode": "built-in image_gen",
+    "bytes": 14934,
+    "width": 960,
+    "height": 540,
+    "sha256": "09f61febf2cb14699532a3e823741ba156bdba567568ade6cb916f0ecd9d8329",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "SoftBank announces AI-assisted vulnerability assessment and remediation service"
+  },
+  {
+    "key": "technology-05",
+    "image": "/images/illustrations/technology-05.webp",
+    "alt": "Illustration of a maple leaf, connected data centers and a cable.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A Canadian maple leaf beside connected data centers, with an open plug and cable showing technology dependency; no politicians, words or branding.",
+    "mode": "built-in image_gen",
+    "bytes": 19590,
+    "width": 960,
+    "height": 540,
+    "sha256": "427ac03baa787d522ee7c22fe73ff40272afb1cdaeac1ddea1ad099b4596be8c",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Carney’s AI warning puts technology dependence under scrutiny"
+  },
+  {
+    "key": "technology-06",
+    "image": "/images/illustrations/technology-06.webp",
+    "alt": "Illustration of a desktop computer, processing chip, monitor and keyboard.",
+    "caption": "AI-generated illustration of a generic desktop computer.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: An open desktop computer tower showing a large AI processing chip, beside a monitor and keyboard; generic personal computer, no invented product branding or technical labels.",
+    "mode": "built-in image_gen",
+    "bytes": 25940,
+    "width": 960,
+    "height": 540,
+    "sha256": "06a38c48bce7f3823130fa618c3f4d553b02a397160088259fa5ef9f69094827",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Nvidia’s RTX Spark proposal brings local AI workloads to Windows PCs"
+  },
+  {
+    "key": "us-00",
+    "image": "/images/illustrations/us-00.webp",
+    "alt": "Illustration of a flight recorder and flight-data document with a cargo airplane in the background.",
+    "caption": "AI-generated illustration with conceptual chart shapes.",
+    "prompt": "Use case: illustration-story. Create one landscape 16:9 simple editorial raster illustration for a sourced blog explainer about a cargo-plane crash investigation. Scene: an orange flight recorder and a plain flight-data document on a desk, with a small intact cargo airplane silhouette in the background. Clearly conceptual artwork, no actual wreck or victims or people. Navy and muted teal with warm ochre on ivory, crisp flat forms, minimal texture, normal quality readable at 960x540. No text, numbers, logos, watermark or documentary appearance.",
+    "mode": "built-in image_gen",
+    "bytes": 25360,
+    "width": 960,
+    "height": 540,
+    "sha256": "2f264a20ecc8de8347e39c33575c935a860e295869ee272f2eb4cdfc99aba9f8",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Miami cargo-plane crash: five deaths confirmed as NTSB examines flight data"
+  },
+  {
+    "key": "us-01",
+    "image": "/images/illustrations/us-01.webp",
+    "alt": "Illustration of a diesel pump, delivery truck, parcels and grocery basket.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre accents, light ivory background, restrained detail and minimal texture, normal quality readable at 960x540. Clearly an illustration, no photo realism, no text, numbers, logos, watermark or frame. Subject: A diesel fuel pump beside a delivery truck, with stacked parcels and a grocery basket showing the everyday uses of transport.",
+    "mode": "built-in image_gen",
+    "bytes": 23068,
+    "width": 960,
+    "height": 540,
+    "sha256": "70a15b4708df9dd90ab1054b7e5417e0c9847be03c056d14ea46f07d2b872b54",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "U.S. diesel reaches a nominal record of $5.85 a gallon: where the cost pressure travels"
+  },
+  {
+    "key": "us-02",
+    "image": "/images/illustrations/us-02.webp",
+    "alt": "Illustration of rescue equipment beside a canyon trail and river.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A rescue rope and life jacket beside a canyon trail, with a winding river and red sandstone canyon in the distance; calm conceptual scene, no people in danger.",
+    "mode": "built-in image_gen",
+    "bytes": 62780,
+    "width": 960,
+    "height": 540,
+    "sha256": "30160933fdfb31d3ca4396c775d1bb87fe213a58951cda4b6f494598a951ab48",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Grand Canyon floods: rescue toll and water-system damage complicate visits"
+  },
+  {
+    "key": "us-03",
+    "image": "/images/illustrations/us-03.webp",
+    "alt": "Illustration of a ballot box and endorsement envelopes beside an outline of Michigan.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A plain ballot box and two endorsement envelopes beside a simplified outline of Michigan's two peninsulas; neutral civic illustration without party logos or candidates.",
+    "mode": "built-in image_gen",
+    "bytes": 13000,
+    "width": 960,
+    "height": 540,
+    "sha256": "f2140cf931e7e4bc2d345c5ddee4ff30de89262a31f90819a6631ee44d4819e8",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Michigan’s Senate contest: what crossover endorsements do and do not reveal"
+  },
+  {
+    "key": "us-04",
+    "image": "/images/illustrations/us-04.webp",
+    "alt": "Illustration of a report and response folder beside an institutional building.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A human-rights report and separate official response folder on a desk, with the neutral exterior of an institutional building behind; no detainees, prison violence or identifiable people.",
+    "mode": "built-in image_gen",
+    "bytes": 29580,
+    "width": 960,
+    "height": 540,
+    "sha256": "a9d79fc5f09837f352f0aaa140a0bfbcd889b4b9cc027affd14e6e4c4b057aa4",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Fort Bliss detention report alleges abuse; Homeland Security disputes the findings"
+  },
+  {
+    "key": "us-05",
+    "image": "/images/illustrations/us-05.webp",
+    "alt": "Illustration of two survey sheets, a pencil and a United States flag.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: Two survey sheets with different abstract response marks beside a modest United States flag and a pencil; no percentages, polling results or partisan symbols.",
+    "mode": "built-in image_gen",
+    "bytes": 20202,
+    "width": 960,
+    "height": 540,
+    "sha256": "313ba2f4e80f5fecd15966a9948c3f2cb1b760306d01ac7f7cec3fb29575d021",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Polls find declining national pride, but their questions measure different things"
+  },
+  {
+    "key": "us-06",
+    "image": "/images/illustrations/us-06.webp",
+    "alt": "Illustration of bank documents, wheat stalks and a cargo container.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A bank document and separate agreement folders beside wheat stalks and a cargo container; conceptual restricted-funds and trade discussion, no politicians or money transfers depicted as evidence.",
+    "mode": "built-in image_gen",
+    "bytes": 27804,
+    "width": 960,
+    "height": 540,
+    "sha256": "fa75985996eec94c5086f9d89fa9baf0710c6ff53d29cc02b26a6f1fd0520d7d",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "U.S. and Iran give conflicting accounts of how released funds could be spent"
+  },
+  {
+    "key": "us-07",
+    "image": "/images/illustrations/us-07.webp",
+    "alt": "Illustration of a court folder and legal scales in an empty courtroom.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A sealed indictment folder on a court clerk's desk, with balanced justice scales and an empty public gallery; no defendants, handcuffs, weapons or guilt symbolism.",
+    "mode": "built-in image_gen",
+    "bytes": 24494,
+    "width": 960,
+    "height": 540,
+    "sha256": "3b3d9845601f35f921c7fe1560d7f452af2351c0b730d67cc60ee866c8ab52a5",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Fifteen charged in Minnesota protest-related case; indictment is not a verdict"
+  },
+  {
+    "key": "us-08",
+    "image": "/images/illustrations/us-08.webp",
+    "alt": "Illustration of an industrial tank and safety clipboard near a neighborhood.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A sealed industrial tank beside a safety clipboard and a calm neighborhood street beyond a barrier; no spill, evacuation victims or invented chemical reaction.",
+    "mode": "built-in image_gen",
+    "bytes": 36728,
+    "width": 960,
+    "height": 540,
+    "sha256": "cf95572fd940ad14dc3bf3b0b2adf6338090daeee33c2f3867fbb5632cbea9f0",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Garden Grove chemical incident: evacuation orders lifted May 26"
+  },
+  {
+    "key": "world-00",
+    "image": "/images/illustrations/world-00.webp",
+    "alt": "Illustration of a rescue boat and safety equipment near a mountain river.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A rescue boat, coiled rope and life ring at a riverside staging point with mountain slopes in the background; no suffering people or reconstruction of an actual flood.",
+    "mode": "built-in image_gen",
+    "bytes": 51704,
+    "width": 960,
+    "height": 540,
+    "sha256": "d0988b2f202e37f55877e5978f8897ef2b83170b25af022214b6e48dfef1a05e",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Nepal–China floods: understanding the August 2026 rescue figures"
+  },
+  {
+    "key": "world-01",
+    "image": "/images/illustrations/world-01.webp",
+    "alt": "Illustration of negotiation papers beside a window overlooking a shipping channel.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A round negotiation table with blank agreement papers in the foreground, and a cargo ship passing through a narrow waterway beyond a window.",
+    "mode": "built-in image_gen",
+    "bytes": 27558,
+    "width": 960,
+    "height": 540,
+    "sha256": "30e3ba8f4b4e3e6c7f887dc7a9c0c863ff84d6d9ecc4fb22e88c110e4f0a8c03",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Hormuz talks in August 2026: what would establish a deal?"
+  },
+  {
+    "key": "world-02",
+    "image": "/images/illustrations/world-02.webp",
+    "alt": "Illustration of two tankers with a maritime report and magnifying glass.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: Two oil tankers traveling on calm open water with a maritime incident report and magnifying glass in the foreground; no explosion, weapons, fire or invented attack scene.",
+    "mode": "built-in image_gen",
+    "bytes": 28868,
+    "width": 960,
+    "height": 540,
+    "sha256": "b02283586253554e94976a1176950d6217f62b147c0b1baa7ef98477eb3cd5f0",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Houthis claim attacks on two Saudi tankers in the Red Sea"
+  },
+  {
+    "key": "world-03",
+    "image": "/images/illustrations/world-03.webp",
+    "alt": "Illustration of two source folders, a magnifying glass and a distant drone.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: Two plain source folders and a magnifying glass beside a small surveillance-drone silhouette in the distance; conceptual evidence comparison, no attack or military action.",
+    "mode": "built-in image_gen",
+    "bytes": 13166,
+    "width": 960,
+    "height": 540,
+    "sha256": "0d13c6cb5893f5fabe688af2e1224e35d8975ab3ba10918e8b606b3270283763",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "July 20 Moscow-region drone attacks: Russian and Ukrainian accounts describe different evidence"
+  },
+  {
+    "key": "world-04",
+    "image": "/images/illustrations/world-04.webp",
+    "alt": "Illustration of a budget ledger, coins and bridge beside an outline of Ukraine.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: An outline of Ukraine beside a bridge under repair, a budget ledger and orderly stacks of coins; conceptual public funding, no flags, numbers or battlefield.",
+    "mode": "built-in image_gen",
+    "bytes": 33912,
+    "width": 960,
+    "height": 540,
+    "sha256": "1dae291b1bef810beecd9a5817a8d43266326bfc9da4353a0905ac2f36e95d2e",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "How the EU’s €90 billion Ukraine loan supports budget and defense needs"
+  },
+  {
+    "key": "world-05",
+    "image": "/images/illustrations/world-05.webp",
+    "alt": "Illustration of two diplomatic chairs, an unsigned agreement and an hourglass.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: Two empty diplomatic chairs facing each other across a table holding an unsigned agreement and an hourglass; tense but restrained, no weapons or world leaders.",
+    "mode": "built-in image_gen",
+    "bytes": 23044,
+    "width": 960,
+    "height": 540,
+    "sha256": "65fe655014185a687abc18735a7355793783f77bbc9325682907acf4fb37eb68",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "On July 10, Trump declared the Iran ceasefire over while saying talks would continue"
+  },
+  {
+    "key": "world-06",
+    "image": "/images/illustrations/world-06.webp",
+    "alt": "Illustration of an appointment document and pen beside a government doorway.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: An official appointment document and fountain pen on a desk with the dark doorway of a British government building in the background; no people or text.",
+    "mode": "built-in image_gen",
+    "bytes": 29806,
+    "width": 960,
+    "height": 540,
+    "sha256": "08933115a84144d6468541cd7e5b2b3572f5a486a67162d1b649b17e8fa08a6b",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Andy Burnham’s July 2026 appointment: the official succession record"
+  },
+  {
+    "key": "world-07",
+    "image": "/images/illustrations/world-07.webp",
+    "alt": "Illustration of incident reports, a magnifying glass and an outline map.",
+    "caption": "AI-generated illustration of comparing reports; map markers are illustrative.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A pair of incident-report folders beside a magnifying glass and a plain regional outline map; conceptual verification of conflicting strike announcements, no explosions, damage or soldiers.",
+    "mode": "built-in image_gen",
+    "bytes": 23732,
+    "width": 960,
+    "height": 540,
+    "sha256": "71e7a16e2705693e0d39a94c7ea011256309bf58bac3b08de606260c1c69608c",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "June 11 U.S.–Iran exchanges: separate attack announcements from verified damage"
+  },
+  {
+    "key": "world-08",
+    "image": "/images/illustrations/world-08.webp",
+    "alt": "Illustration of a seismograph and wave warning sign beside a coastal town.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A seismograph instrument beside a coastal warning sign with a simple wave symbol, hills and buildings in the background; no victims or destroyed buildings, no warning text or numbers.",
+    "mode": "built-in image_gen",
+    "bytes": 33430,
+    "width": 960,
+    "height": 540,
+    "sha256": "c1f12171ec588b2bd7dc9e0b02186e44db3e9afc141f1601f8a224e9abf54906",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "Mindanao’s June 8 earthquake: regional damage and the lifted tsunami warning"
+  },
+  {
+    "key": "world-09",
+    "image": "/images/illustrations/world-09.webp",
+    "alt": "Illustration of a microphone, dictionary and trophy in an auditorium.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A spelling-contest microphone on a podium beside an open dictionary and a small trophy, with a simple concert-hall interior behind; no contestants, words or results.",
+    "mode": "built-in image_gen",
+    "bytes": 27660,
+    "width": 960,
+    "height": 540,
+    "sha256": "3a6bb26bda9560747b5e5b436bb0bac3c7ff0bdf1386e1582fac64642ff19731",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "2026 Spelling Bee: Shrey Parikh wins at the new Constitution Hall venue"
+  },
+  {
+    "key": "world-10",
+    "image": "/images/illustrations/world-10.webp",
+    "alt": "Illustration of a draft agreement and pen on a diplomatic table.",
+    "caption": "AI-generated illustration.",
+    "prompt": "Use case: illustration-story. One standalone landscape 16:9 editorial raster illustration for a sourced blog. Simple flat drawn shapes, navy and muted teal with warm ochre, light ivory background, restrained detail, minimal texture, normal quality readable at 960x540. Clearly illustrative, no photo realism, text, numbers, logos, watermark or frame. Subject: A draft peace framework on a diplomatic table with a fountain pen and several empty chairs; no signatures, names, flags or suggestion that a deal is completed.",
+    "mode": "built-in image_gen",
+    "bytes": 25674,
+    "width": 960,
+    "height": 540,
+    "sha256": "445baef1ca04bb79067d03c7246a0e6e2ce6b0e1d7cbc601cbd98499e11e4d98",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "title": "The May 25 Iran talks framework: progress was not a completed peace agreement"
+  }
+]

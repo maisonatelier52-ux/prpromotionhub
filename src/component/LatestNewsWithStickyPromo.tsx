@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import HorizontalFeaturedArticle from "./HorizontalFeaturedArticle";
 import UpgradePromoCard from "./UpgradePromoCard";
 import CategorySectionHeader from "./CategorySectionHeader";
@@ -26,6 +26,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
   author: Author;
 }
 
@@ -49,7 +50,7 @@ export default function LatestNewsWithStickyPromo({ data }: Props) {
 
         {/* LEFT SECTION */}
         <div className="relative w-full">
-          <CategorySectionHeader title="Top News" />
+          <CategorySectionHeader title="More posts" />
 
           <div className="mt-4">
             {data.slice(0, visibleCount).map((item, index) => (

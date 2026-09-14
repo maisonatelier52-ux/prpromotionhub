@@ -9,7 +9,6 @@ import prnewsData from '../../public/data/prnews.json';
 import financeData from '../../public/data/finance.json';
 import usData from '../../public/data/us.json';
 import worldData from '../../public/data/world.json';
-import marketingData from '../../public/data/marketing.json';
 import entertainmentData from '../../public/data/entertainment.json';
 import technologyData from '../../public/data/technology.json';
 
@@ -18,7 +17,6 @@ const latestNews = [
   financeData?.[0],
   worldData?.[0],
   usData?.[0],
-  marketingData?.[0],
   technologyData?.[0],
   entertainmentData?.[0],
 ].filter(Boolean);
@@ -49,11 +47,10 @@ export default function MobileSidebar({ onClose }: Props) {
           <h3 className="text-sm mb-3 uppercase">Home</h3>
           <ul className="space-y-3 text-[16px] ml-5">
             {[
-              ['/prnews', 'PR News'],
+              ['/prnews', 'Public Relations'],
               ['/world', 'World'],
               ['/us', 'U.S'],
               ['/finance', 'Finance'],
-              ['/marketing', 'Marketing'],
               ['/technology', 'Technology'],
               ['/entertainment', 'Entertainment'],
             ].map(([href, label]) => (
@@ -73,7 +70,7 @@ export default function MobileSidebar({ onClose }: Props) {
             {[
               ['/about', 'About Us'],
               ['/contact', 'Contact'],
-              ['/editorial', 'Editorial Policy'],
+              ['/editorial', 'Blog standards'],
               ['/privacy-policy', 'Privacy Policy'],
               ['/terms-and-conditions', 'Terms and Conditions'],
               ['/faq', 'FAQ'],
@@ -89,26 +86,29 @@ export default function MobileSidebar({ onClose }: Props) {
 
         {/* Ad */}
         <section>
+          <p className="text-xs uppercase tracking-widest text-slate-500 mb-2">Advertisement</p>
           <Link
             href="https://mirrorstandard.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored noopener noreferrer"
             onClick={onClose}
+            className="flex items-center justify-between gap-4 bg-[#573080] text-white p-4"
           >
+            <span className="font-serif text-xl">Mirrorstandard<span className="block font-sans text-xs mt-2">Visit website →</span></span>
             <Image
-              src="/images/mirrorstandard-ad.webp"
-              alt="NewsFlashPro Ad"
-              width={1200}
-              height={500}
-              className="w-full h-[100px] object-contain"
-              priority
+              src="/images/illustrations/sponsor-mirrorstandard.webp"
+              alt="Illustration of a folded newspaper, tablet and coffee cup."
+              width={960}
+              height={540}
+              className="w-28 h-auto"
             />
           </Link>
+          <p className="text-xs text-slate-500 mt-1">AI-generated illustration</p>
         </section>
 
         {/* Latest News */}
         <section>
-          <CategorySectionHeader title="Latest News" />
+          <CategorySectionHeader title="From the blog" />
           <NewsCard data={latestNews} onClose={onClose} />
         </section>
 

@@ -17,6 +17,7 @@ interface Author {
 interface NewsData {
     title: string;
     image: string;
+  imageAlt?: string;
     date: string;
     category: string;
     slug: string;
@@ -58,7 +59,7 @@ export default function RelatedNews({ data }: Props) {
                     <div className="relative w-[110px] md:w-[160px] h-[90px] md:h-[110px] flex-shrink-0">
                         <Image
                             src={data.image}
-                            alt={data.title}
+                            alt={data.imageAlt ?? data.title}
                                  title={data.title}
                             fill
                             className="object-cover"
@@ -79,7 +80,7 @@ export default function RelatedNews({ data }: Props) {
                         <div className="relative w-full h-[130px] lg:h-[200px]">
                             <Image
                                 src={data.image}
-                                alt={data.title}
+                                alt={data.imageAlt ?? data.title}
                                      title={data.title}
                                 fill
                                 className="object-cover"

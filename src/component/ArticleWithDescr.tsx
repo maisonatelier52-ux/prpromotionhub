@@ -1,55 +1,20 @@
-import { FaQuoteLeft } from 'react-icons/fa';
+import Link from 'next/link';
+import type { Article } from '@/utils/newsUtils';
 
-interface NewsData {
-  title: string;
-  slug: string;
-  category: string;
-  shortdescription: string;
-  description: string;
-  image: string;
-}
-
-interface Props {
-  data: NewsData;
-}
-
-export default function   ArticleWithDescr({ data }: Props) {
-  // Split description into sentences
-  const sentences = data.description.split('. ');
-  const mid = Math.ceil(sentences.length / 2);
-
-  const firstHalf = sentences.slice(0, mid).join('. ') + '.';
-  const secondHalf = sentences.slice(mid).join('. ');
-
+export default function ArticleWithDescr({ data }: { data: Article }) {
   return (
-    <section className="w-full mx-auto text-black">
-      {/* First paragraph with drop cap */}
-      <p className="">
-        {/* <span className="float-left text-5xl md:text-6xl font-bold leading-none mt-1 mr-2">
-          {firstHalf.charAt(0)}
-        </span> */}
-        <span className="leading-tight text-[16px]">
-          {firstHalf}
-        </span>
-      </p>
-
-      {/* Quote Section */}
-      <div className="w-full mx-auto py-2 mb-2 text-center">
-        {/* <FaQuoteLeft className="mx-auto text-red-600 text-2xl md:text-3xl mb-3" /> */}
-
-        {/* <p className="text-[15px] md:text-[20px] font-semibold leading-tight">
-          “{data.shortdescription}”
-        </p> */}
-
-      
-      </div>
-
-      {/* Remaining Description */}
-      <div className="w-full mx-auto">
-        <p className="tracking-tight text-[16px]">
-          {secondHalf}
-        </p>
-      </div>
-    </section>
+    <article className="article-copy">
+      {data.editorialNote && <aside className="editorial-note"><strong>About this post</strong><p>{data.editorialNote}</p></aside>}
+      {data.takeaways?.length ? <aside className="article-takeaways" aria-label="Key points"><h2>Key points</h2><ul>{data.takeaways.map(point => <li key={point}>{point}</li>)}</ul></aside> : null}
+      {data.sections?.length ? data.sections.map((section, index) => (
+        <section key={index} aria-labelledby={`section-${index}`}>
+          <h2 id={`section-${index}`}>{section.heading}</h2>
+          {section.paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+          {!!section.sourceIds?.length && <p className="section-sources">Sources: {section.sourceIds.map((id, i) => <span key={id}>{i > 0 ? ', ' : ''}<a href={`#source-${id}`}>{data.sources?.[id - 1]?.publisher ?? id} [{id}]</a></span>)}</p>}
+        </section>
+      )) : data.description.split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+      {!!data.sources?.length && <section className="article-sources" aria-labelledby="sources-heading"><h2 id="sources-heading">Sources & further reading</h2><ol>{data.sources.map((source, i) => <li id={`source-${i + 1}`} key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a><p>{source.publisher} · {source.note}</p><p>Accessed {source.accessedAt}</p></li>)}</ol></section>}
+      <footer className="article-editorial-footer"><p>This post was prepared with AI assistance using the sources linked above. It combines attributed information with explanation and interpretation.</p><p><Link href="/source-methodology">How we use sources</Link> · <Link href="/contact">Send a correction</Link></p></footer>
+    </article>
   );
 }

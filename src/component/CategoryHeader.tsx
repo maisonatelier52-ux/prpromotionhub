@@ -7,7 +7,7 @@ export default function CategoryHeader({category}:CategoryHeaderProps) {
   let headerTitle: string;
   
   if (category === "prnews") {
-    headerTitle = "PR News";
+    headerTitle = "Public Relations";
   } else if (category === "us") {
     headerTitle = "U.S";
   } else {

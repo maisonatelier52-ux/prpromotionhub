@@ -8,6 +8,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
 }
 
 interface Props {
@@ -25,7 +26,7 @@ export default function WhatsHotBar({data}: Props) {
       className="flex items-center gap-2 py-3 truncate"
     >
       <span className="whitespace-nowrap font-bold text-[16px]">
-        What&apos;s Hot:
+        Featured:
       </span>
 
       <span className="truncate text-[17px] font-semibold">

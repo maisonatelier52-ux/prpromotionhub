@@ -23,6 +23,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
   author:Author;
 }
 
@@ -43,7 +44,7 @@ export default function HeroArticle({
         <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-100">
           <Image
             src={data[0].image}
-            alt={data[0].title}
+            alt={data[0].imageAlt ?? data[0].title}
                  title={data[0].title}
             fill
             priority
@@ -51,7 +52,7 @@ export default function HeroArticle({
           />
           {/* Red small box with part inside the image */}
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#041f4a] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 capitalize tracking-wide text-center" style={{ marginBottom: '-10px' }}>
-       {data[0].category=='prnews'?'PR News':data[0].category}
+       {data[0].category=='prnews'?'Public Relations':data[0].category}
           </div>
         </div>
 

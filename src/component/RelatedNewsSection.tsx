@@ -17,6 +17,7 @@ interface Author {
 interface NewsData {
   title: string;
   image: string;
+  imageAlt?: string;
   date: string;
   category: string;
   slug: string;
@@ -39,7 +40,7 @@ export default function RelatedNewsSection({ data, article }: Props) {
   return (
     <section className="mt-8">
       <h2 className="mb-3 text-2xl font-semibold uppercase tracking-wide">
-        Related News
+        Related posts
       </h2>
 
       <div className="flex flex-col lg:flex-row gap-6">

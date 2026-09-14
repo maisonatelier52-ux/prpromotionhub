@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { SITE_URL } from "@/utils/siteConfig";
 import {
   FaTimes,
   FaLink,
@@ -22,11 +23,7 @@ export default function ShareComponent({
   onClose,
 }: ShareArticleProps) {
 
-    const [url, setUrl] = useState("");
-
-        useEffect(() => {
-            setUrl(window.location.href);
-        }, []);
+    const url = SITE_URL + usePathname();
 
         const encodedUrl = encodeURIComponent(url);
         const encodedTitle = encodeURIComponent(title);

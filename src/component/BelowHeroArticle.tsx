@@ -22,6 +22,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
   author:Author;
 }
 
@@ -68,7 +69,7 @@ export default function BelowHeroArticle({ data }: Props) {
       <div className="relative w-[110px] md:w-[160px] h-[90px] md:h-[110px] flex-shrink-0">
         <Image
           src={item.image}
-          alt={item.title}
+          alt={item.imageAlt ?? item.title}
           fill
           className="object-cover"
         />
@@ -94,7 +95,7 @@ export default function BelowHeroArticle({ data }: Props) {
             <div className="relative w-full h-36 mb-3">
               <Image
                 src={item.image}
-                alt={item.title}
+                alt={item.imageAlt ?? item.title}
                 fill
                 className="object-cover"
               />

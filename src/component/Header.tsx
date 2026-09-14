@@ -3,15 +3,13 @@ import Link from 'next/link';
 
 import {
   FaTwitter,
-  FaInstagram,
-  FaFacebookF,
   FaMediumM,
   FaReddit,
 } from 'react-icons/fa';
 import { SiSubstack } from 'react-icons/si';
 import CategoriesNav from './CategoriesNav';
 import MobileHeader from './MobileHeader';
-import { useEffect, useState } from 'react';
+
 
 const categories = [
   { name: 'About', href: '/about' },
@@ -21,17 +19,6 @@ const categories = [
 
 export default function Header() {
 
-  const [date, setDate] = useState("");
-   useEffect(() => {
-    setDate(
-      new Date().toLocaleDateString("en-US", {
-        weekday: "long",
-        month: "short",
-        day: "2-digit",
-        year: "numeric",
-      })
-    );
-  }, []);
   return (
     <header className="w-full">
 
@@ -46,7 +33,7 @@ export default function Header() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-2 text-xs text-gray-500 font-semibold border-b border-[#88888888]">
             <div>
-              {date}
+              Guides · Explainers · Perspectives
             </div>
 
             <div className="flex items-center gap-6">
@@ -85,7 +72,7 @@ export default function Header() {
 
             {/* Center Logo */}
             <div className="flex justify-center">
-              <Link href="/" title='home' className="select-none">
+              <Link href="/" title='home' className="select-none text-center">
                 <span className="font-serif font-bold text-[32px] tracking-tight text-black uppercase">
                   PR<span className="font-normal">PROMOTIONHUB</span>
                 </span>

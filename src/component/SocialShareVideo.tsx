@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { SITE_URL } from "@/utils/siteConfig";
 import { FiShare } from "react-icons/fi";
 import {
   FaWhatsapp,
@@ -21,11 +22,7 @@ interface Props {
 }
 
 export default function SocialShareVideo({ video }: Props) {
-  const [pageUrl, setPageUrl] = useState("");
-
-  useEffect(() => {
-    setPageUrl(window.location.href);
-  }, []);
+  const pageUrl = SITE_URL + usePathname();
 
   const encodedPageUrl = encodeURIComponent(pageUrl);
   const encodedTitle = encodeURIComponent(video.title);

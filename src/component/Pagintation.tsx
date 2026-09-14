@@ -9,14 +9,17 @@ export default function Pagination({
   totalPages,
   onPageChange,
 }: PaginationProps) {
+  if (totalPages <= 1) return null;
   return (
     <div className="flex items-center justify-center gap-2 mt-10 w-full">
       {/* Page Numbers */}
       {[...Array(totalPages)].map((_, index) => {
         const page = index + 1;
-        return (
+        if (totalPages <= 1) return null;
+  return (
           <button
             key={page}
+            aria-current={currentPage === page ? "page" : undefined}
             onClick={() => onPageChange(page)}
             className={`w-10 h-10 flex items-center justify-center cursor-pointer text-sm font-medium
               ${
@@ -37,7 +40,8 @@ export default function Pagination({
           currentPage < totalPages &&
           onPageChange(currentPage + 1)
         }
-        disabled={currentPage === totalPages}
+        disabled={currentPage >= totalPages}
+        aria-label="Next page"
         className="text-gray-500 hover:text-black disabled:opacity-40"
       >
         →

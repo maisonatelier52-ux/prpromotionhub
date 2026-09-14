@@ -8,6 +8,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
 }
 
 interface Props {
@@ -19,7 +20,7 @@ export default function LatestNewsList({data}:Props) {
     <div className="w-full">
       {/* Heading */}
       <h2 className="text-[20px] md:text-[28px] font-semibold border-b-4 border-black inline-block mb-3">
-        Latest News
+        Recent in the Archive
       </h2>
 
       {/* List */}

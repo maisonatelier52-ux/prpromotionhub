@@ -3,23 +3,26 @@ import Image from 'next/image';
 interface ArticleImageProps {
   src: string;
   alt: string;
+  caption?: string;
 }
 
 export default function ArticleImage({
   src,
   alt,
+  caption = 'AI-generated illustration.',
 }: ArticleImageProps) {
-      const cleanedSrc = src.trimEnd();
+  const cleanedSrc = src.trimEnd();
   return (
-    <div className="relative w-full overflow-hidden">
+    <figure className="relative w-full overflow-hidden">
       <Image
         src={cleanedSrc}
         alt={alt}
-        width={900}
-        height={0}
-        className="w-full h-100 md:h-150 object-cover"
+        width={960}
+        height={540}
+        className="w-full aspect-video object-cover"
         priority
       />
-    </div>
+      <figcaption className="text-xs text-slate-500 mt-2 leading-relaxed">{caption}</figcaption>
+    </figure>
   );
 }

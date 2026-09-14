@@ -24,6 +24,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
   author:Author;
 }
 
@@ -41,6 +42,7 @@ export default function SecondSection({ data }: Props) {
         <div className="lg:col-span-2">
           <SecondArticle
             image={data[0].image}
+            imageAlt={data[0].imageAlt}
             category={data[0].category}
             title={data[0].title}
             author={data[0].author}
@@ -60,6 +62,7 @@ export default function SecondSection({ data }: Props) {
               <SecondEditorial
                 title={item.title}
                 image={item.image}
+                imageAlt={item.imageAlt}
                 date={item.date}
                 author={item.author.name}
                 category={item.category}

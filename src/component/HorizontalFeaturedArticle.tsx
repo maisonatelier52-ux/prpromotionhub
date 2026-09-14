@@ -22,6 +22,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
   author: Author;
 }
 
@@ -61,7 +62,7 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
           <div className="relative w-[110px] md:w-[160px] h-[90px] md:h-[110px] flex-shrink-0">
             <Image
               src={data.image}
-              alt={data.title}
+              alt={data.imageAlt ?? data.title}
               title={data.title}
               fill
               className="object-cover"
@@ -80,7 +81,7 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
           <div className="relative w-full h-66">
             <Image
               src={data.image}
-              alt={data.title}
+              alt={data.imageAlt ?? data.title}
               title={data.title}
               fill
               className="object-cover"

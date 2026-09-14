@@ -1,4 +1,5 @@
-import Head from "next/head";
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "Terms and Conditions", alternates: { canonical: "/terms-and-conditions" } };
 import Link from "next/link";
 import { Scale, ShieldAlert, Copyright, ExternalLink, Info, Mail } from "lucide-react";
 
@@ -14,9 +15,7 @@ export default function TermsAndConditions() {
               <div className="min-h-screen bg-gray-50 py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
 
-      <Head>
-        <title>Terms & Conditions | PRPROMOTIONHUB</title>
-      </Head>
+      
 
       {/* Simple Header */}
      <header className="max-w-6xl mx-auto px-4 pb-5 md:pb-10 text-center border-b border-gray-200">
@@ -86,7 +85,7 @@ export default function TermsAndConditions() {
               <div className="grid sm:grid-cols-2 gap-0 md:gap-4">
                 {[
                   "Use the website in a lawful manner",
-                  "No false or misleading news tips",
+                  "No false or misleading submissions",
                   "No interference with site security",
                   "Respect intellectual property of others"
                 ].map((rule, i) => (
@@ -106,8 +105,8 @@ export default function TermsAndConditions() {
               </div>
               <p className="text-gray-700 leading-relaxed">
                 While we strive for maximum accuracy, PRPROMOTIONHUB makes no warranties regarding the 
-                completeness or timeliness of content. Information is provided <span className="font-mono bg-gray-100 px-1 rounded">"as is"</span> 
-                and is subject to change without notice. Our reporting does not constitute financial, legal, or professional advice.
+                completeness or timeliness of content. Information is provided <span className="font-mono bg-gray-100 px-1 rounded">&quot;as is&quot;</span> 
+                and is subject to change without notice. Our blog content does not constitute financial, legal, or professional advice.
               </p>
             </section>
 
@@ -120,7 +119,7 @@ export default function TermsAndConditions() {
               <p className="text-gray-700 leading-relaxed">
                 PRPROMOTIONHUB shall not be liable for any direct, indirect, or incidental damages 
                 arising from your use of this website. This includes, but is not limited to, 
-                any reliance placed on the accuracy of news stories or marketing analysis published herein.
+                any reliance placed on the accuracy of blog posts or marketing analysis published herein.
               </p>
             </section>
 

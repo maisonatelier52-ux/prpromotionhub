@@ -1,9 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   FaTwitter,
-  FaFacebookF,
-  FaInstagram,
   FaMediumM,
   FaReddit,
 } from "react-icons/fa";
@@ -14,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white ">
       <div className="mx-auto px-8 py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-start">
+        <div className="flex flex-col lg:flex-row justify-between items-start">
           {/* Left Section */}
           <div className="mb-8 md:mb-0">
             <div className="flex">
@@ -30,7 +27,7 @@ export default function Footer() {
                 href="https://x.com/promotionh77500"
                 title="twitter"
                 aria-label="Twitter"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 className="hover:text-gray-400 transition"
               >
                 <FaTwitter />
@@ -39,7 +36,7 @@ export default function Footer() {
                 href="https://medium.com/@prpromotionhub"
                 title="medium"
                 aria-label="Medium"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 className="hover:text-gray-400 transition"
               >
                 <FaMediumM />
@@ -48,7 +45,7 @@ export default function Footer() {
                 href="https://substack.com/@prpromotionhub"
                 title="substack"
                 aria-label="Substack"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 className="hover:text-gray-400 transition"
               >
                 <SiSubstack />
@@ -57,7 +54,7 @@ export default function Footer() {
                 href="https://www.reddit.com/user/PRPromotionHub3009/"
                 title="reddit"
                 aria-label="Reddit"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 className="hover:text-gray-400 transition"
               >
                 <FaReddit />
@@ -67,7 +64,7 @@ export default function Footer() {
               Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-7 md:gap-20 mr-40 w-full md:w-auto">
+          <div className="flex flex-col sm:flex-row gap-7 xl:gap-20 xl:mr-40 w-full lg:w-auto">
             <div className="space-y-2 flex-1">
               <span className="block text-xs uppercase tracking-widest font-bold text-gray-500 mb-3 select-none">Company</span>
               <Link href="/about" title="about" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
@@ -109,7 +106,7 @@ export default function Footer() {
                 title="editorial"
                 className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap"
               >
-                Editorial Policy
+                Blog standards
               </Link>
 
               <Link href="/privacy-policy" title="privacy-policy" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
@@ -139,17 +136,14 @@ export default function Footer() {
               <Link href="/finance" title="finance" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 Finance
               </Link>
-              <Link href="/marketing" title="marketing" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
-                Marketing
-              </Link>
               <Link href="/prnews" title="prnews" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
-                PRNews
+                Public Relations
               </Link>
               <Link href="/technology" title="technology" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 Technology
               </Link>
               <Link href="/us" title="us" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
-                US News
+                U.S.
               </Link>
               <Link href="/world" title="world" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 World

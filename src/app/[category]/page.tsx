@@ -1,194 +1,83 @@
-import prnewsData from '../../../public/data/prnews.json';
-import worldData from '../../../public/data/world.json';
-import usData from '../../../public/data/us.json';
-import marketingData from '../../../public/data/marketing.json';
-import financeData from '../../../public/data/finance.json';
-import technologyData from '../../../public/data/technology.json';
-import entertainmentData from '../../../public/data/entertainment.json';
-import CategoryHeader from '@/component/CategoryHeader';
-import WhatsHotBar from '@/component/WhatsHotBar';
-import CategoryContent from '@/component/CategoryContent';
-import { Metadata } from 'next';
-import { getSortedNews, Article } from '@/utils/newsUtils';
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import CategoryHeader from "@/component/CategoryHeader";
+import CategoryContent from "@/component/CategoryContent";
+import WhatsHotBar from "@/component/WhatsHotBar";
+import { allArticles, newsByCategory } from "@/utils/newsData";
+import { getSortedNews } from "@/utils/newsUtils";
+import { CATEGORY_LABELS, SITE_URL } from "@/utils/siteConfig";
 
-const allData: Record<string, Article[]> = {
-  prnews: prnewsData as Article[],
-  world: worldData as Article[],
-  us: usData as Article[],
-  finance: financeData as Article[],
-  marketing: marketingData as Article[],
-  technology: technologyData as Article[],
-  entertainment: entertainmentData as Article[]
-};
+import Article from "@/component/Article";
+import RelatedNewsSection from "@/component/RelatedNewsSection";
+import { customArticleComponents } from "@/component/customArticleRegistry";
+import { toISODate } from "@/utils/newsUtils";
 
-export async function generateStaticParams() {
-  return Object.keys(allData).map((category) => ({
-    category,
-  }));
+export const dynamicParams = false;
+type Props = { params: Promise<{ category: string }> };
+export function generateStaticParams() {
+  const categoryList = Object.keys(newsByCategory).map(category => ({ category }));
+  const customSlugs = Object.keys(customArticleComponents).map(slug => ({ category: slug }));
+  return [...categoryList, ...customSlugs];
 }
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ category: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
-  
-  // Sort data for this category
-  const data = allData[category] ? getSortedNews([allData[category]]) : [];
-
-  const categoryMeta: Record<string, { title: string; description: string }> = {
-    prnews: {
-      title: "Latest PR News, Press Releases & Brand Announcements (2026)",
-      description:
-        "Read the latest PR news, press releases, brand announcements, and media coverage. Stay updated with real-time public relations trends and business PR strategies.",
-    },
-    world: {
-      title: "Breaking World News Today | Global Politics & International Updates",
-      description:
-        "Get breaking world news today, global politics, international conflicts, economic developments, and major global events updated in real time.",
-    },
-    us: {
-      title: "US News Today: Breaking America News, Politics & Economy Updates",
-      description:
-        "Stay updated with US breaking news, politics, economy, business, and national developments across America with real-time updates.",
-    },
-    finance: {
-      title: "Finance News Today: Stock Market, Economy & Investment Updates",
-      description:
-        "Latest finance news, stock market trends, crypto updates, economy insights, startups, and investment strategies from around the world.",
-    },
-    entertainment: {
-      title: "Entertainment News Today: Celebrities, Movies, OTT & Music Updates",
-      description:
-        "Catch the latest entertainment news, celebrity gossip, movie releases, OTT updates, music trends, and media industry insights.",
-    },
-    marketing: {
-      title: "Digital Marketing News & SEO Trends (2026) | Branding Insights",
-      description:
-        "Explore digital marketing news, SEO trends, branding strategies, social media growth tips, and online business insights for 2026.",
-    },
-    technology: {
-      title: "Technology News Today: AI, Startups, Gadgets & Innovation Updates",
-      description:
-        "Latest technology news including AI, startups, gadgets, software updates, and innovations shaping the future of the digital world.",
-    },
-  };
-
-  const siteUrl = "https://www.prpromotionhub.com";
-  const categoryUrl = `${siteUrl}/${category}`;
-
-  const meta = categoryMeta[category] || {
-    title: `${category.charAt(0).toUpperCase() + category.slice(1)} News – PR Promotion Hub`,
-    description: `Latest ${category} news, updates, and insights from PR Promotion Hub.`,
-  };
-
-  const firstArticle = data[0];
-
-  const firstArticleImage =
-    firstArticle?.image?.startsWith("http")
-      ? firstArticle.image
-      : `${siteUrl}${firstArticle?.image || "/images/pr-logo.webp"}`;
-
-  if (!firstArticle) {
+  const directArticle = allArticles.find(a => a.slug === category);
+  if (directArticle) {
+    const url = `${SITE_URL}/${directArticle.category}/${directArticle.slug}`;
+    const image = new URL(directArticle.image, SITE_URL).href;
+    const description = directArticle.metaDescription || directArticle.shortdescription;
     return {
-      title: "Category Not Found – PR Promotion Hub",
-      description: "The requested category could not be found.",
-      robots: { index: false, follow: false },
+      title: directArticle.title,
+      description,
+      keywords: directArticle.primaryKeyword ? [directArticle.primaryKeyword] : undefined,
+      authors: [{ name: directArticle.author.name }],
+      alternates: { canonical: url },
+      openGraph: {
+        title: directArticle.title,
+        description,
+        url,
+        siteName: "PR Promotion Hub Blog",
+        type: "article",
+        publishedTime: toISODate(directArticle.date),
+        modifiedTime: directArticle.updatedAt,
+        images: [{ url: image, alt: directArticle.imageAlt ?? "AI-generated illustration" }],
+      },
+      twitter: { card: "summary_large_image", title: directArticle.title, description, images: [image] },
     };
   }
-
-  const todayDate = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "America/New_York",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).format(new Date());
-
-  return {
-    title: meta.title,
-    description: meta.description,
-    alternates: {
-      canonical: categoryUrl,
-    },
-    openGraph: {
-      type: "article",
-      title: meta.title,
-      description: meta.description,
-      url: categoryUrl,
-      siteName: "PR Promotion Hub",
-      locale: "en_US",
-      publishedTime: todayDate,
-      modifiedTime: todayDate,
-      images: [
-        {
-          url: firstArticleImage,
-          width: 1200,
-          height: 630,
-          alt: `${category} news – PR Promotion Hub`,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: meta.title,
-      description: meta.description,
-      images: [firstArticleImage],
-      site: "@prpromotionhub",
-    },
-  };
+  if (!newsByCategory[category]) notFound();
+  const title = `${CATEGORY_LABELS[category]}: blog posts & guides`;
+  const description = `Explore ${CATEGORY_LABELS[category].toLowerCase()} posts, guides and explainers with linked sources and useful context.`;
+  return { title, description, alternates: { canonical: `${SITE_URL}/${category}` },
+    openGraph: { type: "website", title, description, url: `${SITE_URL}/${category}` },
+    twitter: { card: "summary", title, description } };
 }
-
-export default async function CategoryPage({
-  params,
-}: {
-  params: Promise<{ category: string }>;
-}) {
+export default async function CategoryPage({ params }: Props) {
   const { category } = await params;
-
-  if (!allData[category]) {
-    return (
-      <main className="max-w-7xl mx-auto h-screen px-6 flex flex-col items-center justify-center text-center">
-        <h1 className="text-3xl font-bold">
-          404 – Page Not Found
-        </h1>
-        <p className="mt-4 text-gray-600">
-          The category you’re looking for doesn’t exist.
-        </p>
-      </main>
-    );
-  }
-
-  const categoryData = getSortedNews([allData[category]]);
-
-  const allGlobalNews = getSortedNews([
-    prnewsData as Article[],
-    marketingData as Article[],
-    worldData as Article[],
-    usData as Article[],
-    financeData as Article[],
-    technologyData as Article[],
-    entertainmentData as Article[]
-  ]);
-
-  const whatsHotItem = allGlobalNews[0];
-  
-  const mainContentData = categoryData.filter(item => item.slug !== whatsHotItem.slug);
-
-  const categorySlugs = new Set(mainContentData.map(item => item.slug));
-  const popularNews = allGlobalNews
-    .filter(item => item.slug !== whatsHotItem.slug && !categorySlugs.has(item.slug))
-    .slice(0, 4);
-
-  return (
-    <>
-      <WhatsHotBar data={whatsHotItem} />
-      <CategoryHeader category={category} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <CategoryContent data={mainContentData} popularNews={popularNews} />
+  const directArticle = allArticles.find(a => a.slug === category);
+  if (directArticle) {
+    const sameCategory = getSortedNews([newsByCategory[directArticle.category]]).filter(item => item.slug !== directArticle.slug);
+    const relatedNews = sameCategory.slice(0, 3);
+    const otherPosts = getSortedNews([allArticles]).filter(item => item.slug !== directArticle.slug);
+    return <main id="main-content">
+      <WhatsHotBar data={otherPosts[0]} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10">
+        <Article article={directArticle} popularNews={otherPosts.slice(1, 5)} />
+        <RelatedNewsSection data={relatedNews} article={directArticle} />
       </div>
-    </>
-  );
+    </main>;
+  }
+  if (!newsByCategory[category]) notFound();
+  const data = getSortedNews([newsByCategory[category]]);
+  const latest = getSortedNews([allArticles]);
+  const popularNews = latest.filter(post => post.category !== category).slice(0,4);
+  return <main id="main-content">
+    <WhatsHotBar data={latest[0]} />
+    <CategoryHeader category={category} />
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {data.length === 0 && <p className="py-6 text-gray-600">There are no posts in this topic among the latest 40 articles.</p>}
+      <CategoryContent key={category} data={data} popularNews={popularNews} />
+    </div>
+  </main>;
 }
-
 

@@ -23,6 +23,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
   author: Author;
 }
 
@@ -53,7 +54,7 @@ export default function FeaturedEditorialGrid({ data }: Props) {
                 >
                   <Image
                     src={item.image}
-                    alt={item.title}
+                    alt={item.imageAlt ?? item.title}
                          title={item.title}
                     fill
                     className="object-cover"
@@ -68,9 +69,9 @@ export default function FeaturedEditorialGrid({ data }: Props) {
                   {item.category}
                 </span>
 
-                <p className="relative z-10 text-[14px] font-semibold leading-snug line-clamp-">
-                  {item.title}
-                </p>
+                <h2 className="relative z-10 text-[14px] font-semibold leading-snug">
+                  <Link href={`/${item.category}/${item.slug}`} className="hover:underline">{item.title}</Link>
+                </h2>
                        <div className=" text-[11px] text-gray-600">
             <span>{item.date}</span>
           

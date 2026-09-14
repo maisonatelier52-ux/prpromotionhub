@@ -22,6 +22,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
   author: Author;
 }
 
@@ -45,7 +46,7 @@ export default function NewsCard({ data ,onClose }: Props) {
           <div className="relative w-12 h-12 flex-shrink-0">
             <Image
               src={item.image}
-              alt={item.title}
+              alt={item.imageAlt ?? item.title}
               fill
               sizes="48px"
               className="rounded-full object-cover"

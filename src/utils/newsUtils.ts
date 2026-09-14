@@ -4,9 +4,20 @@ export interface Article {
   title: string;
   slug: string;
   image: string;
+  imageAlt?: string;
+  imageCaption?: string;
   date: string;
   shortdescription: string;
   description: string;
+  updatedAt?: string;
+  contentType?: string;
+  reportingAsOf?: string;
+  editorialNote?: string;
+  takeaways?: string[];
+  sections?: { heading: string; paragraphs: string[]; sourceIds?: number[] }[];
+  sources?: { title: string; url: string; publisher: string; note: string; accessedAt: string }[];
+  metaDescription?: string;
+  primaryKeyword?: string;
   author: {
     name: string;
     role: string;
@@ -23,10 +34,13 @@ export interface Article {
 }
 
 export function parseDate(dateStr: string): Date {
-  // Handle formats like "Jan. 1, 2026" or "Dec. 31, 2025"
-  // Remove the dot after month if present
-  const cleanedDate = dateStr.replace('.', '');
-  return new Date(cleanedDate);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return new Date(dateStr + 'T00:00:00Z');
+  const match = dateStr.trim().match(/^([A-Za-z]+)\.?\s*(\d{1,2}),?\s*(\d{4})$/);
+  if (!match) return new Date(NaN);
+  const months = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+  const month = months.indexOf(match[1].slice(0,3).toLowerCase());
+  if (month < 0) return new Date(NaN);
+  return new Date(Date.UTC(Number(match[3]), month, Number(match[2])));
 }
 
 export function getSortedNews(allNews: Article[][]): Article[] {
@@ -36,4 +50,9 @@ export function getSortedNews(allNews: Article[][]): Article[] {
     const dateB = parseDate(b.date);
     return dateB.getTime() - dateA.getTime();
   });
+}
+
+export function toISODate(value: string): string {
+  const date = parseDate(value);
+  return Number.isNaN(date.getTime()) ? value : date.toISOString().slice(0, 10);
 }

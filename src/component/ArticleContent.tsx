@@ -8,6 +8,7 @@ interface NewsData {
   category:string;
   title: string;
   image: string;
+  imageAlt?: string;
   shortdescription:string;
   description:string;
 }
@@ -23,7 +24,7 @@ data
 
   return (
     <div className="w-full">
-    <ArticleImage src={data.image} alt={data.title} />
+    <ArticleImage src={data.image} alt={data.imageAlt ?? data.title} />
     <SocialShareList title={data.title}/>
     </div>
   );

@@ -22,6 +22,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
   author: Author;
 }
 
@@ -32,7 +33,7 @@ interface Props {
 export default function TravelSectionWithSubscribe({ data }: Props) {
   return (
     <section className="mx-auto mt-8">
-      <CategorySectionHeader title="Financial Highlights" />
+      <CategorySectionHeader title="From the blog" />
       <div className="mt-8">
         <EditorialGrid2x2
           data={[data[0], data[1], data[2], data[3]]}

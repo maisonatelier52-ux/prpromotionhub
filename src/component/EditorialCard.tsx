@@ -4,6 +4,7 @@ import Link from "next/link";
 export type EditorialCardProps = {
   title: string;
   image: string;
+  imageAlt?: string;
   date: string;
   author: string;
   category:string;
@@ -13,6 +14,7 @@ export type EditorialCardProps = {
 export default function EditorialCard({
   title,
   image,
+  imageAlt,
   date,
   author,
   category,
@@ -49,7 +51,7 @@ export default function EditorialCard({
         <div className="relative w-[110px] md:w-[160px] h-[90px] md:h-[110px] flex-shrink-0">
           <Image
             src={image}
-            alt={title}
+            alt={imageAlt ?? title}
                  title={title}
             fill
             className="object-cover"
@@ -68,7 +70,7 @@ export default function EditorialCard({
         <div className="relative w-full h-46 mb-3">
           <Image
             src={image}
-            alt={title}
+            alt={imageAlt ?? title}
                  title={title}
             fill
             className="object-cover"

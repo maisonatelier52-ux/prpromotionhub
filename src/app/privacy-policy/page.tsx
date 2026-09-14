@@ -1,4 +1,5 @@
-import Head from "next/head";
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "Privacy Policy", alternates: { canonical: "/privacy-policy" } };
 import Link from "next/link";
 import { Shield, Lock, Eye, Cookie, Globe, RefreshCw, Mail } from "lucide-react";
 
@@ -14,9 +15,7 @@ export default function PrivacyPolicy() {
         <div className="min-h-screen bg-gray-50 py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
 
-                <Head>
-                    <title>Privacy Policy | PRPROMOTIONHUB</title>
-                </Head>
+                
 
                 {/* Simple Header */}
                 <header className="max-w-6xl mx-auto px-4 pb-5 md:pb-10 text-center border-b border-gray-200">
@@ -73,7 +72,7 @@ export default function PrivacyPolicy() {
                                     </p>
                                     <p>
                                         <strong>Automatic Data:</strong> We collect non-personal data like browser type,
-                                        device info, and page views to improve our journalism and site speed.
+                                        device info, and page views to improve our blog and site speed.
                                     </p>
                                 </div>
                             </section>

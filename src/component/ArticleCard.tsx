@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import ArticleCardHeader from './ArticleCardHeader';
 
 interface NewsData {
   slug: string;
@@ -10,6 +9,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
 }
 
 interface Props {
@@ -22,12 +22,12 @@ export default function ArticleCard({ data }: Props) {
    <div className="w-full border border-black">
     <div className="border-t-4 border-black py-2 flex justify-center">
       <h2 className="text-[18px] font-semibold tracking-wide">
-        POPULAR
+        MORE TO READ
       </h2>
     </div>
   </div>
       <div className="flex flex-col justify-start gap-4 pt-4">
-        {data.map((item, index) => (
+        {data.map((item) => (
           <article
             key={item.slug}
             className="relative w-full "
@@ -39,7 +39,7 @@ export default function ArticleCard({ data }: Props) {
                   title={item.title}
                   className="flex items-center gap-2 py-3 truncate"
                 >
-                  <Image src={item.image} alt={item.title} fill className="object-cover" />
+                  <Image src={item.image} alt={item.imageAlt ?? item.title} fill className="object-cover" />
                 </Link>
               </div>
               <div className="relative flex flex-col gap-2 overflow-hidden">
@@ -49,7 +49,7 @@ export default function ArticleCard({ data }: Props) {
                 </span>
 
                 <h3 className="relative z-10 text-[15px] font-semibold leading-snug line-clamp-3">
-                  {item.title}
+                  <Link href={`/${item.category}/${item.slug}`} className="hover:underline">{item.title}</Link>
                 </h3>
               </div>
             </div>

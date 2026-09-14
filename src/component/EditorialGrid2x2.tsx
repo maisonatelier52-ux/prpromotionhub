@@ -22,6 +22,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
   author:Author;
 }
 
@@ -46,6 +47,7 @@ export default function EditorialGrid2x2({ data }: Props) {
             <SecondEditorial
               title={item.title}
               image={item.image}
+              imageAlt={item.imageAlt}
               date={item.date}
               author={item.author.name}
               category={item.category}

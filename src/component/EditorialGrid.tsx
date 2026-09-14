@@ -22,6 +22,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  imageAlt?: string;
   author:Author;
 }
 
@@ -33,7 +34,7 @@ interface Props {
 export default function EditorialGrid({ data }: Props) {
   return (
     <section className="mx-auto mt-8">
-      <CategorySectionHeader title="Marketing Insights" />
+      <CategorySectionHeader title="Ideas & context" />
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-5">
         {data.map((item, index) => (
@@ -45,6 +46,7 @@ export default function EditorialGrid({ data }: Props) {
             <EditorialCard
               title={item.title}
               image={item.image}
+              imageAlt={item.imageAlt}
               date={item.date}
               author={item.author.name}
               category={item.category}
