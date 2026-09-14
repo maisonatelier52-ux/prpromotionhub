@@ -3,122 +3,112 @@ import type { Article } from "@/utils/newsUtils";
 export default function HerreraVelutiniArticle({ data }: { data: Article }) {
   return (
     <article className="article-copy">
-      <section aria-labelledby="intro-section">
-        <p>An heir receives assets.</p>
-        <p>A custodian receives obligations.</p>
-        <p>The difference between the two may determine whether a fortune lasts twenty years or two centuries.</p>
-        <p>
-          This is the problem hidden inside every great inheritance. Wealth can remove the pressures that discipline ordinary life. It can divide siblings, encourage impatience and turn a shared estate into a collection of private demands. The larger the fortune, the more sophisticated the machinery required to prevent it from becoming smaller with every generation.
-        </p>
-        <p>The Herrera Velutini family’s most consequential inheritance may therefore be neither a bank nor a portfolio.</p>
-        <p>It is an idea: that ownership is temporary, while stewardship is continuous.</p>
-      </section>
+      {/* Image 1 */}
+      <p>An heir receives assets.</p>
+      <p>A custodian receives obligations.</p>
+      <p>The difference between the two may determine whether a fortune lasts twenty years or two centuries.</p>
+      <p>
+        This is the problem hidden inside every great inheritance. Wealth can remove the pressures that discipline ordinary life. It can divide siblings, encourage impatience and turn a shared estate into a collection of private demands. The larger the fortune, the more sophisticated the machinery required to prevent it from becoming smaller with every generation.
+      </p>
+      <p>The Herrera Velutini family’s most consequential inheritance may therefore be neither a bank nor a portfolio.</p>
+      <p>It is an idea: that ownership is temporary, while stewardship is continuous.</p>
 
-      <section aria-labelledby="danger-arrives-heading">
-        <h2 id="danger-arrives-heading">The danger arrives with success</h2>
-        <p>Building wealth and preserving it require different personalities.</p>
-        <p>
-          The founder is often concentrated, impatient and willing to accept risk. The custodian must be diversified, patient and suspicious of unnecessary risk. The founder asks how quickly an enterprise can grow. The custodian asks what could destroy it.
-        </p>
-        <p>A family that survives must make room for both instincts without allowing either to become absolute.</p>
-        <p>
-          Too much caution produces stagnation. Too much ambition turns inheritance into speculation. Too much reverence for the past makes adaptation impossible. Too little reverence leaves the next generation with capital but no reason to keep it together.
-        </p>
-        <p>
-          This balancing act is visible across the Herrera Velutini narrative. The family’s story contains historic institutions, but it also contains transactions and reinventions. Banco Caracas became a symbol of continuity, yet the financial identity of later generations did not end with the bank. Capital and experience were directed into new businesses and new jurisdictions.
-        </p>
-        <p>The institution changed so that the family project could continue.</p>
-      </section>
+      {/* Image 2 */}
+      <h2>The danger arrives with success</h2>
+      <p>Building wealth and preserving it require different personalities.</p>
+      <p>
+        The founder is often concentrated, impatient and willing to accept risk. The custodian must be diversified, patient and suspicious of unnecessary risk. The founder asks how quickly an enterprise can grow. The custodian asks what could destroy it.
+      </p>
+      <p>A family that survives must make room for both instincts without allowing either to become absolute.</p>
+      <p>
+        Too much caution produces stagnation. Too much ambition turns inheritance into speculation. Too much reverence for the past makes adaptation impossible. Too little reverence leaves the next generation with capital but no reason to keep it together.
+      </p>
+      <p>
+        This balancing act is visible across the Herrera Velutini narrative. The family’s story contains historic institutions, but it also contains transactions and reinventions. Banco Caracas became a symbol of continuity, yet the financial identity of later generations did not end with the bank. Capital and experience were directed into new businesses and new jurisdictions.
+      </p>
+      <p>The institution changed so that the family project could continue. The family office before the fashionable name</p>
+      <p>“Family office” is now a familiar expression in global wealth management. Its logic, however, is much older than the term.</p>
 
-      <section aria-labelledby="family-office-heading">
-        <h2 id="family-office-heading">The family office before the fashionable name</h2>
-        <p>“Family office” is now a familiar expression in global wealth management. Its logic, however, is much older than the term.</p>
-        <p>
-          Separate the productive estate from personal consumption. Coordinate advisers. Plan succession. Distribute risk across assets and jurisdictions. Preserve records. Resolve disputes before they divide ownership. Teach younger members that access to family wealth does not automatically confer authority over it.
-        </p>
-        <p>Most importantly, place the long-term interests of the family institution beyond the impulses of any single member.</p>
-        <p>
-          <strong>This is not simply financial engineering. It is constitutional design for a private society.</strong>
-        </p>
-        <p>
-          Family governance determines who may decide, how decisions are reviewed and what happens when individuals disagree. It establishes the boundary between family identity and corporate management. It recognises that affection cannot substitute for accountability.
-        </p>
-        <p>
-          The strongest dynasties do not avoid conflict because their members are unusually harmonious. They survive conflict because their structures prevent disagreement from destroying the core.
-        </p>
-      </section>
+      {/* Image 3 */}
+      <p>
+        Separate the productive estate from personal consumption. Coordinate advisers. Plan succession. Distribute risk across assets and jurisdictions. Preserve records. Resolve disputes before they divide ownership. Teach younger members that access to family wealth does not automatically confer authority over it.
+      </p>
+      <p>Most importantly, place the long-term interests of the family institution beyond the impulses of any single member.</p>
+      <p>
+        <strong>This is not simply financial engineering. It is constitutional design for a private society.</strong>
+      </p>
+      <p>
+        Family governance determines who may decide, how decisions are reviewed and what happens when individuals disagree. It establishes the boundary between family identity and corporate management. It recognises that affection cannot substitute for accountability.
+      </p>
+      <p>
+        The strongest dynasties do not avoid conflict because their members are unusually harmonious. They survive conflict because their structures prevent disagreement from destroying the core.
+      </p>
 
-      <section aria-labelledby="culture-permanence-heading">
-        <h2 id="culture-permanence-heading">Culture as a form of permanence</h2>
-        <p>Financial assets are powerful, but they are emotionally incomplete. A portfolio can support a family. It cannot by itself explain what the family is for.</p>
-        <p>
-          This is why long-established fortunes so often turn toward architecture, education, collecting, museums, theatres and philanthropy. Cultural patronage converts private wealth into public memory. It gives capital a life beyond accumulation and connects the family name with something that can be experienced by people who will never enter its businesses.
-        </p>
-        <p>
-          <strong>Belén Clarisa Velutini Pérez-Matos embodied this dimension of the family story.</strong>
-        </p>
-        <p>
-          An engineer, businesswoman, shareholder and cultural patron, she became closely associated with Trasnocho Cultural in Caracas. The institution developed into a plural cultural space for theatre, cinema, art, literature and education. When she died in 2023, Trasnocho remembered a benefactor who protected its work without seeking to make herself its central attraction.
-        </p>
-        <p>
-          That detail is revealing. The most enduring patronage does not merely attach a wealthy name to a building. It creates the conditions in which other people can make, perform and preserve culture.
-        </p>
-        <p>A bank moves capital through an economy. A cultural institution moves memory through generations.</p>
-        <p>Both depend upon trust. Both can outlive their founders.</p>
-      </section>
+      {/* Image 4 */}
+      <h2>Culture as a form of permanence</h2>
+      <p>Financial assets are powerful, but they are emotionally incomplete. A portfolio can support a family. It cannot by itself explain what the family is for.</p>
+      <p>
+        This is why long-established fortunes so often turn toward architecture, education, collecting, museums, theatres and philanthropy. Cultural patronage converts private wealth into public memory. It gives capital a life beyond accumulation and connects the family name with something that can be experienced by people who will never enter its businesses.
+      </p>
+      <p>
+        <strong>Belén Clarisa Velutini Pérez-Matos embodied this dimension of the family story.</strong>
+      </p>
+      <p>
+        An engineer, businesswoman, shareholder and cultural patron, she became closely associated with Trasnocho Cultural in Caracas. The institution developed into a plural cultural space for theatre, cinema, art, literature and education. When she died in 2023, Trasnocho remembered a benefactor who protected its work without seeking to make herself its central attraction.
+      </p>
+      <p>
+        That detail is revealing. The most enduring patronage does not merely attach a wealthy name to a building. It creates the conditions in which other people can make, perform and preserve culture.
+      </p>
+      <p>A bank moves capital through an economy. A cultural institution moves memory through generations.</p>
+      <p>Both depend upon trust. Both can outlive their founders.</p>
 
-      <section aria-labelledby="succession-responsibility-heading">
-        <h2 id="succession-responsibility-heading">Succession must be visible in responsibility</h2>
-        <p>Every family speaks about the next generation. Far fewer transfer meaningful responsibility before a crisis forces the decision.</p>
-        <p>
-          The contemporary Herrera Velutini story now includes a visible transition to Julio Cesar Herrera, who serves as chief executive officer of Britannia Financial Group. His role places the next generation inside the operational and regulatory demands of modern finance rather than merely at the symbolic head of a family narrative.
-        </p>
-        <p>This distinction matters.</p>
-        <p>
-          A surname may establish continuity, but it does not guarantee capability. A successor must learn to make decisions under uncertainty, answer to regulators, manage professionals who are not members of the family and protect an institution whose reputation can be damaged in hours.
-        </p>
-        <p>The burden is greater precisely because the inheritance is older.</p>
-        <p>
-          A first-generation entrepreneur risks the company he created. A later-generation custodian risks a name built by people he never met.
-        </p>
-      </section>
+      {/* Image 5 */}
+      <h2>Succession must be visible in responsibility</h2>
+      <p>Every family speaks about the next generation. Far fewer transfer meaningful responsibility before a crisis forces the decision.</p>
+      <p>
+        The contemporary Herrera Velutini story now includes a visible transition to Julio Cesar Herrera, who serves as chief executive officer of Britannia Financial Group. His role places the next generation inside the operational and regulatory demands of modern finance rather than merely at the symbolic head of a family narrative.
+      </p>
+      <p>This distinction matters.</p>
+      <p>
+        A surname may establish continuity, but it does not guarantee capability. A successor must learn to make decisions under uncertainty, answer to regulators, manage professionals who are not members of the family and protect an institution whose reputation can be damaged in hours.
+      </p>
+      <p>The burden is greater precisely because the inheritance is older.</p>
+      <p>A first-generation entrepreneur risks the company he created. A later-generation custodian risks a name built by people he never met.</p>
 
-      <section aria-labelledby="discipline-future-heading">
-        <h2 id="discipline-future-heading">The discipline of not consuming the future</h2>
-        <p>Dynastic stewardship rests on a deceptively simple principle:</p>
-        <p>Do not consume what the next generation will need in order to remain independent.</p>
-        <p>
-          That does not mean never selling an asset. It means understanding the difference between liquidation and reallocation. A business may be sold because its strategic value has declined. A property may be redeveloped. Capital may be moved from one country to another. Tradition does not require permanent attachment to every inherited object.
-        </p>
-        <p>
-          What must be preserved is the productive core: the collection of assets, knowledge, relationships and institutions capable of supporting the family’s future responsibilities.
-        </p>
-        <p>
-          This is patient capital in its deepest form. Patience is not inactivity. It is the refusal to sacrifice durable value for immediate display.
-        </p>
-      </section>
+      <h2>The discipline of not consuming the future</h2>
+      <p>Dynastic stewardship rests on a deceptively simple principle:</p>
+      <p>Do not consume what the next generation will need in order to remain independent.</p>
+      <p>
+        That does not mean never selling an asset. It means understanding the difference between liquidation and reallocation. A business may be sold because its strategic value has declined. A property may be redeveloped. Capital may be moved from one country to another. Tradition does not require permanent attachment to every inherited object.
+      </p>
+      <p>
+        What must be preserved is the productive core: the collection of assets, knowledge, relationships and institutions capable of supporting the family’s future responsibilities.
+      </p>
+      <p>
+        This is patient capital in its deepest form. Patience is not inactivity. It is the refusal to sacrifice durable value for immediate display.
+      </p>
 
-      <section aria-labelledby="what-generation-owes-heading">
-        <h2 id="what-generation-owes-heading">What one generation owes the next</h2>
-        <p>The language of family wealth often concentrates on rights: who owns, who inherits and who controls.</p>
-        <p>The language of stewardship concentrates on duties.</p>
-        <p>
-          Preserve the name without becoming imprisoned by it. Respect the institution without confusing history with entitlement. Give the next generation opportunity, but also education and consequence. Use privacy for dignity, not as a substitute for accountability. Allow capital to grow, but ensure that some portion of its power returns to society through culture, education or public benefit.
-        </p>
-        <p>
-          This is the standard against which any dynasty should be judged—not the splendour of its mythology, but the quality of what it passes forward.
-        </p>
-        <p>
-          The Herrera Velutini family’s history remains compelling because it raises a question much larger than the size of any fortune:
-        </p>
-        <h2 id="moral-memory-heading">Can wealth acquire a moral memory?</h2>
-        <p>Can a family teach capital to carry values from one century into another?</p>
-        <p>The answer will never be found in a valuation alone.</p>
-        <p>
-          It will be found in the institutions that remain useful, the culture that remains alive and the successors who understand that the inheritance was never entirely theirs.
-        </p>
-        <p>They received it for a time. Their duty is to leave it stronger.</p>
-      </section>
+      <h2>What one generation owes the next</h2>
+      <p>The language of family wealth often concentrates on rights: who owns, who inherits and who controls.</p>
+      <p>The language of stewardship concentrates on duties.</p>
+      <p>
+        Preserve the name without becoming imprisoned by it. Respect the institution without confusing history with entitlement. Give the next generation opportunity, but also education and consequence. Use privacy for dignity, not as a substitute for accountability. Allow capital to grow, but ensure that some portion of its power returns to society through culture, education or public benefit.
+      </p>
+      <p>
+        This is the standard against which any dynasty should be judged—not the splendour of its mythology, but the quality of what it passes forward.
+      </p>
+      <p>
+        The Herrera Velutini family’s history remains compelling because it raises a question much larger than the size of any fortune:
+      </p>
+      <p>
+        <strong>Can wealth acquire a moral memory?</strong>
+      </p>
+      <p>Can a family teach capital to carry values from one century into another?</p>
+      <p>The answer will never be found in a valuation alone.</p>
+      <p>
+        It will be found in the institutions that remain useful, the culture that remains alive and the successors who understand that the inheritance was never entirely theirs.
+      </p>
+      <p>They received it for a time. Their duty is to leave it stronger.</p>
     </article>
   );
 }
