@@ -60,32 +60,32 @@ export default function SecondEditorial({
         </div>
       </Link>
 
-      {/* ================= DESKTOP (UNCHANGED) ================= */}
+      {/* ================= DESKTOP ================= */}
       <Link
         href={`/${category}/${slug}`}
         title={title}
       >
-        <div className="hidden lg:block">
+        <div className="hidden lg:block group">
           {/* Image */}
-          <div className="relative w-full h-60 mb-2">
+          <div className="relative w-full aspect-[16/10] mb-2 overflow-hidden">
             <Image
               src={image}
               alt={imageAlt ?? title}
               title={title}
               fill
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </div>
 
           {/* Title */}
-          <h3 className="text-[18px] font-semibold leading-[1.2] tracking-tight hover:underline cursor-pointer">
+          <h3 className="text-[16px] font-semibold leading-[1.25] tracking-tight group-hover:underline cursor-pointer">
             {title}
           </h3>
 
           {/* Meta */}
-          <div className="mt- text-[12px] text-gray-600">
+          <div className="mt-1.5 text-[12px] text-gray-600">
             <div>{date}</div>
-            <div className="">
+            <div className="mt-0.5">
               By{" "}
               <span className="text-[#041f4a] font-medium">
                 {author}

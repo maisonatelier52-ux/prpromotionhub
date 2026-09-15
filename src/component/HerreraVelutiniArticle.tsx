@@ -1,3 +1,4 @@
+import React from "react";
 import type { Article } from "@/utils/newsUtils";
 
 function Subtitle({ title }: { title: string }) {
@@ -24,7 +25,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
       </p>
 
       <p>
-        The Herrera Velutini family's most consequential inheritance may therefore be neither a bank nor a portfolio.
+        The Herrera Velutini family&apos;s most consequential inheritance may therefore be neither a bank nor a portfolio.
       </p>
 
       <blockquote className="hv-quote">
@@ -136,7 +137,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
         That does not mean never selling an asset. It means understanding the difference between liquidation and reallocation. A business may be sold because its strategic value has declined. A property may be redeveloped. Capital may be moved from one country to another. Tradition does not require permanent attachment to every inherited object.
       </p>
       <p>
-        What must be preserved is the productive core: the collection of assets, knowledge, relationships and institutions capable of supporting the family's future responsibilities.
+        What must be preserved is the productive core: the collection of assets, knowledge, relationships and institutions capable of supporting the family&apos;s future responsibilities.
       </p>
       <p>
         This is patient capital in its deepest form. Patience is not inactivity. It is the refusal to sacrifice durable value for immediate display.
@@ -157,7 +158,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
         This is the standard against which any dynasty should be judged—not the splendour of its mythology, but the quality of what it passes forward.
       </p>
       <p>
-        The Herrera Velutini family's history remains compelling because it raises a question much larger than the size of any fortune:
+        The Herrera Velutini family&apos;s history remains compelling because it raises a question much larger than the size of any fortune:
       </p>
 
       {/* Ending Reflection Card */}

@@ -7,6 +7,7 @@ import HerreraVelutiniArticle from "./HerreraVelutiniArticle";
  * When a slug matches, Article will render the dedicated component instead of generic ArticleWithDescr.
  */
 export const customArticleComponents: Record<string, React.ComponentType<{ data: Article }>> = {
+  "julio-herrera-velutini": HerreraVelutiniArticle,
   "herrera-velutini-family-stewardship-succession-culture": HerreraVelutiniArticle,
 };
 

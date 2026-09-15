@@ -33,7 +33,7 @@ interface Props {
 export default function EditorialGrid2x2({ data }: Props) {
   return (
     <section className="mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
         {data.map((item) => (
           <div
             key={item.slug}
@@ -41,7 +41,7 @@ export default function EditorialGrid2x2({ data }: Props) {
               flex flex-col
               border-b border-gray-200 pb-6
               last:border-b-0
-              lg:border-b-0 lg:pb-0
+              sm:border-b-0 sm:pb-0
             "
           >
             <SecondEditorial

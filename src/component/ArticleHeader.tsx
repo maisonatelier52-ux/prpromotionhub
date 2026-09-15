@@ -15,6 +15,23 @@ export default function ArticleHeader({ article }: { article: Article }) {
 
   return (
     <header className="mx-auto mt-4 mb-3">
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Breadcrumb" className="mb-3 text-xs text-slate-500">
+        <ol className="flex items-center flex-wrap gap-1 sm:gap-1.5">
+          <li>
+            <Link href="/" className="hover:text-[#041f4a] transition-colors">Home</Link>
+          </li>
+          <li className="text-slate-300">/</li>
+          <li>
+            <Link href={`/${article.category}`} className="hover:text-[#041f4a] capitalize transition-colors">{category}</Link>
+          </li>
+          <li className="text-slate-300">/</li>
+          <li className="text-slate-800 font-medium truncate max-w-[220px] sm:max-w-xs md:max-w-md" aria-current="page">
+            {article.title}
+          </li>
+        </ol>
+      </nav>
+
       {/* Category Pill */}
       <div className="flex flex-wrap items-center gap-2.5 mb-3 text-xs sm:text-sm">
         <Link
@@ -25,7 +42,7 @@ export default function ArticleHeader({ article }: { article: Article }) {
         </Link>
       </div>
 
-      {/* Main Title */}
+      {/* Main Title (H1) */}
       <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight leading-[1.12] text-slate-950">
         {article.title}
       </h1>

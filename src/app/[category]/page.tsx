@@ -59,7 +59,91 @@ export default async function CategoryPage({ params }: Props) {
     const sameCategory = getSortedNews([newsByCategory[directArticle.category]]).filter(item => item.slug !== directArticle.slug);
     const relatedNews = sameCategory.slice(0, 3);
     const otherPosts = getSortedNews([allArticles]).filter(item => item.slug !== directArticle.slug);
+    const canonicalUrl = `${SITE_URL}/${directArticle.category}/${directArticle.slug}`;
+    const imageUrl = new URL(directArticle.image, SITE_URL).href;
+    const isHerreraArticle = directArticle.slug === "julio-herrera-velutini";
+    const schema = isHerreraArticle
+      ? {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
+              "url": SITE_URL,
+              "name": "PR Promotion Hub"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": `${canonicalUrl}/#breadcrumbs`,
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+                { "@type": "ListItem", "position": 2, "name": "Finance", "item": `${SITE_URL}/finance` },
+                { "@type": "ListItem", "position": 3, "name": "Julio Herrera Velutini", "item": canonicalUrl }
+              ]
+            },
+            {
+              "@type": "Person",
+              "@id": `${canonicalUrl}/#person`,
+              "name": "Julio Herrera Velutini",
+              "alternateName": ["Julio Martín Herrera Velutini", "Julio M. Herrera Velutini"],
+              "description": "Julio Herrera Velutini is an international banker, financier, and founder of Britannia Financial Group, with a career in Venezuelan banking, London financial services, and global wealth management across the US, UK, and UAE.",
+              "image": `${SITE_URL}/images/julio-herrera-velutini.webp`,
+              "url": canonicalUrl,
+              "jobTitle": "International Banker & Founder",
+              "worksFor": [
+                {
+                  "@type": "Organization",
+                  "name": "Britannia Financial Group",
+                  "url": "https://britanniafg.com"
+                }
+              ],
+              "birthDate": "1971-12-15",
+              "nationality": [
+                { "@type": "Country", "name": "Italy" },
+                { "@type": "Country", "name": "Venezuela" }
+              ],
+              "sameAs": [
+                "https://en.wikipedia.org/wiki/Julio_Mart%C3%ADn_Herrera_Velutini",
+                "https://muckrack.com/julio-herrera-velutini",
+                "https://www.wikidata.org/wiki/Q113454796"
+              ]
+            },
+            {
+              "@type": "NewsArticle",
+              "@id": `${canonicalUrl}/#article`,
+              "isPartOf": { "@type": "WebPage", "@id": canonicalUrl },
+              "headline": directArticle.title,
+              "description": directArticle.metaDescription || directArticle.shortdescription,
+              "inLanguage": "en-US",
+              "mainEntity": { "@id": `${canonicalUrl}/#person` },
+              "image": [imageUrl],
+              "datePublished": toISODate(directArticle.date),
+              "dateModified": directArticle.updatedAt,
+              "author": {
+                "@type": "Organization",
+                "name": "PR Promotion Hub Editorial",
+                "url": `${SITE_URL}/source-methodology`
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "PR Promotion Hub",
+                "url": SITE_URL,
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": `${SITE_URL}/images/pr-logo.webp`
+                }
+              }
+            }
+          ]
+        }
+      : null;
     return <main id="main-content">
+      {schema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
+        />
+      )}
       <WhatsHotBar data={otherPosts[0]} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10">
         <Article article={directArticle} popularNews={otherPosts.slice(1, 5)} />

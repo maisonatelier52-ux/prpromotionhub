@@ -2,7 +2,6 @@
 
 import { useRef, useState } from "react";
 import CategoryCard from "./CategoryCard";
-import UpgradePromoCard from "./UpgradePromoCard";
 import Pagination from "./Pagintation";
 import ArticleCard from "./ArticleCard";
 
@@ -60,7 +59,6 @@ export default function CategoryContent({ data, popularNews }: Props) {
         <div className="w-full lg:w-1/3">
           <div className="sticky top-10 flex flex-col gap-8">
             <ArticleCard data={popularNews} />
-            <UpgradePromoCard />
           </div>
         </div>
       </div>
