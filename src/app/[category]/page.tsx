@@ -5,156 +5,45 @@ import CategoryContent from "@/component/CategoryContent";
 import WhatsHotBar from "@/component/WhatsHotBar";
 import { allArticles, newsByCategory } from "@/utils/newsData";
 import { getSortedNews } from "@/utils/newsUtils";
-import { CATEGORY_LABELS, SITE_URL } from "@/utils/siteConfig";
-
-import Article from "@/component/Article";
-import RelatedNewsSection from "@/component/RelatedNewsSection";
-import { customArticleComponents } from "@/component/customArticleRegistry";
-import { toISODate } from "@/utils/newsUtils";
+import { CATEGORY_LABELS } from "@/utils/siteConfig";
+import { siteUrl } from "@/utils/seo";
 
 export const dynamicParams = false;
 type Props = { params: Promise<{ category: string }> };
+
+/**
+ * Categories only.
+ *
+ * This route used to also render article slugs as top-level pages, which
+ * published every custom article at a second root-level URL (/<slug>/) as well
+ * as its real /<category>/<slug>/ URL, and emitted a soft-404 page at
+ * /julio-herrera-velutini/. Both are removed; those paths are 301'd at the host.
+ */
 export function generateStaticParams() {
-  const categoryList = Object.keys(newsByCategory).map(category => ({ category }));
-  const customSlugs = Object.keys(customArticleComponents).map(slug => ({ category: slug }));
-  return [...categoryList, ...customSlugs];
+  return Object.keys(newsByCategory).map(category => ({ category }));
 }
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
-  const directArticle = allArticles.find(a => a.slug === category);
-  if (directArticle) {
-    const url = `${SITE_URL}/${directArticle.category}/${directArticle.slug}`;
-    const image = new URL(directArticle.image, SITE_URL).href;
-    const description = directArticle.metaDescription || directArticle.shortdescription;
-    return {
-      title: directArticle.title,
-      description,
-      keywords: directArticle.primaryKeyword ? [directArticle.primaryKeyword] : undefined,
-      authors: [{ name: directArticle.author.name }],
-      alternates: { canonical: url },
-      openGraph: {
-        title: directArticle.title,
-        description,
-        url,
-        siteName: "PR Promotion Hub Blog",
-        type: "article",
-        publishedTime: toISODate(directArticle.date),
-        modifiedTime: directArticle.updatedAt,
-        images: [{ url: image, alt: directArticle.imageAlt ?? "AI-generated illustration" }],
-      },
-      twitter: { card: "summary_large_image", title: directArticle.title, description, images: [image] },
-    };
-  }
   if (!newsByCategory[category]) notFound();
   const title = `${CATEGORY_LABELS[category]}: blog posts & guides`;
   const description = `Explore ${CATEGORY_LABELS[category].toLowerCase()} posts, guides and explainers with linked sources and useful context.`;
-  return { title, description, alternates: { canonical: `${SITE_URL}/${category}` },
-    openGraph: { type: "website", title, description, url: `${SITE_URL}/${category}` },
-    twitter: { card: "summary", title, description } };
+  return {
+    title,
+    description,
+    alternates: { canonical: siteUrl(category) },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+    openGraph: { type: "website", title, description, url: siteUrl(category) },
+    twitter: { card: "summary", title, description },
+  };
 }
+
 export default async function CategoryPage({ params }: Props) {
   const { category } = await params;
-  const directArticle = allArticles.find(a => a.slug === category);
-  if (directArticle) {
-    const sameCategory = getSortedNews([newsByCategory[directArticle.category]]).filter(item => item.slug !== directArticle.slug);
-    const relatedNews = sameCategory.slice(0, 3);
-    const otherPosts = getSortedNews([allArticles]).filter(item => item.slug !== directArticle.slug);
-    const canonicalUrl = `${SITE_URL}/${directArticle.category}/${directArticle.slug}`;
-    const imageUrl = new URL(directArticle.image, SITE_URL).href;
-    const isHerreraArticle = directArticle.slug === "julio-herrera-velutini";
-    const schema = isHerreraArticle
-      ? {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "WebSite",
-              "@id": `${SITE_URL}/#website`,
-              "url": SITE_URL,
-              "name": "PR Promotion Hub"
-            },
-            {
-              "@type": "BreadcrumbList",
-              "@id": `${canonicalUrl}/#breadcrumbs`,
-              "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
-                { "@type": "ListItem", "position": 2, "name": "Finance", "item": `${SITE_URL}/finance` },
-                { "@type": "ListItem", "position": 3, "name": "Julio Herrera Velutini", "item": canonicalUrl }
-              ]
-            },
-            {
-              "@type": "Person",
-              "@id": `${canonicalUrl}/#person`,
-              "name": "Julio Herrera Velutini",
-              "alternateName": ["Julio Martín Herrera Velutini", "Julio M. Herrera Velutini"],
-              "description": "Julio Herrera Velutini is an international banker, financier, and founder of Britannia Financial Group, with a career in Venezuelan banking, London financial services, and global wealth management across the US, UK, and UAE.",
-              "image": `${SITE_URL}/images/julio-herrera-velutini.webp`,
-              "url": canonicalUrl,
-              "jobTitle": "International Banker & Founder",
-              "worksFor": [
-                {
-                  "@type": "Organization",
-                  "name": "Britannia Financial Group",
-                  "url": "https://britanniafg.com"
-                }
-              ],
-              "birthDate": "1971-12-15",
-              "nationality": [
-                { "@type": "Country", "name": "Italy" },
-                { "@type": "Country", "name": "Venezuela" }
-              ],
-              "sameAs": [
-                "https://en.wikipedia.org/wiki/Julio_Mart%C3%ADn_Herrera_Velutini",
-                "https://muckrack.com/julio-herrera-velutini",
-                "https://www.wikidata.org/wiki/Q113454796"
-              ]
-            },
-            {
-              "@type": "NewsArticle",
-              "@id": `${canonicalUrl}/#article`,
-              "isPartOf": { "@type": "WebPage", "@id": canonicalUrl },
-              "headline": directArticle.title,
-              "description": directArticle.metaDescription || directArticle.shortdescription,
-              "inLanguage": "en-US",
-              "mainEntity": { "@id": `${canonicalUrl}/#person` },
-              "image": [imageUrl],
-              "datePublished": toISODate(directArticle.date),
-              "dateModified": directArticle.updatedAt,
-              "author": {
-                "@type": "Organization",
-                "name": "PR Promotion Hub Editorial",
-                "url": `${SITE_URL}/source-methodology`
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "PR Promotion Hub",
-                "url": SITE_URL,
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": `${SITE_URL}/images/pr-logo.webp`
-                }
-              }
-            }
-          ]
-        }
-      : null;
-    return <main id="main-content">
-      {schema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
-        />
-      )}
-      <WhatsHotBar data={otherPosts[0]} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10">
-        <Article article={directArticle} popularNews={otherPosts.slice(1, 5)} />
-        <RelatedNewsSection data={relatedNews} article={directArticle} />
-      </div>
-    </main>;
-  }
   if (!newsByCategory[category]) notFound();
   const data = getSortedNews([newsByCategory[category]]);
   const latest = getSortedNews([allArticles]);
-  const popularNews = latest.filter(post => post.category !== category).slice(0,4);
+  const popularNews = latest.filter(post => post.category !== category).slice(0, 4);
   return <main id="main-content">
     <WhatsHotBar data={latest[0]} />
     <CategoryHeader category={category} />
@@ -164,4 +53,3 @@ export default async function CategoryPage({ params }: Props) {
     </div>
   </main>;
 }
-
