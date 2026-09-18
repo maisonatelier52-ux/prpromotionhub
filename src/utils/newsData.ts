@@ -4,8 +4,9 @@ import us from "../../public/data/us.json";
 import finance from "../../public/data/finance.json";
 import technology from "../../public/data/technology.json";
 import entertainment from "../../public/data/entertainment.json";
+import marketing from "../../public/data/marketing.json";
 import type { Article } from "./newsUtils";
-const archiveFiles: Record<string, Article[]> = { prnews, world, us, finance, technology, entertainment };
+const archiveFiles: Record<string, Article[]> = { prnews, world, us, finance, technology, entertainment, marketing };
 export const allArticles = Object.values(archiveFiles).flat();
 const slugAliases: Record<string, string> = {
   "julio-herrera-velutini": "herrera-velutini-family-stewardship-succession-culture",

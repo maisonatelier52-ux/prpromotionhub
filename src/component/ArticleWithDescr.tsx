@@ -9,12 +9,15 @@ export default function ArticleWithDescr({ data }: { data: Article }) {
       {data.sections?.length ? data.sections.map((section, index) => (
         <section key={index} aria-labelledby={`section-${index}`}>
           <h2 id={`section-${index}`}>{section.heading}</h2>
-          {section.paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+          {section.paragraphs.map((paragraph, i) => (
+            // dangerouslySetInnerHTML lets embedded <a> links in JSON paragraphs render as real anchors
+            <p key={i} dangerouslySetInnerHTML={{ __html: paragraph }} />
+          ))}
           {!!section.sourceIds?.length && <p className="section-sources">Sources: {section.sourceIds.map((id, i) => <span key={id}>{i > 0 ? ', ' : ''}<a href={`#source-${id}`}>{data.sources?.[id - 1]?.publisher ?? id} [{id}]</a></span>)}</p>}
         </section>
-      )) : data.description.split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-      {!!data.sources?.length && <section className="article-sources" aria-labelledby="sources-heading"><h2 id="sources-heading">Sources & further reading</h2><ol>{data.sources.map((source, i) => <li id={`source-${i + 1}`} key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a><p>{source.publisher} · {source.note}</p><p>Accessed {source.accessedAt}</p></li>)}</ol></section>}
-      <footer className="article-editorial-footer"><p>This post was prepared with AI assistance using the sources linked above. It combines attributed information with explanation and interpretation.</p><p><Link href="/source-methodology">How we use sources</Link> · <Link href="/contact">Send a correction</Link></p></footer>
+      )) : (data.description || data.shortdescription || '').split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+      {!!data.sources?.length && <section className="article-sources" aria-labelledby="sources-heading"><h2 id="sources-heading">Sources &amp; further reading</h2><ol>{data.sources.map((source, i) => <li id={`source-${i + 1}`} key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a><p>{source.publisher} · {source.note}</p><p>Accessed {source.accessedAt}</p></li>)}</ol></section>}
+      <footer className="article-editorial-footer"><p>This post was prepared with source-based research and editorial review by PR Promotion Hub.</p><p><Link href="/source-methodology">How we use sources</Link> · <Link href="/corrections">Send a correction</Link></p></footer>
     </article>
   );
 }

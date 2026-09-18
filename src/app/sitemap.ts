@@ -10,17 +10,46 @@ export const dynamic = "force-static";
  * non-canonical or redirecting URLs weakens the canonical signal it is meant
  * to reinforce.
  */
+import { AUTHORS_DATA } from "@/utils/authorsData";
+import { RESEARCH_REPORTS } from "@/utils/researchData";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ["", "about", "contact", "editorial", "source-methodology", "ownership-and-funding", "faq", "legal", "right-of-reply-policy", "advertising-and-sponsored-content-policy", "privacy-policy", "terms-and-conditions", ...Object.keys(newsByCategory)];
+  const staticPages = [
+    "",
+    "about",
+    "contact",
+    "editorial",
+    "editorial-guidelines",
+    "corrections",
+    "authors",
+    "research",
+    "source-methodology",
+    "ownership-and-funding",
+    "faq",
+    "legal",
+    "right-of-reply-policy",
+    "advertising-and-sponsored-content-policy",
+    "privacy-policy",
+    "terms-and-conditions",
+    ...Object.keys(newsByCategory),
+  ];
+
+  const authorPages = Object.keys(AUTHORS_DATA).map((slug) => `authors/${slug}`);
+  const researchPages = RESEARCH_REPORTS.map((report) => `research/${report.slug}`);
+
+  const allPagePaths = [...staticPages, ...authorPages, ...researchPages];
+
   const seen = new Set<string>();
-  const articles = allArticles.flatMap(article => {
+  const articles = allArticles.flatMap((article) => {
     const url = articleUrl(article);
     if (seen.has(url)) return [];
     seen.add(url);
     return [{ url, lastModified: article.updatedAt || REVIEW_DATE }];
   });
+
   return [
-    ...pages.map(path => ({ url: siteUrl(path), lastModified: REVIEW_DATE })),
+    ...allPagePaths.map((path) => ({ url: siteUrl(path), lastModified: REVIEW_DATE })),
     ...articles,
   ];
 }
+

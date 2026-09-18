@@ -1,8 +1,9 @@
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://pr-promotion-hub-editorial-review.web-developm-8730.chatgpt.site").replace(/\/$/, "");
-export const REVIEW_DATE = "2026-09-11";
+export const BRAND_NAME = "PR Promotion Hub";
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.prpromotionhub.com").replace(/\/$/, "");
+export const REVIEW_DATE = "2026-09-18";
 export const CATEGORY_LABELS: Record<string, string> = {
   prnews: "Public Relations", technology: "Technology", finance: "Finance",
-  entertainment: "Entertainment", world: "World Affairs", us: "U.S. Affairs",
+  marketing: "Marketing", entertainment: "Entertainment", world: "World Affairs", us: "U.S. Affairs",
 };
-export const SITE_DESCRIPTION = "The PR Promotion Hub blog: practical guides, sourced explainers and perspectives on public relations, business, technology and current affairs.";
+export const SITE_DESCRIPTION = "PR Promotion Hub: sourced guides, explainers and perspectives on finance, banking, public relations, business leadership, technology and current affairs.";
 

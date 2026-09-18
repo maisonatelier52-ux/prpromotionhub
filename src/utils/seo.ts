@@ -1,4 +1,4 @@
-import { SITE_URL } from "./siteConfig";
+import { SITE_URL, CATEGORY_LABELS } from "./siteConfig";
 import { toISODate, type Article } from "./newsUtils";
 
 /**
@@ -151,12 +151,13 @@ export function buildArticleSchema(article: Article) {
     caption: article.imageCaption ?? article.imageAlt ?? article.title,
   };
 
+  const categoryLabel = CATEGORY_LABELS[article.category] ?? article.category;
   const breadcrumb = {
     "@type": "BreadcrumbList",
     "@id": `${pageUrl}#breadcrumb`,
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: siteUrl() },
-      { "@type": "ListItem", position: 2, name: "Finance", item: siteUrl(article.category) },
+      { "@type": "ListItem", position: 2, name: categoryLabel, item: siteUrl(article.category) },
       { "@type": "ListItem", position: 3, name: article.title },
     ],
   };
@@ -183,7 +184,7 @@ export function buildArticleSchema(article: Article) {
     mainEntityOfPage: { "@id": pageUrl },
     headline: article.title,
     description,
-    articleSection: "Finance",
+    articleSection: categoryLabel,
     inLanguage: "en",
     image: { "@id": primaryImage["@id"] },
     datePublished: toISODate(article.date),

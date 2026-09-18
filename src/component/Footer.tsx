@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="mb-8 md:mb-0">
             <div className="flex">
               <Link href="/" title="home" className="select-none">
-                <span className="font-serif font-bold text-[25px] tracking-tight text-white uppercase">
+                <span className="site-logo font-serif font-bold text-[25px] tracking-tight text-white uppercase">
                   PR<span className="font-normal">PROMOTIONHUB</span>
                 </span>
               </Link>

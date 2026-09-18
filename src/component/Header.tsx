@@ -32,22 +32,23 @@ export default function Header() {
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-2 text-xs text-gray-500 font-semibold border-b border-[#88888888]">
-            <div>
-              Guides · Explainers · Perspectives
+            <div className="flex items-center gap-6">
+              <span>Guides · Explainers · Perspectives</span>
+              <span className="text-gray-300 select-none" aria-hidden="true">|</span>
+              <nav aria-label="Quick links" className="flex items-center gap-5">
+                {categories.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    title={item.name}
+                    className="hover:underline hover:text-black transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </nav>
             </div>
 
-            <div className="flex items-center gap-6">
-              {categories.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  title={item.name}
-                  className="hover:underline"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
 
             <div className="flex items-center gap-4 text-black text-sm">
               <Link href="https://x.com/promotionh77500" title="twitter" target="_blank" rel="noopener noreferrer">
@@ -73,7 +74,7 @@ export default function Header() {
             {/* Center Logo */}
             <div className="flex justify-center">
               <Link href="/" title='home' className="select-none text-center">
-                <span className="font-serif font-bold text-[32px] tracking-tight text-black uppercase">
+                <span className="site-logo font-serif font-bold text-[36px] tracking-tight text-black uppercase">
                   PR<span className="font-normal">PROMOTIONHUB</span>
                 </span>
               </Link>

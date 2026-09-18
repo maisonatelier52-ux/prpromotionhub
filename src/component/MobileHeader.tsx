@@ -14,7 +14,7 @@ export default function MobileHeader() {
       <header className="w-full bg-black text-white relative z-50">
         <div className="flex items-center justify-between px-4 py-3">
           <Link href="/" title="home">
-            <span className="font-serif font-bold text-[22px] uppercase">
+            <span className="site-logo font-serif font-bold text-[22px] uppercase">
               PR<span className="font-normal">PROMOTIONHUB</span>
             </span>
           </Link>

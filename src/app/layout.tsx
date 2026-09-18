@@ -7,12 +7,19 @@ import ScrollToTop from "@/component/ScrollToTop";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "PR Promotion Hub Blog – Guides & Perspectives", template: "%s | PR Promotion Hub Blog" },
+  title: { default: "PR Promotion Hub – Finance, Banking & Business Intelligence", template: "%s | PR Promotion Hub" },
   description: SITE_DESCRIPTION,
-  openGraph: { title: "PR Promotion Hub Blog", description: SITE_DESCRIPTION, siteName: "PR Promotion Hub",
-    locale: "en_US", type: "website", images: [{ url: "/images/pr-logo.webp", alt: "PR Promotion Hub" }] },
-  twitter: { card: "summary", title: "PR Promotion Hub Blog", description: SITE_DESCRIPTION },
-  authors: [{ name: "PR Promotion Hub" }], publisher: "PR Promotion Hub",
+  openGraph: {
+    title: "PR Promotion Hub",
+    description: SITE_DESCRIPTION,
+    siteName: "PR Promotion Hub",
+    locale: "en_US",
+    type: "website",
+    images: [{ url: "/images/prpromotionhub-logo.webp", alt: "PR Promotion Hub" }],
+  },
+  twitter: { card: "summary_large_image", title: "PR Promotion Hub", description: SITE_DESCRIPTION },
+  authors: [{ name: "PR Promotion Hub" }],
+  publisher: "PR Promotion Hub",
   icons: { icon: "/favicon.ico" },
 };
 

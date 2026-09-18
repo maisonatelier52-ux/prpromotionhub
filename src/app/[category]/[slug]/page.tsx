@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Article from "@/component/Article";
-import RelatedNewsSection from "@/component/RelatedNewsSection";
 import WhatsHotBar from "@/component/WhatsHotBar";
 import { newsByCategory, allArticles, archiveRoutes, findArticle } from "@/utils/newsData";
 import { getSortedNews, toISODate } from "@/utils/newsUtils";
@@ -52,16 +51,21 @@ export default async function DetailPage({ params }: Props) {
   const article = findArticle(category, slug);
   if (!article) notFound();
   const sameCategory = getSortedNews([newsByCategory[article.category]]).filter(item => item.slug !== article.slug);
-  const relatedNews = sameCategory.slice(0, 3);
-  const otherPosts = getSortedNews([allArticles]).filter(item => item.slug !== article.slug);
+  const clusterArticles = sameCategory.slice(0, 5);
+  // Ensure sidebar "MORE TO READ" articles are completely distinct from the cluster articles
+  const clusterSlugs = new Set(clusterArticles.map(c => c.slug));
+  const otherPosts = getSortedNews([allArticles]).filter(
+    item => item.slug !== article.slug && !clusterSlugs.has(item.slug)
+  );
+  const sidebarArticles = otherPosts.slice(0, 4);
   const schema = buildArticleSchema(article);
 
   return <main id="main-content">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
     <WhatsHotBar data={otherPosts[0]} />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10">
-      <Article article={article} popularNews={otherPosts.slice(1,5)} />
-      <RelatedNewsSection data={relatedNews} article={article} />
+      <Article article={article} popularNews={sidebarArticles} clusterArticles={clusterArticles} />
     </div>
   </main>;
+
 }

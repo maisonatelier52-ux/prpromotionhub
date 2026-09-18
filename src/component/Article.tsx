@@ -3,15 +3,24 @@ import SocialShare from "./SocialShare";
 import ArticleImage from "./ArticleImage";
 import ArticleWithDescr from "./ArticleWithDescr";
 import CommentForm from "./CommentForm";
-import UpgradePromoCard from "./UpgradePromoCard";
 import SocialShareList from "./SocialShareList";
 import ShareComponent from "./ShareComponent";
 import ArticleCard from "./ArticleCard";
-import FAQ from "./FAQ";
 import type { Article as Post } from "@/utils/newsUtils";
 import { getCustomArticleComponent } from "./customArticleRegistry";
+import AuthorBox from "./article/AuthorBox";
+import RelatedArticlesBlock from "./article/RelatedArticlesBlock";
+import VerifiedSourcesPanel from "./article/VerifiedSourcesPanel";
 
-export default function Article({ article, popularNews }: { article: Post; popularNews: Post[] }) {
+export default function Article({
+  article,
+  popularNews,
+  clusterArticles
+}: {
+  article: Post;
+  popularNews: Post[];
+  clusterArticles?: Post[];
+}) {
   const CustomArticle = getCustomArticleComponent(article.slug);
 
   return (
@@ -28,17 +37,25 @@ export default function Article({ article, popularNews }: { article: Post; popul
               {CustomArticle ? <CustomArticle data={article} /> : <ArticleWithDescr data={article} />}
             </div>
           </div>
+
+          {/* E-E-A-T: Verified sources panel — only shown when article has real sources */}
+          <VerifiedSourcesPanel sources={article.sources} category={article.category} />
+
+          {/* Author attribution */}
+          <AuthorBox authorSlug={article.author.slug} fallbackName={article.author.name} />
+
+          {/* Topic cluster: related articles in the same subject area */}
+          <RelatedArticlesBlock relatedArticles={clusterArticles ?? popularNews} />
+
+
           {/* Space before suggest a correction section */}
-          <div className="mt-16 md:mt-24">
+          <div className="mt-6">
             <CommentForm />
           </div>
+
         </div>
         <aside className="w-full lg:w-1/3 lg:pl-8 lg:border-l-2 lg:border-dotted lg:border-gray-200 lg:sticky lg:top-6 lg:self-start">
           <ArticleCard data={popularNews} />
-          <FAQ />
-          <div className="py-5">
-            <UpgradePromoCard />
-          </div>
         </aside>
       </div>
     </div>

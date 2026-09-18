@@ -1,19 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
-/* Optional: custom font */
+/* ─── Global Typography System ───────────────────────────────────────────── */
 :root {
-  --font-system-helvetica:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
-    Helvetica,
-    Arial,
-    sans-serif;
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-system-helvetica: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-  font-family: var(--font-system-helvetica);
+  font-family: var(--font-primary);
 }
+
+/* Apply consistently across all text elements (excluding .site-logo) */
+h1:not(.site-logo), h2:not(.site-logo), h3:not(.site-logo), h4:not(.site-logo), h5:not(.site-logo), h6:not(.site-logo),
+p:not(.site-logo), a:not(.site-logo), span:not(.site-logo):not(.site-logo *), li, button, label, input, textarea, select, nav, footer {
+  font-family: var(--font-primary);
+}
+
+.site-logo, .site-logo span {
+  font-family: Georgia, 'Times New Roman', Times, Cambria, serif !important;
+}
+
 
 .article-copy { max-width: 72ch; font-size: 1.125rem; line-height: 1.7; color: #172537; overflow-wrap: anywhere; }
 .article-copy h2 { font-size: 1.5rem; font-weight: 700; line-height: 1.3; margin: 1.75rem 0 0.75rem; color: #041f4a; }
