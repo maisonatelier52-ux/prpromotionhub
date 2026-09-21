@@ -13,28 +13,20 @@ export const metadata: Metadata = {
 export default function CorrectionsPage() {
   const correctionLogs = [
     {
-      date: "September 11, 2026",
-      articleTitle: "Banking Succession & Institutional Governance: Herrera Velutini Family Review",
-      category: "Finance & Governance",
+      date: "September 21, 2026",
+      articleTitle: "The Inheritance Is Not the Fortune",
+      category: "Finance",
       slug: "finance/julio-herrera-velutini",
-      type: "Factual Precision & Citation Clarification",
-      description: "Updated historical bank asset valuations and added direct links to the relevant Central Bank and commercial court dockets. Clarified organizational structure distinctions within international subsidiary holdings."
+      type: "Material Omission Added",
+      description: "The article did not mention the federal criminal case, plea, pardon and related campaign-finance complaint that are part of the public record about its subject. A sourced section on the legal history was added, together with the supporting references, and statements made on the subject's behalf are labeled as such. Allegations are identified as allegations."
     },
     {
-      date: "August 24, 2026",
-      articleTitle: "Generative AI in Media Intelligence: 2026 Software Benchmarking",
-      category: "Technology & Innovation",
-      slug: "technology/ai-media-intelligence-benchmark",
-      type: "Data Correction",
-      description: "Corrected an erroneous percentage figure in Table 2 regarding automated sentiment classification accuracy. The revised figure (74.2%) reflects the updated benchmark dataset released by the research authors."
-    },
-    {
-      date: "July 15, 2026",
-      articleTitle: "Crisis Communications Playbook: Responding to Hostile Short-Seller Campaigns",
-      category: "Reputation & Crisis",
-      slug: "reputation/crisis-response-short-seller-campaigns",
-      type: "Attribution Note",
-      description: "Added formal source credit to the National Investor Relations Institute (NIRI) guidelines referenced in Section 3."
+      date: "September 21, 2026",
+      articleTitle: "The Inheritance Is Not the Fortune",
+      category: "Finance",
+      slug: "finance/julio-herrera-velutini",
+      type: "Encoding Fix",
+      description: "Corrected garbled punctuation characters in the page description and image text. No factual content changed."
     }
   ];
 
@@ -111,7 +103,7 @@ export default function CorrectionsPage() {
 
           <div className="space-y-4">
             {correctionLogs.map((log) => (
-              <article key={log.articleTitle} className="p-5 bg-white border border-gray-200 rounded shadow-xs space-y-2">
+              <article key={`${log.date}-${log.type}`} className="p-5 bg-white border border-gray-200 rounded shadow-xs space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-gray-500">
                   <span className="font-semibold text-[#111111]">{log.date}</span>
                   <span className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded font-mono">

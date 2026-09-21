@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import type { Article } from "@/utils/newsUtils";
 
 function Subtitle({ title }: { title: string }) {
@@ -143,6 +144,29 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
         This is patient capital in its deepest form. Patience is not inactivity. It is the refusal to sacrifice durable value for immediate display.
       </p>
 
+      {/* ── Public legal record (added Sept 21, 2026) ── */}
+      <Subtitle title="The public record: legal history" />
+      <p>
+        A profile of stewardship and reputation is incomplete without the legal proceedings that have shaped public discussion of Julio Herrera Velutini in recent years. The summary below is drawn from the sources listed at the end of this article and separates documented events from allegations and from statements made by his own side.
+      </p>
+      <ul className="list-disc pl-6 space-y-2 my-4">
+        <li>
+          <strong>August 2022 – indictment.</strong> Campaign Legal Center reports that he was criminally charged in a federal case in Puerto Rico alongside then-governor Wanda Vázquez Garced. Prosecutors alleged that $300,000 was provided to a super PAC supporting her re-election in exchange for a pledge to remove a top banking regulator. He pleaded not guilty.
+        </li>
+        <li>
+          <strong>Mid-2025 – plea.</strong> Campaign Legal Center reports that federal prosecutors allowed him to plead guilty to a single misdemeanor, which the presiding judge described as a &ldquo;slap on the wrist.&rdquo; A statement issued by his attorney characterises the matter as a technical campaign-finance violation, says the corruption charges were withdrawn and says no funds were ever delivered. That statement is his side&apos;s account, not an independent finding.
+        </li>
+        <li>
+          <strong>January 2026 – pardon and dismissal.</strong> Bloomberg Law reported that President Donald Trump granted him a full and unconditional pardon. A press release issued on his behalf states that the court dismissed the case on January 27, 2026.
+        </li>
+        <li>
+          <strong>February 2026 – campaign-finance complaint.</strong> Campaign Legal Center filed a complaint with the Federal Election Commission alleging that his daughter, Isabela Herrera, acted as a straw donor for a total of $3.5 million in contributions to a pro-Trump super PAC between December 2024 and July 2025. This is an allegation by an advocacy group. We did not find a public determination on the complaint as of the reporting date of this article.
+        </li>
+      </ul>
+      <p>
+        Earlier reporting by OCCRP in 2024 also described the bribery charges and his bank&apos;s liquidation. Readers should consult the primary sources listed below and any later court or agency records, because these matters may develop after this article&apos;s reporting date.
+      </p>
+
       {/* ── What one generation owes the next ── */}
       <Subtitle title="What one generation owes the next" />
       <p>
@@ -171,6 +195,10 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
         </p>
         <p className="hv-reflection-final">They received it for a time. Their duty is to leave it stronger.</p>
       </div>
+
+      <p className="mt-8 border-t border-slate-200 pt-4 text-xs text-slate-600">
+        <strong>Editor&apos;s note, September 21, 2026:</strong> This article originally omitted the legal history of its subject. The section &ldquo;The public record: legal history&rdquo; and the accompanying sources were added on this date. See the <Link href="/corrections/" className="underline">corrections ledger</Link>.
+      </p>
     </article>
   );
 }

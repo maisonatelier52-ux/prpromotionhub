@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Terms and Conditions", alternates: { canonical: "/terms-and-conditions" } };
+export const metadata: Metadata = { title: "Terms and Conditions", alternates: { canonical: "/terms-and-conditions/" } };
 import Link from "next/link";
 import { Scale, ShieldAlert, Copyright, ExternalLink, Info, Mail } from "lucide-react";
 

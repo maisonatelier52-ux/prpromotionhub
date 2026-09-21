@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Contact and corrections", description: "Existing publication contacts and what to include with a correction.", alternates: { canonical: "/contact" } };
+export const metadata: Metadata = { title: "Contact and corrections", description: "Existing publication contacts and what to include with a correction.", alternates: { canonical: "/contact/" } };
 export default function Contact() {
   return <main id="main-content" className="max-w-3xl mx-auto px-5 py-12">
     <h1 className="text-4xl font-bold text-[#041f4a] mb-5">Contact and corrections</h1>

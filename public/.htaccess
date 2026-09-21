@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Old descriptive slug -> canonical article URL (single 301 hop, any scheme/host)
+RewriteRule ^finance/herrera-velutini-family-stewardship-succession-culture/?$ https://www.prpromotionhub.com/finance/julio-herrera-velutini/ [R=301,L]
+
 # Redirect HTTP to HTTPS and non-WWW to WWW in one step
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^prpromotionhub\.com$ [NC]

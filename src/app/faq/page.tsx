@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   "title": "Questions about the blog",
   "description": "How to read the posts, use their references and suggest corrections.",
   "alternates": {
-    "canonical": "/faq"
+    "canonical": "/faq/"
   }
 };
 export default function Page() { return <PolicyPage title="Questions about the blog" intro="How to read the posts, use their references and suggest corrections." sections={[

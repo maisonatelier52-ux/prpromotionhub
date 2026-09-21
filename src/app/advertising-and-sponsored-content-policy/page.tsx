@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   "title": "Advertising and commercial disclosures",
   "description": "Commercial messages should be identifiable, and unknown funding relationships should remain unknown.",
   "alternates": {
-    "canonical": "/advertising-and-sponsored-content-policy"
+    "canonical": "/advertising-and-sponsored-content-policy/"
   }
 };
 export default function Page() { return <PolicyPage title="Advertising and commercial disclosures" intro="Commercial messages should be identifiable, and unknown funding relationships should remain unknown." sections={[

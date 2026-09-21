@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   "title": "Ownership and funding",
   "description": "Publication identity is visible; legal ownership and financial arrangements still require documented disclosure from the operator.",
   "alternates": {
-    "canonical": "/ownership-and-funding"
+    "canonical": "/ownership-and-funding/"
   }
 };
 export default function Page() { return <PolicyPage title="Ownership and funding" intro="Publication identity is visible; legal ownership and financial arrangements still require documented disclosure from the operator." sections={[

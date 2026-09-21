@@ -25,7 +25,7 @@ export default function Home() {
       <div className="mx-auto mt-8"><CategorySectionHeader title="Perspectives" /><SecondSection data={posts.slice(21,24)} /></div>
       <TravelSectionWithSubscribe data={posts.slice(24,28)} />
       <div className="mx-auto mt-8"><CategorySectionHeader title="More to explore" /><SecondSection data={posts.slice(28,31)} /></div>
-      <LatestNewsWithStickyPromo data={posts.slice(31)} />
+      <LatestNewsWithStickyPromo data={posts.slice(31)} sidebarArticles={posts.slice(0, 5)} />
     </div>
   </main>;
 }

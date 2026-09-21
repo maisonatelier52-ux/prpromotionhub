@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Privacy Policy", alternates: { canonical: "/privacy-policy" } };
+export const metadata: Metadata = { title: "Privacy Policy", alternates: { canonical: "/privacy-policy/" } };
 import Link from "next/link";
 import { Shield, Lock, Eye, Cookie, Globe, RefreshCw, Mail } from "lucide-react";
 

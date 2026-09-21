@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import HorizontalFeaturedArticle from "./HorizontalFeaturedArticle";
-import UpgradePromoCard from "./UpgradePromoCard";
+import ArticleCard from "./ArticleCard";
 import CategorySectionHeader from "./CategorySectionHeader";
 
 interface Author {
@@ -32,12 +32,13 @@ interface NewsData {
 
 interface Props {
   data: NewsData[];
+  sidebarArticles?: NewsData[];
 }
 
 const INITIAL_COUNT = 6;
 const LOAD_MORE_COUNT = 6;
 
-export default function LatestNewsWithStickyPromo({ data }: Props) {
+export default function LatestNewsWithStickyPromo({ data, sidebarArticles }: Props) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
 
   const showMore = () => {
@@ -97,7 +98,7 @@ export default function LatestNewsWithStickyPromo({ data }: Props) {
         {/* RIGHT SECTION */}
         <div className="w-full lg:w-1/3">
           <div className="sticky top-10">
-            <UpgradePromoCard />
+            <ArticleCard data={sidebarArticles ?? data.slice(0, 5)} title="More to read" />
           </div>
         </div>
       </div>

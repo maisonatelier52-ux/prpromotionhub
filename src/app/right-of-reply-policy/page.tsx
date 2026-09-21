@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   "title": "Corrections and responses",
   "description": "A specific, supported correction or response is more useful than an unsourced dispute.",
   "alternates": {
-    "canonical": "/right-of-reply-policy"
+    "canonical": "/right-of-reply-policy/"
   }
 };
 export default function Page() { return <PolicyPage title="Corrections and responses" intro="A specific, supported correction or response is more useful than an unsourced dispute." sections={[

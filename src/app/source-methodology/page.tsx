@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   "title": "Sources and methodology",
   "description": "How the blog’s posts use sources, distinguish interpretation and explain uncertainty.",
   "alternates": {
-    "canonical": "/source-methodology"
+    "canonical": "/source-methodology/"
   }
 };
 export default function Page() { return <PolicyPage title="Sources and methodology" intro="How the blog’s posts use sources, distinguish interpretation and explain uncertainty." sections={[
