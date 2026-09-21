@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "PR Promotion Hub – Finance, Banking & Business Intelligence", template: "%s | PR Promotion Hub" },
   description: SITE_DESCRIPTION,
+  verification: {
+    google: "UgoR9dTSJNmoUi3Qa8k5P5TolstRHM_8B5G9iC8HHpY",
+  },
   openGraph: {
     title: "PR Promotion Hub",
     description: SITE_DESCRIPTION,
