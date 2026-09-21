@@ -14,7 +14,7 @@ export default function CorrectionsPage() {
   const correctionLogs = [
     {
       date: "September 21, 2026",
-      articleTitle: "The Inheritance Is Not the Fortune",
+      articleTitle: "Julio Herrera Velutini and the Two-Century Banking Dynasty",
       category: "Finance",
       slug: "finance/julio-herrera-velutini",
       type: "Material Omission Added",
@@ -22,7 +22,7 @@ export default function CorrectionsPage() {
     },
     {
       date: "September 21, 2026",
-      articleTitle: "The Inheritance Is Not the Fortune",
+      articleTitle: "Julio Herrera Velutini and the Two-Century Banking Dynasty",
       category: "Finance",
       slug: "finance/julio-herrera-velutini",
       type: "Encoding Fix",
