@@ -6,6 +6,7 @@ import { newsByCategory, allArticles, archiveRoutes, findArticle } from "@/utils
 import { getSortedNews, toISODate } from "@/utils/newsUtils";
 import { SITE_URL } from "@/utils/siteConfig";
 import { articleUrl, buildArticleSchema, imageDimensions } from "@/utils/seo";
+import { getCustomArticleComponent } from "@/component/customArticleRegistry";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -50,8 +51,9 @@ export default async function DetailPage({ params }: Props) {
   const { category, slug } = await params;
   const article = findArticle(category, slug);
   if (!article) notFound();
+  const isCustom = !!getCustomArticleComponent(article.slug);
   const sameCategory = getSortedNews([newsByCategory[article.category]]).filter(item => item.slug !== article.slug);
-  const clusterArticles = sameCategory.slice(0, 5);
+  const clusterArticles = isCustom ? [] : sameCategory.slice(0, 5);
   // Ensure sidebar "MORE TO READ" articles are completely distinct from the cluster articles
   const clusterSlugs = new Set(clusterArticles.map(c => c.slug));
   const otherPosts = getSortedNews([allArticles]).filter(
