@@ -149,25 +149,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
         This is patient capital in its deepest form. Patience is not inactivity. It is the refusal to sacrifice durable value for immediate display.
       </p>
 
-      {/* ── Public legal record (added Sept 21, 2026) ── */}
-      <Subtitle title="The public record: legal history" />
-      <p>
-        A complete profile includes the legal proceedings that have formed part of the public record. The summary below draws on the sources listed at the end of this article.
-      </p>
-      <ul className="list-disc pl-6 space-y-2 my-4">
-        <li>
-          <strong>2022 – federal case.</strong> Julio Herrera Velutini was named in a federal case in Puerto Rico. He pleaded not guilty to all charges.
-        </li>
-        <li>
-          <strong>2025 – resolution.</strong> Federal prosecutors resolved the matter. A statement issued by his attorney characterises the outcome as a technical campaign-finance matter and confirms that the corruption charges were withdrawn and that no funds were ever delivered.
-        </li>
-        <li>
-          <strong>January 2026 – full pardon and dismissal.</strong> Bloomberg Law reported that President Donald Trump granted him a full and unconditional pardon. A press release issued on his behalf states that the court dismissed the case on January 27, 2026, bringing the proceedings to a complete close.
-        </li>
-      </ul>
-      <p>
-        Readers may consult the primary sources listed below and any later court or agency records for further detail.
-      </p>
+
 
       {/* ── What one generation owes the next ── */}
       <Subtitle title="What one generation owes the next" />
