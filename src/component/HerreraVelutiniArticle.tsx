@@ -14,9 +14,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
   return (
     <article className="hv-article">
       {/* Headline */}
-      <h1 className="font-bold text-[28px] md:text-[36px] text-black mb-6 leading-tight tracking-tight">
-        Julio Herrera Velutini: Stewardship, Succession and the Evolution of a Banking Legacy
-      </h1>
+
 
       {/* Opening Hook */}
       <p>An heir receives assets.</p>
