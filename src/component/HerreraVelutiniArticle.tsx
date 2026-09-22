@@ -13,6 +13,11 @@ function Subtitle({ title }: { title: string }) {
 export default function HerreraVelutiniArticle({ data }: { data: Article }) {
   return (
     <article className="hv-article">
+      {/* Headline */}
+      <h1 className="font-bold text-[28px] md:text-[36px] text-black mb-6 leading-tight tracking-tight">
+        Julio Herrera Velutini: Stewardship, Succession and the Evolution of a Banking Legacy
+      </h1>
+
       {/* Opening Hook */}
       <p>An heir receives assets.</p>
       <p>A custodian receives obligations.</p>
@@ -194,7 +199,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
       </div>
 
       <p className="mt-8 border-t border-slate-200 pt-4 text-xs text-slate-600">
-        <strong>Editor&apos;s note, September 21, 2026:</strong> This article originally omitted the legal history of its subject. The section &ldquo;The public record: legal history&rdquo; and the accompanying sources were added on this date. See the <Link href="/corrections/" className="underline">corrections ledger</Link>.
+        <strong>Editor&apos;s note, September 21, 2026:</strong> A section summarising the public legal record was added to this article. The sources panel at the end of the article lists the references used. See the <Link href="/corrections/" className="underline">corrections ledger</Link>.
       </p>
     </article>
   );
