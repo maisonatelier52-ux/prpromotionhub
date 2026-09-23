@@ -25,48 +25,48 @@ export default function Footer() {
             <div className="flex gap-4 mt-4 text-xl text-white">
               <Link
                 href="https://x.com/promotionh77500"
-                title="twitter"
-                aria-label="Twitter"
+                title="Twitter"
+                aria-label="Follow us on Twitter"
                 target="_blank" rel="noopener noreferrer"
-                className="hover:text-gray-400 transition"
+                className="hover:text-gray-300 transition"
               >
-                <FaTwitter />
+                <FaTwitter aria-hidden="true" />
               </Link>
               <Link
                 href="https://medium.com/@prpromotionhub"
-                title="medium"
-                aria-label="Medium"
+                title="Medium"
+                aria-label="Follow us on Medium"
                 target="_blank" rel="noopener noreferrer"
-                className="hover:text-gray-400 transition"
+                className="hover:text-gray-300 transition"
               >
-                <FaMediumM />
+                <FaMediumM aria-hidden="true" />
               </Link>
               <Link
                 href="https://substack.com/@prpromotionhub"
-                title="substack"
-                aria-label="Substack"
+                title="Substack"
+                aria-label="Follow us on Substack"
                 target="_blank" rel="noopener noreferrer"
-                className="hover:text-gray-400 transition"
+                className="hover:text-gray-300 transition"
               >
-                <SiSubstack />
+                <SiSubstack aria-hidden="true" />
               </Link>
               <Link
                 href="https://www.reddit.com/user/PRPromotionHub3009/"
-                title="reddit"
-                aria-label="Reddit"
+                title="Reddit"
+                aria-label="Follow us on Reddit"
                 target="_blank" rel="noopener noreferrer"
-                className="hover:text-gray-400 transition"
+                className="hover:text-gray-300 transition"
               >
-                <FaReddit />
+                <FaReddit aria-hidden="true" />
               </Link>
             </div>
-            <p className="mt-4 text-[11px] md:text-sm text-[#555555] leading-relaxed">
+            <p className="mt-4 text-[11px] md:text-sm text-gray-300 leading-relaxed">
               Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-7 xl:gap-20 xl:mr-40 w-full lg:w-auto">
             <div className="space-y-2 flex-1">
-              <span className="block text-xs uppercase tracking-widest font-bold text-gray-500 mb-3 select-none">Company</span>
+              <span className="block text-xs uppercase tracking-widest font-bold text-gray-300 mb-3 select-none">Company</span>
               <Link href="/about" title="about" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 About Us
               </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
             </div>
 
             <div className="space-y-2 flex-1">
-              <span className="block text-xs uppercase tracking-widest font-bold text-gray-500 mb-3 select-none">Policies</span>
+              <span className="block text-xs uppercase tracking-widest font-bold text-gray-300 mb-3 select-none">Policies</span>
               <Link
                 href="/editorial"
                 title="editorial"
@@ -132,7 +132,7 @@ export default function Footer() {
             </div>
 
             <div className="space-y-2 flex-1">
-              <span className="block text-xs uppercase tracking-widest font-bold text-gray-500 mb-3 select-none">Sections</span>
+              <span className="block text-xs uppercase tracking-widest font-bold text-gray-300 mb-3 select-none">Sections</span>
               <Link href="/finance" title="finance" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 Finance
               </Link>

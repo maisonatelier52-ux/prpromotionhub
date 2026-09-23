@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { SITE_URL, SITE_DESCRIPTION } from "@/utils/siteConfig";
 import "./globals.css";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 import ScrollToTop from "@/component/ScrollToTop";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,11 +40,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={inter.variable}>
       <body
-        className="antialiased"
+        className="antialiased font-sans"
+        style={{ fontFamily: "var(--font-inter, var(--font-primary))" }}
       >
-      
           <Header/>
           {children}
           <Footer />

@@ -55,8 +55,10 @@ export default function FeaturedEditorialGrid({ data }: Props) {
                   <Image
                     src={item.image}
                     alt={item.imageAlt ?? item.title}
-                         title={item.title}
+                    title={item.title}
                     fill
+                    sizes="(max-width: 640px) 72px, (max-width: 768px) 88px, (max-width: 1024px) 96px, 108px"
+                    loading="lazy"
                     className="object-cover"
                   />
                 </Link>

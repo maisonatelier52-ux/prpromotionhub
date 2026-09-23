@@ -4,12 +4,14 @@ interface ArticleImageProps {
   src: string;
   alt: string;
   caption?: string;
+  priority?: boolean;
 }
 
 export default function ArticleImage({
   src,
   alt,
   caption = 'AI-generated illustration.',
+  priority = false,
 }: ArticleImageProps) {
   const cleanedSrc = src.trimEnd();
 
@@ -26,8 +28,10 @@ export default function ArticleImage({
             alt={alt}
             width={960}
             height={540}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 800px"
             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-            priority
+            priority={priority}
+            loading={priority ? undefined : "lazy"}
           />
 
           {/* Animated diagonal glass sheen sweep */}

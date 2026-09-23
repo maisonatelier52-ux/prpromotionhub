@@ -64,6 +64,8 @@ export default function CategoryCard({ data }: Props) {
                             alt={data.imageAlt ?? data.title}
                             title={data.title}
                             fill
+                            sizes="(max-width: 768px) 110px, 160px"
+                            loading="lazy"
                             className="object-cover"
                         />
                     </div>
@@ -83,6 +85,8 @@ export default function CategoryCard({ data }: Props) {
                             alt={data.imageAlt ?? data.title}
                             title={data.title}
                             fill
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            loading="lazy"
                             className="object-cover"
                         />
                     </div>

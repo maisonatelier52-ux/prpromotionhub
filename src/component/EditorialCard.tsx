@@ -52,8 +52,10 @@ export default function EditorialCard({
           <Image
             src={image}
             alt={imageAlt ?? title}
-                 title={title}
+            title={title}
             fill
+            sizes="(max-width: 768px) 110px, 160px"
+            loading="lazy"
             className="object-cover"
           />
         </div>
@@ -71,8 +73,10 @@ export default function EditorialCard({
           <Image
             src={image}
             alt={imageAlt ?? title}
-                 title={title}
+            title={title}
             fill
+            sizes="(max-width: 1024px) 100vw, 33vw"
+            loading="lazy"
             className="object-cover"
           />
         </div>

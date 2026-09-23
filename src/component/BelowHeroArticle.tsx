@@ -71,6 +71,8 @@ export default function BelowHeroArticle({ data }: Props) {
           src={item.image}
           alt={item.imageAlt ?? item.title}
           fill
+          sizes="(max-width: 768px) 110px, 160px"
+          loading="lazy"
           className="object-cover"
         />
       </div>
@@ -97,6 +99,8 @@ export default function BelowHeroArticle({ data }: Props) {
                 src={item.image}
                 alt={item.imageAlt ?? item.title}
                 fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                loading="lazy"
                 className="object-cover"
               />
             </div>

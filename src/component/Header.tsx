@@ -51,17 +51,17 @@ export default function Header() {
 
 
             <div className="flex items-center gap-4 text-black text-sm">
-              <Link href="https://x.com/promotionh77500" title="twitter" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className='text-lg hover:opacity-70' />
+              <Link href="https://x.com/promotionh77500" title="Twitter" aria-label="Follow us on Twitter" target="_blank" rel="noopener noreferrer">
+                <FaTwitter className='text-lg hover:opacity-70' aria-hidden="true" />
               </Link>
-              <Link href="https://medium.com/@prpromotionhub" title="medium" target="_blank" rel="noopener noreferrer">
-                <FaMediumM className='text-lg hover:opacity-70' />
+              <Link href="https://medium.com/@prpromotionhub" title="Medium" aria-label="Follow us on Medium" target="_blank" rel="noopener noreferrer">
+                <FaMediumM className='text-lg hover:opacity-70' aria-hidden="true" />
               </Link>
-              <Link href="https://substack.com/@prpromotionhub" title="substack" target="_blank" rel="noopener noreferrer">
-                <SiSubstack className='text-lg hover:opacity-70' />
+              <Link href="https://substack.com/@prpromotionhub" title="Substack" aria-label="Follow us on Substack" target="_blank" rel="noopener noreferrer">
+                <SiSubstack className='text-lg hover:opacity-70' aria-hidden="true" />
               </Link>
-              <Link href="https://www.reddit.com/user/PRPromotionHub3009/" title="reddit" target="_blank" rel="noopener noreferrer">
-                <FaReddit className='text-lg hover:opacity-70' />
+              <Link href="https://www.reddit.com/user/PRPromotionHub3009/" title="Reddit" aria-label="Follow us on Reddit" target="_blank" rel="noopener noreferrer">
+                <FaReddit className='text-lg hover:opacity-70' aria-hidden="true" />
               </Link>
             </div>
           </div>
