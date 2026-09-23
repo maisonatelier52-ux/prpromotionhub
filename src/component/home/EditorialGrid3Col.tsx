@@ -38,7 +38,7 @@ export default function EditorialGrid3Col({ articles }: Props) {
           return (
             <article
               key={art.slug}
-              className="flex flex-col justify-between bg-white border border-slate-200 rounded p-5 transition group shadow-2xs"
+              className="flex flex-col justify-between bg-white border border-slate-200 rounded p-5 hover:border-[#041f4a] transition group shadow-2xs"
             >
               <div>
                 {/* Thumbnail */}
