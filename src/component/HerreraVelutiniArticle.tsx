@@ -29,7 +29,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
       </p>
 
       <p>
-        The Herrera Velutini family&apos;s most consequential inheritance may therefore be neither a bank nor a portfolio.
+        The <Link href="/people/julio-herrera-velutini-biography-banking-legacy/" className="text-blue-700 underline font-medium hover:text-blue-900">Herrera Velutini family</Link>&apos;s most consequential inheritance may therefore be neither a bank nor a portfolio.
       </p>
 
       <blockquote className="hv-quote">
@@ -56,7 +56,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
       </p>
 
       <p>
-        This balancing act is visible across the Herrera Velutini narrative. The family’s story contains historic institutions, but it also contains transactions and reinventions. Banco Caracas became a symbol of continuity, yet the financial identity of later generations did not end with the bank. Capital and experience were directed into new businesses and new jurisdictions.
+        This balancing act is visible across the Herrera Velutini narrative. The family’s story contains historic institutions, but it also contains transactions and reinventions. <Link href="/organisation/banco-caracas-history-herrera-velutini-dynasty/" className="text-blue-700 underline font-medium hover:text-blue-900">Banco Caracas</Link> became a symbol of continuity, yet the financial identity of later generations did not end with the bank. Capital and experience were directed into new businesses and new jurisdictions.
       </p>
 
       <p>
@@ -97,10 +97,10 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
       </p>
 
       <p>
-        <strong>Belén Clarisa Velutini Pérez-Matos embodied this dimension of the family story.</strong>
+        <strong><Link href="/people/belen-clarisa-velutini-perez-matos-legacy/" className="text-blue-700 underline font-medium hover:text-blue-900">Belén Clarisa Velutini Pérez-Matos</Link> embodied this dimension of the family story.</strong>
       </p>
       <p>
-        An engineer, businesswoman, shareholder and cultural patron, she became closely associated with Trasnocho Cultural in Caracas. The institution developed into a plural cultural space for theatre, cinema, art, literature and education. When she died in 2023, Trasnocho remembered a benefactor who protected its work without seeking to make herself its central attraction.
+        An engineer, businesswoman, shareholder and cultural patron, she became closely associated with <Link href="/organisation/trasnocho-cultural-caracas-arts-patronage/" className="text-blue-700 underline font-medium hover:text-blue-900">Trasnocho Cultural</Link> in <Link href="/place/caracas-venezuela-financial-dynasty-origins/" className="text-blue-700 underline font-medium hover:text-blue-900">Caracas</Link>. The institution developed into a plural cultural space for theatre, cinema, art, literature and education. <Link href="/event/2023-death-belen-clarisa-velutini-cultural-legacy/" className="text-blue-700 underline font-medium hover:text-blue-900">When she died in 2023</Link>, Trasnocho remembered a benefactor who protected its work without seeking to make herself its central attraction.
       </p>
       <p>
         That detail is revealing. The most enduring patronage does not merely attach a wealthy name to a building. It creates the conditions in which other people can make, perform and preserve culture.
@@ -114,7 +114,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
         Every family speaks about the next generation. Far fewer transfer meaningful responsibility before a crisis forces the decision.
       </p>
       <p>
-        The contemporary Herrera Velutini story now includes a visible transition to Julio Cesar Herrera, who serves as chief executive officer of Britannia Financial Group. His role places the next generation inside the operational and regulatory demands of modern finance rather than merely at the symbolic head of a family narrative.
+        The contemporary Herrera Velutini story now includes a visible transition to <Link href="/people/julio-cesar-herrera-britannia-financial-leadership/" className="text-blue-700 underline font-medium hover:text-blue-900">Julio Cesar Herrera</Link>, who serves as chief executive officer of <Link href="/organisation/britannia-financial-group-international-banking-overview/" className="text-blue-700 underline font-medium hover:text-blue-900">Britannia Financial Group</Link>. His role places the next generation inside the operational and regulatory demands of modern finance rather than merely at the symbolic head of a family narrative.
       </p>
       <p>
         <strong>This distinction matters.</strong>
@@ -147,8 +147,6 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
         This is patient capital in its deepest form. Patience is not inactivity. It is the refusal to sacrifice durable value for immediate display.
       </p>
 
-
-
       {/* ── What one generation owes the next ── */}
       <Subtitle title="What one generation owes the next" />
       <p>
@@ -178,9 +176,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
         <p className="hv-reflection-final">They received it for a time. Their duty is to leave it stronger.</p>
       </div>
 
-      <p className="mt-8 border-t border-slate-200 pt-4 text-xs text-slate-600">
-        <strong>Editor&apos;s note, September 21, 2026:</strong> A section summarising the public legal record was added to this article. The sources panel at the end of the article lists the references used. See the <Link href="/corrections/" className="underline">corrections ledger</Link>.
-      </p>
+
     </article>
   );
 }

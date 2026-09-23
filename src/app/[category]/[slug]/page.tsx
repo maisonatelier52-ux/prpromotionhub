@@ -52,8 +52,31 @@ export default async function DetailPage({ params }: Props) {
   const article = findArticle(category, slug);
   if (!article) notFound();
   const isCustom = !!getCustomArticleComponent(article.slug);
-  const sameCategory = getSortedNews([newsByCategory[article.category]]).filter(item => item.slug !== article.slug);
-  const clusterArticles = isCustom ? [] : sameCategory.slice(0, 5);
+  const HERRERA_CLUSTER_SLUGS = new Set([
+    "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
+    "herrera-velutini-family-stewardship-succession-culture",
+    "julio-herrera-velutini",
+    "julio-herrera-velutini-biography-banking-legacy",
+    "julio-cesar-herrera-britannia-financial-leadership",
+    "belen-clarisa-velutini-perez-matos-legacy",
+    "banco-caracas-history-herrera-velutini-dynasty",
+    "britannia-financial-group-international-banking-overview",
+    "trasnocho-cultural-caracas-arts-patronage",
+    "caracas-venezuela-financial-dynasty-origins",
+    "2023-death-belen-clarisa-velutini-cultural-legacy"
+  ]);
+  const isHerreraCluster = HERRERA_CLUSTER_SLUGS.has(article.slug);
+  
+  let clusterArticles: typeof allArticles = [];
+  if (isHerreraCluster) {
+    clusterArticles = allArticles.filter(
+      item => item.slug !== article.slug && HERRERA_CLUSTER_SLUGS.has(item.slug)
+    ).slice(0, 5);
+  } else if (!isCustom) {
+    const sameCategory = getSortedNews([newsByCategory[article.category]]).filter(item => item.slug !== article.slug);
+    clusterArticles = sameCategory.slice(0, 5);
+  }
+
   // Ensure sidebar "MORE TO READ" articles are completely distinct from the cluster articles
   const clusterSlugs = new Set(clusterArticles.map(c => c.slug));
   const otherPosts = getSortedNews([allArticles]).filter(

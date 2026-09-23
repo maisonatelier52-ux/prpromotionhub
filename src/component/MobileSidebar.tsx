@@ -3,7 +3,6 @@ import CategorySectionHeader from './CategorySectionHeader';
 import NewsCard from './NewsCard';
 import { FaFacebookF, FaInstagram, FaMediumM, FaReddit, FaTwitter } from 'react-icons/fa';
 import { SiSubstack } from 'react-icons/si';
-import Image from 'next/image';
 
 import prnewsData from '../../public/data/prnews.json';
 import financeData from '../../public/data/finance.json';
@@ -47,6 +46,7 @@ export default function MobileSidebar({ onClose }: Props) {
           <h3 className="text-sm mb-3 uppercase">Home</h3>
           <ul className="space-y-3 text-[16px] ml-5">
             {[
+              ['/', 'Blog'],
               ['/prnews', 'Public Relations'],
               ['/world', 'World'],
               ['/us', 'U.S'],
@@ -84,27 +84,7 @@ export default function MobileSidebar({ onClose }: Props) {
           </ul>
         </section>
 
-        {/* Ad */}
-        <section>
-          <p className="text-xs uppercase tracking-widest text-slate-500 mb-2">Advertisement</p>
-          <Link
-            href="https://mirrorstandard.com"
-            target="_blank"
-            rel="sponsored noopener noreferrer"
-            onClick={onClose}
-            className="flex items-center justify-between gap-4 bg-[#573080] text-white p-4"
-          >
-            <span className="font-serif text-xl">Mirrorstandard<span className="block font-sans text-xs mt-2">Visit website →</span></span>
-            <Image
-              src="/images/illustrations/sponsor-mirrorstandard.webp"
-              alt="Illustration of a folded newspaper, tablet and coffee cup."
-              width={960}
-              height={540}
-              className="w-28 h-auto"
-            />
-          </Link>
-          <p className="text-xs text-slate-500 mt-1">AI-generated illustration</p>
-        </section>
+
 
         {/* Latest News */}
         <section>

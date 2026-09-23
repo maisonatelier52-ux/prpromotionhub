@@ -4,6 +4,7 @@ export const REVIEW_DATE = "2026-09-18";
 export const CATEGORY_LABELS: Record<string, string> = {
   prnews: "Public Relations", technology: "Technology", finance: "Finance",
   marketing: "Marketing", entertainment: "Entertainment", world: "World Affairs", us: "U.S. Affairs",
+  people: "People", organisation: "Organisation", place: "Place", event: "Event",
 };
 export const SITE_DESCRIPTION = "PR Promotion Hub: sourced guides, explainers and perspectives on finance, banking, public relations, business leadership, technology and current affairs.";
 

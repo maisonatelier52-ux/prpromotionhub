@@ -47,7 +47,7 @@ export default function VerifiedSourcesPanel({ sources }: Props) {
 
       <ol className="space-y-3 text-xs text-slate-700 list-decimal pl-5">
         {sources.map((source, i) => (
-          <li key={source.url + i} className="pl-1">
+          <li id={`source-${i + 1}`} key={source.url + i} className="pl-1 scroll-mt-20">
             <a
               href={source.url}
               target="_blank"

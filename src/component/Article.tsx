@@ -12,6 +12,21 @@ import AuthorBox from "./article/AuthorBox";
 import RelatedArticlesBlock from "./article/RelatedArticlesBlock";
 import VerifiedSourcesPanel from "./article/VerifiedSourcesPanel";
 
+const HERRERA_CLUSTER_SLUGS = new Set([
+  "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
+  "julio-herrera-velutini", // short alias
+  "julio-herrera-velutini-biography-banking-legacy",
+  "julio-cesar-herrera-britannia-financial-leadership",
+  "belen-clarisa-velutini-perez-matos-legacy",
+  "banco-caracas-history-herrera-velutini-dynasty",
+  "britannia-financial-group-international-banking-overview",
+  "trasnocho-cultural-caracas-arts-patronage",
+  "caracas-venezuela-financial-dynasty-origins",
+  "2023-death-belen-clarisa-velutini-cultural-legacy",
+]);
+
+
+
 export default function Article({
   article,
   popularNews,
@@ -22,6 +37,7 @@ export default function Article({
   clusterArticles?: Post[];
 }) {
   const CustomArticle = getCustomArticleComponent(article.slug);
+  const isHerreraCluster = HERRERA_CLUSTER_SLUGS.has(article.slug);
 
   return (
     <div>
@@ -34,19 +50,26 @@ export default function Article({
               <SocialShareList title={article.title} />
             </div>
             <div className="flex-1 min-w-0">
-              {CustomArticle ? <CustomArticle data={article} /> : <ArticleWithDescr data={article} />}
+              {CustomArticle ? (
+                <CustomArticle data={article} />
+              ) : (
+                <ArticleWithDescr data={article} relatedArticles={clusterArticles} />
+              )}
             </div>
           </div>
 
-          {/* E-E-A-T: Verified sources panel — only shown when article has real sources */}
-          <VerifiedSourcesPanel sources={article.sources} category={article.category} />
+          {/* E-E-A-T: Verified sources panel — hidden on cluster/pillar pages */}
+          {!isHerreraCluster && (
+            <VerifiedSourcesPanel sources={article.sources} category={article.category} />
+          )}
 
-          {/* Author attribution */}
-          <AuthorBox authorSlug={article.author.slug} fallbackName={article.author.name} />
+          {/* Author attribution — hidden on cluster/pillar pages */}
+          {!isHerreraCluster && (
+            <AuthorBox authorSlug={article.author.slug} fallbackName={article.author.name} />
+          )}
 
           {/* Topic cluster: related articles in the same subject area */}
           <RelatedArticlesBlock relatedArticles={clusterArticles ?? popularNews} />
-
 
           {/* Space before suggest a correction section */}
           <div className="mt-6">

@@ -23,7 +23,7 @@ export default function Header() {
     <header className="w-full">
 
       {/* ================= MOBILE HEADER ================= */}
-      <div className="lg:hidden border-b border-black">
+      <div className="lg:hidden">
         <MobileHeader />
       </div>
 

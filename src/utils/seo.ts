@@ -15,9 +15,9 @@ import { toISODate, type Article } from "./newsUtils";
 
 /** Slugs whose canonical path is NOT the slug stored in the archive JSON. */
 const CANONICAL_SLUG_OVERRIDES: Record<string, string> = {
-  // The exact-match query is "Julio Herrera Velutini"; that slug is the better
-  // canonical. The descriptive slug 301s to it at the host level.
-  "herrera-velutini-family-stewardship-succession-culture": "julio-herrera-velutini",
+  // Legacy slugs point to the canonical full-keyword slug
+  "herrera-velutini-family-stewardship-succession-culture": "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
+  "julio-herrera-velutini": "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
 };
 
 export function canonicalSlug(article: Pick<Article, "slug">): string {
@@ -129,6 +129,90 @@ function britanniaOrganization() {
   };
 }
 
+function julioCesarPerson() {
+  return {
+    "@type": "Person",
+    "@id": `${SITE_URL}/#julio-cesar-herrera`,
+    name: "Julio Cesar Herrera",
+    jobTitle: "Chief Executive Officer",
+    worksFor: { "@id": `${SITE_URL}/#britannia-financial-group` },
+    description: "Chief Executive Officer of Britannia Financial Group and next-generation leader in the Herrera Velutini dynasty.",
+    knowsAbout: ["Investment Banking", "Wealth Management", "Financial Regulation", "Fintech"],
+  };
+}
+
+function belenClarisaPerson() {
+  return {
+    "@type": "Person",
+    "@id": `${SITE_URL}/#belen-clarisa-velutini`,
+    name: "Belén Clarisa Velutini Pérez-Matos",
+    alternateName: ["Belén Clarisa Velutini", "Belen Clarisa Velutini"],
+    description: "Venezuelan civil engineer, corporate shareholder, and cultural patron behind Trasnocho Cultural in Caracas.",
+    birthPlace: { "@type": "Place", name: "Caracas, Venezuela" },
+    deathDate: "2023",
+    knowsAbout: ["Civil Engineering", "Cultural Philanthropy", "Performing Arts", "Corporate Stewardship"],
+  };
+}
+
+function bancoCaracasOrganization() {
+  return {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#banco-caracas`,
+    name: "Banco Caracas",
+    foundingDate: "1890",
+    foundingLocation: { "@type": "Place", name: "Caracas, Venezuela" },
+    description: "Historic Venezuelan commercial bank of issue founded in 1890, steered by the Herrera and Velutini families.",
+    sameAs: ["https://es.wikipedia.org/wiki/Banco_Caracas"],
+  };
+}
+
+function trasnochoCulturalOrganization() {
+  return {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#trasnocho-cultural`,
+    name: "Trasnocho Cultural",
+    foundingDate: "2001",
+    location: { "@type": "Place", name: "Caracas, Venezuela" },
+    description: "Premier cultural and performing arts complex in Caracas founded with the patronage of Belén Clarisa Velutini Pérez-Matos.",
+    sameAs: ["https://es.wikipedia.org/wiki/Trasnocho_Cultural", "https://trasnochocultural.com"],
+  };
+}
+
+function caracasPlace() {
+  return {
+    "@type": "Place",
+    "@id": `${SITE_URL}/#caracas-venezuela`,
+    name: "Caracas, Venezuela",
+    description: "Capital of Venezuela and the historic birthplace and financial cradle of the Herrera Velutini banking lineage.",
+    sameAs: ["https://en.wikipedia.org/wiki/Caracas"],
+  };
+}
+
+function belenMemorialEvent() {
+  return {
+    "@type": "Event",
+    "@id": `${SITE_URL}/#death-belen-clarisa-velutini-2023`,
+    name: "Passing and Memorial of Belén Clarisa Velutini Pérez-Matos",
+    startDate: "2023",
+    location: { "@id": `${SITE_URL}/#caracas-venezuela` },
+    description: "The 2023 passing and cultural commemoration of engineer, shareholder, and Trasnocho Cultural benefactor Belén Clarisa Velutini Pérez-Matos.",
+  };
+}
+
+const HERRERA_CLUSTER_ENTITY_MAP: Record<string, string> = {
+  "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person`,
+  "julio-herrera-velutini": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person`,
+  "herrera-velutini-family-stewardship-succession-culture": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person`,
+  "julio-herrera-velutini-biography-banking-legacy": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person`,
+  "julio-cesar-herrera-britannia-financial-leadership": `${SITE_URL}/#julio-cesar-herrera`,
+  "belen-clarisa-velutini-perez-matos-legacy": `${SITE_URL}/#belen-clarisa-velutini`,
+  "banco-caracas-history-herrera-velutini-dynasty": `${SITE_URL}/#banco-caracas`,
+  "britannia-financial-group-international-banking-overview": `${SITE_URL}/#britannia-financial-group`,
+  "trasnocho-cultural-caracas-arts-patronage": `${SITE_URL}/#trasnocho-cultural`,
+  "caracas-venezuela-financial-dynasty-origins": `${SITE_URL}/#caracas-venezuela`,
+  "2023-death-belen-clarisa-velutini-cultural-legacy": `${SITE_URL}/#death-belen-clarisa-velutini-2023`,
+};
+
 /**
  * JSON-LD graph for an article page. Returns a single @graph so every node can
  * cross-reference by @id (page -> article -> person -> organisation), which is
@@ -139,7 +223,10 @@ export function buildArticleSchema(article: Article) {
   const description = article.metaDescription || article.shortdescription;
   const { width, height } = imageDimensions(article.image);
   const imageUrl = new URL(article.image.trim(), SITE_URL).href;
-  const isHerrera = canonicalSlug(article) === "julio-herrera-velutini";
+  const cSlug = canonicalSlug(article);
+  const clusterEntityId = HERRERA_CLUSTER_ENTITY_MAP[cSlug] ?? HERRERA_CLUSTER_ENTITY_MAP[article.slug];
+  const isHerreraCluster = !!clusterEntityId;
+  const isMainHerrera = cSlug === "julio-herrera-velutini" || cSlug === "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader";
 
   const primaryImage = {
     "@type": "ImageObject",
@@ -162,7 +249,7 @@ export function buildArticleSchema(article: Article) {
     ],
   };
 
-  const webPage = {
+  const webPage: Record<string, unknown> = {
     "@type": "WebPage",
     "@id": pageUrl,
     url: pageUrl,
@@ -174,8 +261,11 @@ export function buildArticleSchema(article: Article) {
     datePublished: toISODate(article.date),
     dateModified: article.updatedAt ?? toISODate(article.date),
     inLanguage: "en",
-    ...(isHerrera ? { about: { "@id": `${pageUrl}#person` } } : {}),
   };
+
+  if (isHerreraCluster) {
+    webPage.about = { "@id": clusterEntityId };
+  }
 
   const articleNode: Record<string, unknown> = {
     "@type": "Article",
@@ -195,13 +285,27 @@ export function buildArticleSchema(article: Article) {
     ...(article.sources?.length ? { citation: article.sources.map(s => s.url) } : {}),
   };
 
-  if (isHerrera) {
-    articleNode.about = { "@id": `${pageUrl}#person` };
+  if (isHerreraCluster) {
+    articleNode.about = { "@id": clusterEntityId };
     articleNode.mentions = [
-      { "@id": `${pageUrl}#person` },
+      { "@id": `${SITE_URL}/finance/julio-herrera-velutini/#person` },
       { "@id": britanniaOrganization()["@id"] },
+      { "@id": caracasPlace()["@id"] },
     ];
   }
+
+  const clusterEntityNodes = isHerreraCluster
+    ? [
+        herreraPerson(siteUrl("finance/julio-herrera-velutini")),
+        britanniaOrganization(),
+        julioCesarPerson(),
+        belenClarisaPerson(),
+        bancoCaracasOrganization(),
+        trasnochoCulturalOrganization(),
+        caracasPlace(),
+        belenMemorialEvent(),
+      ]
+    : [];
 
   return {
     "@context": "https://schema.org",
@@ -212,7 +316,7 @@ export function buildArticleSchema(article: Article) {
       breadcrumb,
       primaryImage,
       articleNode,
-      ...(isHerrera ? [herreraPerson(pageUrl), britanniaOrganization()] : []),
+      ...clusterEntityNodes,
     ],
   };
 }
