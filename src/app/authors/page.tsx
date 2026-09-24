@@ -44,14 +44,20 @@ export default function AuthorsIndexPage() {
           >
             {/* Avatar */}
             <div className="flex-shrink-0">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white shadow-xs relative mx-auto sm:mx-0">
-                <Image
-                  src={author.avatar}
-                  alt={author.name}
-                  fill
-                  sizes="112px"
-                  className="object-cover group-hover:scale-105 transition duration-300"
-                />
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white shadow-xs relative mx-auto sm:mx-0 bg-[#041f4a]">
+                {author.avatar ? (
+                  <Image
+                    src={author.avatar}
+                    alt={author.name}
+                    fill
+                    sizes="112px"
+                    className="object-cover group-hover:scale-105 transition duration-300"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center font-editorial font-bold text-2xl text-white select-none">
+                    {author.name.split(" ").map(n => n[0]).join("")}
+                  </div>
+                )}
               </div>
             </div>
 

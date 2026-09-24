@@ -14,14 +14,20 @@ export default function AuthorBox({ authorSlug, fallbackName }: Props) {
   return (
     <div className="my-10 p-6 bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg">
       <div className="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
-        <div className="w-20 h-20 rounded-full overflow-hidden relative flex-shrink-0 border-2 border-white shadow-xs">
-          <Image
-            src={author.avatar}
-            alt={author.name}
-            fill
-            sizes="80px"
-            className="object-cover"
-          />
+        <div className="w-20 h-20 rounded-full overflow-hidden relative flex-shrink-0 border-2 border-white shadow-xs bg-[#041f4a]">
+          {author.avatar ? (
+            <Image
+              src={author.avatar}
+              alt={author.name}
+              fill
+              sizes="80px"
+              className="object-cover"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center font-editorial font-bold text-xl text-white select-none">
+              {author.name.split(" ").map(n => n[0]).join("")}
+            </div>
+          )}
         </div>
 
         <div className="flex-1 space-y-1.5">

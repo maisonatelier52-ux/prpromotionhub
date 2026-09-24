@@ -1,4 +1,6 @@
 
+import { getCategoryLabel } from "@/utils/siteConfig";
+
 type CategoryHeaderProps = {
   category: string;
 };
@@ -6,12 +8,10 @@ export default function CategoryHeader({category}:CategoryHeaderProps) {
 
   let headerTitle: string;
   
-  if (category === "prnews") {
-    headerTitle = "Public Relations";
-  } else if (category === "us") {
-    headerTitle = "U.S";
+  if (category === "us") {
+    headerTitle = "U.S.";
   } else {
-    headerTitle = category;
+    headerTitle = getCategoryLabel(category);
   }
 
   return (

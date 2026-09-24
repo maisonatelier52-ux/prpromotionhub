@@ -9,5 +9,12 @@ export const CATEGORY_LABELS: Record<string, string> = {
 export const ENTITY_CATEGORY_LABELS: Record<string, string> = {
   people: "People", organisation: "Organisation", place: "Place", event: "Event",
 };
+export const ALL_CATEGORY_LABELS: Record<string, string> = {
+  ...CATEGORY_LABELS,
+  ...ENTITY_CATEGORY_LABELS,
+};
+export function getCategoryLabel(category: string): string {
+  return ALL_CATEGORY_LABELS[category] || category;
+}
 export const SITE_DESCRIPTION = "PR Promotion Hub: sourced guides, explainers and perspectives on finance, banking, public relations, business leadership, technology and current affairs.";
 

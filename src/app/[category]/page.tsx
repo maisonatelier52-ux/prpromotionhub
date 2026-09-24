@@ -5,7 +5,7 @@ import CategoryContent from "@/component/CategoryContent";
 import WhatsHotBar from "@/component/WhatsHotBar";
 import { allArticles, newsByCategory } from "@/utils/newsData";
 import { getSortedNews } from "@/utils/newsUtils";
-import { CATEGORY_LABELS } from "@/utils/siteConfig";
+import { ALL_CATEGORY_LABELS, getCategoryLabel } from "@/utils/siteConfig";
 import { siteUrl } from "@/utils/seo";
 
 export const dynamicParams = false;
@@ -26,8 +26,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   if (!newsByCategory[category]) notFound();
-  const title = `${CATEGORY_LABELS[category]}: blog posts & guides`;
-  const description = `Explore ${CATEGORY_LABELS[category].toLowerCase()} posts, guides and explainers with linked sources and useful context.`;
+  const label = getCategoryLabel(category);
+  const title = `${label}: blog posts & guides`;
+  const description = `Explore ${label.toLowerCase()} posts, guides and explainers with linked sources and useful context.`;
   return {
     title,
     description,

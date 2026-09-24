@@ -1,4 +1,4 @@
-import { SITE_URL, CATEGORY_LABELS } from "./siteConfig";
+import { SITE_URL, getCategoryLabel } from "./siteConfig";
 import { toISODate, type Article } from "./newsUtils";
 
 /**
@@ -38,6 +38,10 @@ export function siteUrl(path = ""): string {
 /** Intrinsic pixel dimensions of hero images, so og:image and schema don't lie. */
 const IMAGE_DIMENSIONS: Record<string, { width: number; height: number }> = {
   "/images/julio-herrera-velutini.webp": { width: 1200, height: 800 },
+  "/images/julio-cesar-herrera.jpg": { width: 916, height: 1024 },
+  "/images/belen-clarisa-velutini-perez-matos.jpg": { width: 500, height: 565 },
+  "/images/banco-caracas-historic-building.jpg": { width: 738, height: 415 },
+  "/images/britannia-financial-group-office.jpg": { width: 1024, height: 1006 },
 };
 const DEFAULT_IMAGE_DIMENSIONS = { width: 1200, height: 675 };
 
@@ -238,7 +242,7 @@ export function buildArticleSchema(article: Article) {
     caption: article.imageCaption ?? article.imageAlt ?? article.title,
   };
 
-  const categoryLabel = CATEGORY_LABELS[article.category] ?? article.category;
+  const categoryLabel = getCategoryLabel(article.category);
   const breadcrumb = {
     "@type": "BreadcrumbList",
     "@id": `${pageUrl}#breadcrumb`,

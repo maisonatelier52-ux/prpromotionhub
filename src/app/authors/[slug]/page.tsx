@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: author.bio,
       url: pageUrl,
       type: "profile",
-      images: [{ url: author.avatar, width: 400, height: 400, alt: author.name }],
+      images: author.avatar ? [{ url: author.avatar, width: 400, height: 400, alt: author.name }] : undefined,
     },
     twitter: {
       card: "summary",
@@ -58,7 +58,7 @@ export default async function AuthorProfilePage({ params }: Props) {
     name: author.name,
     jobTitle: author.role,
     description: author.bio,
-    image: author.avatar,
+    image: author.avatar || undefined,
     sameAs: [author.linkedin, author.twitter].filter(Boolean),
     knowsAbout: author.expertise,
     alumniOf: author.education,
@@ -90,15 +90,21 @@ export default async function AuthorProfilePage({ params }: Props) {
       {/* Author Bio Banner */}
       <section className="bg-[#F8FAFC] border border-[#E2E8F0] p-8 rounded-lg mb-12">
         <div className="flex flex-col md:flex-row gap-8 items-start">
-          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-md relative flex-shrink-0">
-            <Image
-              src={author.avatar}
-              alt={author.name}
-              fill
-              sizes="(max-width: 768px) 128px, 160px"
-              className="object-cover"
-              priority
-            />
+          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-md relative flex-shrink-0 bg-[#041f4a]">
+            {author.avatar ? (
+              <Image
+                src={author.avatar}
+                alt={author.name}
+                fill
+                sizes="(max-width: 768px) 128px, 160px"
+                className="object-cover"
+                priority
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center font-editorial font-bold text-4xl text-white select-none">
+                {author.name.split(" ").map(n => n[0]).join("")}
+              </div>
+            )}
           </div>
 
           <div className="flex-1 space-y-4">

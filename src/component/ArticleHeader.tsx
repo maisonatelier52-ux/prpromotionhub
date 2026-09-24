@@ -1,4 +1,4 @@
-import { CATEGORY_LABELS } from '@/utils/siteConfig';
+import { getCategoryLabel } from '@/utils/siteConfig';
 import Link from 'next/link';
 import { parseDate, toISODate, type Article } from '@/utils/newsUtils';
 
@@ -10,7 +10,7 @@ function dateLabel(value: string) {
 }
 
 export default function ArticleHeader({ article }: { article: Article }) {
-  const category = CATEGORY_LABELS[article.category] ?? article.category;
+  const category = getCategoryLabel(article.category);
   const textContent = article.description || (article.sections?.map(s => s.paragraphs?.join(' ')).join(' ')) || article.shortdescription || '';
   const words = textContent.trim().split(/\s+/).filter(Boolean).length;
   const readingMinutes = Math.max(1, Math.ceil(words / 220));

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Article } from "@/utils/newsUtils";
-import { CATEGORY_LABELS } from "@/utils/siteConfig";
+import { getCategoryLabel } from "@/utils/siteConfig";
 import { toISODate } from "@/utils/newsUtils";
 
 interface Props {
@@ -29,11 +29,11 @@ export default function RelatedArticlesBlock({ relatedArticles }: Props) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {fiveArticles.map((art) => {
-          const catLabel = CATEGORY_LABELS[art.category] || art.category;
+          const catLabel = getCategoryLabel(art.category);
           return (
             <article
               key={art.slug}
-              className="flex flex-col justify-between bg-white border border-slate-200 rounded p-3 hover:border-[#041f4a] transition group shadow-2xs"
+              className="flex flex-col justify-between bg-white border border-slate-200 rounded p-3 transition group shadow-2xs"
             >
               <div>
                 <div className="relative aspect-[16/10] w-full rounded overflow-hidden mb-2 bg-slate-100">
@@ -60,9 +60,9 @@ export default function RelatedArticlesBlock({ relatedArticles }: Props) {
                 </Link>
               </div>
 
-              <div className="mt-3 pt-2 border-t border-slate-100 text-[10px] text-slate-500 flex items-center justify-between">
-                <span>By {art.author?.name || "Editorial Board"}</span>
-                <span className="font-semibold text-[#041f4a] group-hover:text-[#2563eb]">
+              <div className="mt-3 pt-2 border-t border-slate-100 text-[10px] text-slate-500 flex items-center justify-between gap-1">
+                <span className="truncate max-w-[130px]">By {art.author?.name || "Editorial Board"}</span>
+                <span className="font-semibold text-[#041f4a] group-hover:text-[#2563eb] shrink-0">
                   Read &rarr;
                 </span>
               </div>
