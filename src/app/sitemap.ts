@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { allArticles, newsByCategory } from "@/utils/newsData";
-import { REVIEW_DATE } from "@/utils/siteConfig";
+import { REVIEW_DATE, CATEGORY_LABELS } from "@/utils/siteConfig";
 import { articleUrl, siteUrl } from "@/utils/seo";
 export const dynamic = "force-static";
 
@@ -9,9 +9,18 @@ export const dynamic = "force-static";
  * and articles are emitted at their canonical URL only — a sitemap listing
  * non-canonical or redirecting URLs weakens the canonical signal it is meant
  * to reinforce.
+ *
+ * Entity pseudo-categories (people, organisation, place, event) are intentionally
+ * excluded from the category listing entries — they are thin index pages with no
+ * standalone editorial value. Their individual article URLs are still emitted below.
  */
 import { AUTHORS_DATA } from "@/utils/authorsData";
 import { RESEARCH_REPORTS } from "@/utils/researchData";
+
+/** Only the real editorial category listing pages — not entity pseudo-categories. */
+const EDITORIAL_CATEGORIES = Object.keys(CATEGORY_LABELS).filter(
+  (cat) => newsByCategory[cat] && newsByCategory[cat].length > 0
+);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
@@ -31,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "advertising-and-sponsored-content-policy",
     "privacy-policy",
     "terms-and-conditions",
-    ...Object.keys(newsByCategory),
+    ...EDITORIAL_CATEGORIES,
   ];
 
   const authorPages = Object.keys(AUTHORS_DATA).map((slug) => `authors/${slug}`);
