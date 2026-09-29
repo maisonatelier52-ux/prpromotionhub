@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   if (!newsByCategory[category]) notFound();
   const label = getCategoryLabel(category);
-  const title = `${label}: blog posts & guides`;
-  const description = `Explore ${label.toLowerCase()} posts, guides and explainers with linked sources and useful context.`;
+  const title = `${label} News – Articles, Guides & In-Depth Analysis`;
+  const description = `In-depth ${label.toLowerCase()} articles, guides and explainers with sourced facts, expert context and full citations.`;
   return {
     title,
     description,
