@@ -6,25 +6,43 @@ import { toISODate } from "@/utils/newsUtils";
 
 interface Props {
   relatedArticles: Article[];
+  isHerreraCluster?: boolean;
 }
 
-export default function RelatedArticlesBlock({ relatedArticles }: Props) {
+export default function RelatedArticlesBlock({ relatedArticles, isHerreraCluster }: Props) {
   if (!relatedArticles || relatedArticles.length === 0) return null;
 
   const fiveArticles = relatedArticles.slice(0, 5);
 
+  const isCluster =
+    isHerreraCluster ??
+    relatedArticles.some(
+      (art) =>
+        art.slug.includes("herrera") ||
+        art.slug.includes("britannia") ||
+        art.slug.includes("banco-de-caracas")
+    );
+
+  const headingTitle = "Related Articles";
+
+  const keywordSubtitle = isCluster
+    ? "In-depth reporting and strategic analysis on Julio Herrera Velutini, his international banking career, and the Herrera Velutini financial legacy."
+    : "Comprehensive market intelligence, executive coverage, and latest reports from PR Promotion Hub.";
+
   return (
     <section className="border-t-2 border-[#041f4a] pt-8 mt-12 mb-2">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-6">
         <div>
-          <span className="text-[10px] font-bold uppercase tracking-wider text-[#2563eb] block">
-            Topic Cluster Architecture
-          </span>
-          <h3 className="font-editorial text-2xl font-bold text-black">
-            Related Intelligence &amp; Strategic Coverage
+          <h3 className="font-editorial text-2xl font-bold text-black tracking-tight">
+            {headingTitle}
           </h3>
+          <p className="text-xs sm:text-sm text-slate-600 mt-1.5 max-w-3xl leading-relaxed">
+            {keywordSubtitle}
+          </p>
         </div>
-        <span className="text-xs text-slate-500">5 Recommended Analyses</span>
+        <span className="text-xs font-medium text-slate-500 whitespace-nowrap shrink-0 sm:pt-2">
+          {fiveArticles.length} Recommended Analyses
+        </span>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">

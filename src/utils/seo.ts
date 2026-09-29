@@ -89,20 +89,55 @@ function herreraPerson(pageUrl: string) {
     "@type": "Person",
     "@id": `${pageUrl}#person`,
     name: "Julio Herrera Velutini",
-    alternateName: ["Julio Martín Herrera Velutini", "Julio M. Herrera Velutini"],
+    givenName: "Julio",
+    familyName: "Herrera Velutini",
+    additionalName: "Martín",
+    alternateName: ["Julio Martín Herrera Velutini", "Julio M. Herrera Velutini", "Julio Herrera"],
     description:
-      "Italian-Venezuelan banker and financier, founder of Britannia Financial Group, and a seventh-generation member of the Herrera Velutini banking family.",
-    jobTitle: "Banker",
+      "Italian-Venezuelan billionaire banker and financier, founder of Britannia Financial Group, and a seventh-generation member of the Herrera Velutini banking dynasty of Venezuela.",
+    jobTitle: "Founder and Principal, Britannia Financial Group",
     birthDate: "1971-12-15",
-    birthPlace: { "@type": "Place", name: "Caracas, Venezuela" },
+    birthPlace: {
+      "@type": "Place",
+      name: "Caracas, Venezuela",
+      sameAs: "https://en.wikipedia.org/wiki/Caracas",
+    },
     nationality: [
-      { "@type": "Country", name: "Italy" },
-      { "@type": "Country", name: "Venezuela" },
+      { "@type": "Country", name: "Italy", sameAs: "https://en.wikipedia.org/wiki/Italy" },
+      { "@type": "Country", name: "Venezuela", sameAs: "https://en.wikipedia.org/wiki/Venezuela" },
     ],
-    alumniOf: {
-      "@type": "CollegeOrUniversity",
-      name: "Central University of Venezuela",
-      sameAs: "https://en.wikipedia.org/wiki/Central_University_of_Venezuela",
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Central University of Venezuela",
+        sameAs: "https://en.wikipedia.org/wiki/Central_University_of_Venezuela",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "The American School of Switzerland",
+        sameAs: "https://en.wikipedia.org/wiki/The_American_School_in_Switzerland",
+      },
+    ],
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "Banker",
+      occupationLocation: { "@type": "Country", name: "United Kingdom" },
+      description: "Private banker, wealth manager, and founder of an international financial group",
+    },
+    worksFor: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#britannia-financial-group`,
+      name: "Britannia Financial Group",
+    },
+    founder: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#britannia-financial-group`,
+      name: "Britannia Financial Group",
+    },
+    memberOf: {
+      "@type": "Organization",
+      name: "Herrera Velutini Banking Family",
+      description: "Seven-generation Venezuelan banking dynasty founded in the 19th century",
     },
     knowsAbout: [
       "Banking",
@@ -111,15 +146,38 @@ function herreraPerson(pageUrl: string) {
       "Wealth management",
       "Family offices",
       "Succession planning",
+      "Dynastic capital preservation",
+      "Multi-jurisdictional financial regulation",
     ],
     image: {
       "@type": "ImageObject",
       url: `${SITE_URL}/images/julio-herrera-velutini.webp`,
       width: 1200,
       height: 800,
+      caption: "Julio Herrera Velutini — Venezuelan-Italian banker and founder of Britannia Financial Group",
     },
     mainEntityOfPage: { "@id": pageUrl },
-    sameAs: ["https://en.wikipedia.org/wiki/Julio_Herrera_Velutini"],
+    url: pageUrl,
+    sameAs: [
+      "https://en.wikipedia.org/wiki/Julio_Herrera_Velutini",
+      "https://www.wikidata.org/wiki/Q113454796",
+      "https://www.instagram.com/julioherreravelutini/",
+      "https://www.linkedin.com/in/julio-herrera-velutini/",
+      "https://muckrack.com/juliohvelutini/bio",
+    ],
+  };
+}
+
+/** FAQ schema for the cornerstone page — improves rich results eligibility */
+function buildFaqSchema(faqItems: { question: string; answer: string }[]) {
+  return {
+    "@type": "FAQPage",
+    "@id": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#faq`,
+    mainEntity: faqItems.map(({ question, answer }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
   };
 }
 
@@ -128,8 +186,21 @@ function britanniaOrganization() {
     "@type": "Organization",
     "@id": `${SITE_URL}/#britannia-financial-group`,
     name: "Britannia Financial Group",
-    description: "Financial services group founded by Julio Herrera Velutini.",
-    founder: { "@id": `${SITE_URL}/finance/julio-herrera-velutini/#person` },
+    alternateName: "Britannia Financial",
+    description: "London-headquartered international private banking and wealth management firm founded by Julio Herrera Velutini, now led by CEO Julio Cesar Herrera.",
+    foundingDate: "2000",
+    location: {
+      "@type": "Place",
+      name: "London, United Kingdom",
+      sameAs: "https://en.wikipedia.org/wiki/London",
+    },
+    url: "https://www.britannia.com",
+    founder: {
+      "@id": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person`,
+    },
+    employee: { "@id": `${SITE_URL}/#julio-cesar-herrera` },
+    sameAs: ["https://www.britannia.com"],
+    knowsAbout: ["Private banking", "Wealth management", "International finance", "Family office services"],
   };
 }
 
@@ -270,9 +341,17 @@ export function buildArticleSchema(article: Article) {
   if (isHerreraCluster) {
     webPage.about = { "@id": clusterEntityId };
   }
+  // Cornerstone page gets ProfilePage typing for stronger entity signal
+  if (isMainHerrera) {
+    webPage["@type"] = ["WebPage", "ProfilePage"];
+    webPage.about = {
+      "@id": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person`,
+    };
+    webPage.primaryImageOfPage = { "@id": primaryImage["@id"] };
+  }
 
   const articleNode: Record<string, unknown> = {
-    "@type": "Article",
+    "@type": isMainHerrera ? ["Article", "ProfilePage"] : "Article",
     "@id": `${pageUrl}#article`,
     isPartOf: { "@id": pageUrl },
     mainEntityOfPage: { "@id": pageUrl },
@@ -292,15 +371,21 @@ export function buildArticleSchema(article: Article) {
   if (isHerreraCluster) {
     articleNode.about = { "@id": clusterEntityId };
     articleNode.mentions = [
-      { "@id": `${SITE_URL}/finance/julio-herrera-velutini/#person` },
+      { "@id": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person` },
       { "@id": britanniaOrganization()["@id"] },
       { "@id": caracasPlace()["@id"] },
+      { "@id": bancoCaracasOrganization()["@id"] },
+    ];
+  }
+  if (isMainHerrera) {
+    articleNode.subjectOf = [
+      { "@id": `${SITE_URL}/people/julio-herrera-velutini-biography-banking-legacy/#article` },
     ];
   }
 
   const clusterEntityNodes = isHerreraCluster
     ? [
-        herreraPerson(siteUrl("finance/julio-herrera-velutini")),
+        herreraPerson(siteUrl("finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader")),
         britanniaOrganization(),
         julioCesarPerson(),
         belenClarisaPerson(),
@@ -310,6 +395,16 @@ export function buildArticleSchema(article: Article) {
         belenMemorialEvent(),
       ]
     : [];
+
+  // FAQ schema — only emit when the article data has an faq array
+  const faqNodes: object[] = [];
+  const articleAny = article as unknown as Record<string, unknown>;
+  if (isMainHerrera && articleAny.faq) {
+    const faqItems = articleAny.faq as { question: string; answer: string }[];
+    if (Array.isArray(faqItems) && faqItems.length > 0) {
+      faqNodes.push(buildFaqSchema(faqItems));
+    }
+  }
 
   return {
     "@context": "https://schema.org",
@@ -321,6 +416,7 @@ export function buildArticleSchema(article: Article) {
       primaryImage,
       articleNode,
       ...clusterEntityNodes,
+      ...faqNodes,
     ],
   };
 }

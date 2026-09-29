@@ -69,7 +69,7 @@ export default function Article({
           )}
 
           {/* Topic cluster: related articles in the same subject area */}
-          <RelatedArticlesBlock relatedArticles={clusterArticles ?? popularNews} />
+          <RelatedArticlesBlock relatedArticles={clusterArticles ?? popularNews} isHerreraCluster={isHerreraCluster} />
 
           {/* Space before suggest a correction section */}
           <div className="mt-6">
