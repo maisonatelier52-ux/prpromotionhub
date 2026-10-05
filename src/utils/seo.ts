@@ -160,7 +160,6 @@ function herreraPerson(pageUrl: string) {
     url: pageUrl,
     sameAs: [
       "https://en.wikipedia.org/wiki/Julio_Herrera_Velutini",
-      "https://www.wikidata.org/wiki/Q113454796",
       "https://www.instagram.com/julioherreravelutini/",
       "https://www.linkedin.com/in/julio-herrera-velutini/",
       "https://muckrack.com/juliohvelutini/bio",
@@ -194,12 +193,10 @@ function britanniaOrganization() {
       name: "London, United Kingdom",
       sameAs: "https://en.wikipedia.org/wiki/London",
     },
-    url: "https://www.britannia.com",
     founder: {
       "@id": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person`,
     },
     employee: { "@id": `${SITE_URL}/#julio-cesar-herrera` },
-    sameAs: ["https://www.britannia.com"],
     knowsAbout: ["Private banking", "Wealth management", "International finance", "Family office services"],
   };
 }
@@ -351,7 +348,7 @@ export function buildArticleSchema(article: Article) {
   }
 
   const articleNode: Record<string, unknown> = {
-    "@type": isMainHerrera ? ["Article", "ProfilePage"] : "Article",
+    "@type": "Article",
     "@id": `${pageUrl}#article`,
     isPartOf: { "@id": pageUrl },
     mainEntityOfPage: { "@id": pageUrl },
