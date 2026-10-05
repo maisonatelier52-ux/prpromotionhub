@@ -14,6 +14,7 @@ import VerifiedSourcesPanel from "./article/VerifiedSourcesPanel";
 
 const HERRERA_CLUSTER_SLUGS = new Set([
   "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
+  "herrera-velutini-family-stewardship-succession-culture",
   "julio-herrera-velutini", // short alias
   "julio-herrera-velutini-biography-banking-legacy",
   "julio-cesar-herrera-britannia-financial-leadership",
@@ -58,8 +59,8 @@ export default function Article({
             </div>
           </div>
 
-          {/* E-E-A-T: Verified sources panel — hidden on cluster/pillar pages */}
-          {!isHerreraCluster && (
+          {/* Verified sources panel — only shown on Julio Herrera article and pillar pages */}
+          {isHerreraCluster && (
             <VerifiedSourcesPanel sources={article.sources} category={article.category} />
           )}
 

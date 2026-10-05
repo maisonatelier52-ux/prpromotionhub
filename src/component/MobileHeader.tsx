@@ -18,7 +18,7 @@ export default function MobileHeader() {
         <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
           <Link href="/" title="home">
             <span className="site-logo font-serif font-bold text-[22px] tracking-tight text-black uppercase">
-              PR<span className="font-normal">PROMOTIONHUB</span>
+              PR{" "}<span className="font-normal">PROMOTIONHUB</span>
             </span>
           </Link>
 

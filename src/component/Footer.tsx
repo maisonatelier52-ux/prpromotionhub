@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="flex">
               <Link href="/" title="home" className="select-none">
                 <span className="site-logo font-serif font-bold text-[25px] tracking-tight text-white uppercase">
-                  PR<span className="font-normal">PROMOTIONHUB</span>
+                  PR{" "}<span className="font-normal">PROMOTIONHUB</span>
                 </span>
               </Link>
             </div>
@@ -61,7 +61,7 @@ export default function Footer() {
               </Link>
             </div>
             <p className="mt-4 text-[11px] md:text-sm text-gray-300 leading-relaxed">
-              Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.
+              Copyright 2026 PR PROMOTIONHUB. All Rights Reserved.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-7 xl:gap-20 xl:mr-40 w-full lg:w-auto">

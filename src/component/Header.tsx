@@ -75,7 +75,7 @@ export default function Header() {
             <div className="flex justify-center">
               <Link href="/" title='home' className="select-none text-center">
                 <span className="site-logo font-serif font-bold text-[36px] tracking-tight text-black uppercase">
-                  PR<span className="font-normal">PROMOTIONHUB</span>
+                  PR{" "}<span className="font-normal">PROMOTIONHUB</span>
                 </span>
               </Link>
             </div>
