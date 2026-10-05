@@ -338,9 +338,7 @@ export function buildArticleSchema(article: Article) {
   if (isHerreraCluster) {
     webPage.about = { "@id": clusterEntityId };
   }
-  // Cornerstone page gets ProfilePage typing for stronger entity signal
   if (isMainHerrera) {
-    webPage["@type"] = ["WebPage", "ProfilePage"];
     webPage.about = {
       "@id": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person`,
     };
@@ -359,7 +357,13 @@ export function buildArticleSchema(article: Article) {
     image: { "@id": primaryImage["@id"] },
     datePublished: toISODate(article.date),
     dateModified: article.updatedAt ?? toISODate(article.date),
-    author: { "@id": PUBLISHER["@id"] },
+    author: article.author?.name
+      ? {
+          "@type": "Person",
+          name: article.author.name,
+          url: siteUrl(`authors/${article.author.slug}`),
+        }
+      : { "@id": PUBLISHER["@id"] },
     publisher: { "@id": PUBLISHER["@id"] },
     ...(article.keywords?.length ? { keywords: article.keywords.join(", ") } : {}),
     ...(article.sources?.length ? { citation: article.sources.map(s => s.url) } : {}),
