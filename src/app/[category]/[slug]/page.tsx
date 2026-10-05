@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: seoTitle,
       description,
       url: canonicalUrl,
-      siteName: "PR Promotion Hub Blog",
+      siteName: "International Banking & Finance Intelligence",
       locale: "en_US",
       type: "article",
       publishedTime: toISODate(article.date),

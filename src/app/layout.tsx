@@ -45,10 +45,10 @@ export default function RootLayout({
         className="antialiased font-sans"
         style={{ fontFamily: "var(--font-inter, var(--font-primary))" }}
       >
-          <Header/>
-          {children}
-          <Footer />
-          <ScrollToTop />
+        <Header />
+        {children}
+        <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );
