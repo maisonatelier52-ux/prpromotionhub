@@ -260,16 +260,6 @@ function caracasPlace() {
   };
 }
 
-function belenMemorialEvent() {
-  return {
-    "@type": "Event",
-    "@id": `${SITE_URL}/#death-belen-clarisa-velutini-2023`,
-    name: "Passing and Memorial of Belén Clarisa Velutini Pérez-Matos",
-    startDate: "2023",
-    location: { "@id": `${SITE_URL}/#caracas-venezuela` },
-    description: "The 2023 passing and cultural commemoration of engineer, shareholder, and Trasnocho Cultural benefactor Belén Clarisa Velutini Pérez-Matos.",
-  };
-}
 
 const HERRERA_CLUSTER_ENTITY_MAP: Record<string, string> = {
   "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person`,
@@ -393,7 +383,6 @@ export function buildArticleSchema(article: Article) {
         bancoCaracasOrganization(),
         trasnochoCulturalOrganization(),
         caracasPlace(),
-        belenMemorialEvent(),
       ]
     : [];
 
