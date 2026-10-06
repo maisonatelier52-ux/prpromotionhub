@@ -50,22 +50,17 @@ export const metadata: Metadata = {
 export default function Home() {
   const posts = getSortedNews([allArticles]);
 
-  // Track every slug already shown in other homepage sections
-  const usedSlugs = new Set(
-    [
-      posts[0],                   // WhatsHotBar
-      ...posts.slice(1, 5),       // FeaturedEditorialGrid
-      ...posts.slice(5, 17),      // HeroSection
-      ...posts.slice(17, 21),     // EditorialGrid
-      ...posts.slice(21, 24),     // Perspectives (SecondSection)
-      ...posts.slice(24, 28),     // TravelSectionWithSubscribe
-      ...posts.slice(28, 31),     // More to explore (SecondSection)
-      ...posts.slice(31),         // LatestNews main feed
-    ].map((p) => p.slug)
-  );
-
-  // Pick first 5 articles NOT already shown anywhere on the page
-  const sidebarArticles = posts.filter((p) => !usedSlugs.has(p.slug)).slice(0, 5);
+  const hotBarArticle = posts[0];
+  const featuredEditorialArticles = posts.slice(1, 5);
+  const heroArticles = posts.slice(5, 17);
+  const editorialArticles = posts.slice(17, 21);
+  const perspectivesArticles = posts.slice(21, 24);
+  const travelArticles = posts.slice(24, 28);
+  const moreToExploreArticles = posts.slice(28, 31);
+  // Pick exactly 3 distinct non-repeating articles for "MORE TO READ" sidebar
+  const sidebarArticles = posts.slice(31, 34);
+  // Feed receives the remaining non-repeating articles
+  const latestNewsArticles = posts.slice(34);
 
   const schema = {
     "@context": "https://schema.org",
@@ -82,15 +77,15 @@ export default function Home() {
   };
   return <main id="main-content">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
-    <WhatsHotBar data={posts[0]} />
+    <WhatsHotBar data={hotBarArticle} />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <FeaturedEditorialGrid data={posts.slice(1,5)} />
-      <HeroSection data={posts.slice(5,17)} />
-      <EditorialGrid data={posts.slice(17,21)} />
-      <div className="mx-auto mt-8"><CategorySectionHeader title="Perspectives" /><SecondSection data={posts.slice(21,24)} /></div>
-      <TravelSectionWithSubscribe data={posts.slice(24,28)} />
-      <div className="mx-auto mt-8"><CategorySectionHeader title="More to explore" /><SecondSection data={posts.slice(28,31)} /></div>
-      <LatestNewsWithStickyPromo data={posts.slice(31)} sidebarArticles={sidebarArticles} />
+      <FeaturedEditorialGrid data={featuredEditorialArticles} />
+      <HeroSection data={heroArticles} />
+      <EditorialGrid data={editorialArticles} />
+      <div className="mx-auto mt-8"><CategorySectionHeader title="Perspectives" /><SecondSection data={perspectivesArticles} /></div>
+      <TravelSectionWithSubscribe data={travelArticles} />
+      <div className="mx-auto mt-8"><CategorySectionHeader title="More to explore" /><SecondSection data={moreToExploreArticles} /></div>
+      <LatestNewsWithStickyPromo data={latestNewsArticles} sidebarArticles={sidebarArticles} />
     </div>
   </main>;
 }

@@ -1,8 +1,11 @@
 import type { MetadataRoute } from "next";
 import { allArticles, newsByCategory } from "@/utils/newsData";
-import { REVIEW_DATE, CATEGORY_LABELS } from "@/utils/siteConfig";
+import { REVIEW_DATE, CATEGORY_LABELS, SITE_URL } from "@/utils/siteConfig";
 import { articleUrl, siteUrl } from "@/utils/seo";
 export const dynamic = "force-static";
+
+/** The canonical finance URL for Julio Herrera Velutini — receives priority treatment in sitemap. */
+const HERRERA_PRIMARY_URL = `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/`;
 
 /**
  * Every URL is emitted with a trailing slash to match `trailingSlash: true`,
@@ -49,12 +52,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const allPagePaths = [...staticPages, ...authorPages, ...researchPages];
 
   const seen = new Set<string>();
-  const articles = allArticles.flatMap((article) => {
+  const articles: MetadataRoute.Sitemap = [];
+  for (const article of allArticles) {
     const url = articleUrl(article);
-    if (seen.has(url)) return [];
+    if (seen.has(url)) continue;
     seen.add(url);
-    return [{ url, lastModified: article.updatedAt || REVIEW_DATE }];
-  });
+    // The primary Herrera finance page gets maximum priority and weekly change frequency
+    // so Google Search Console treats it as the most important indexable URL on the site.
+    if (url === HERRERA_PRIMARY_URL) {
+      articles.push({ url, lastModified: article.updatedAt || REVIEW_DATE, changeFrequency: "weekly", priority: 1.0 });
+    } else {
+      articles.push({ url, lastModified: article.updatedAt || REVIEW_DATE, changeFrequency: "monthly", priority: 0.8 });
+    }
+  }
 
   return [
     ...allPagePaths.map((path) => ({ url: siteUrl(path), lastModified: REVIEW_DATE })),

@@ -5,7 +5,7 @@ import WhatsHotBar from "@/component/WhatsHotBar";
 import { newsByCategory, allArticles, archiveRoutes, findArticle } from "@/utils/newsData";
 import { getSortedNews, toISODate } from "@/utils/newsUtils";
 import { SITE_URL } from "@/utils/siteConfig";
-import { articleUrl, buildArticleSchema, imageDimensions } from "@/utils/seo";
+import { articleUrl, buildArticleSchema, canonicalSlug, imageDimensions } from "@/utils/seo";
 import { getCustomArticleComponent } from "@/component/customArticleRegistry";
 
 export const dynamicParams = false;
@@ -18,6 +18,53 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category, slug } = await params;
   const article = findArticle(category, slug);
   if (!article) notFound();
+
+  // Exactly as specified in topic-cluster metadata requirements
+  if (canonicalSlug(article) === "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader") {
+    const herreraCanonical = "https://www.prpromotionhub.com/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/";
+    return {
+      title: "Julio Herrera Velutini: Banker and Britannia Founder",
+      description: "Learn about Julio Herrera Velutini, founder of Britannia Financial Group, including his banking career, family legacy and international finance work.",
+      alternates: {
+        canonical: herreraCanonical,
+        // hreflang signals: tells Google Search Console this page targets
+        // English-speaking audiences globally and specifically in the U.S.,
+        // which enables U.S. impression tracking in Search Console.
+        languages: {
+          "en": herreraCanonical,
+          "en-US": herreraCanonical,
+          "x-default": herreraCanonical,
+        },
+      },
+      robots: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+      },
+      openGraph: {
+        title: "Julio Herrera Velutini: Banker and Britannia Founder",
+        description: "A sourced profile of Julio Herrera Velutini covering his banking career, Britannia Financial Group and family legacy.",
+        url: herreraCanonical,
+        type: "article",
+        images: [
+          {
+            url: "https://www.prpromotionhub.com/images/julio-herrera-velutini.webp",
+            width: 1200,
+            height: 800,
+            alt: "Julio Herrera Velutini",
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Julio Herrera Velutini: Banker and Britannia Founder",
+        description: "A sourced profile covering Julio Herrera Velutini's banking career, financial activities and family legacy.",
+      },
+    };
+  }
+
   // Always the single canonical URL, whichever alias path was requested.
   const canonicalUrl = articleUrl(article);
   const image = new URL(article.image.trim(), SITE_URL).href;
@@ -49,6 +96,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 export default async function DetailPage({ params }: Props) {
   const { category, slug } = await params;
+  if (slug === "julio-herrera-velutini-biography-banking-legacy") {
+    return (
+      <main id="main-content" className="max-w-4xl mx-auto px-4 py-20 text-center">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.location.replace("/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/");`,
+          }}
+        />
+        <h1 className="text-2xl font-bold mb-4 text-[#041f4a]">Redirecting to Primary Article...</h1>
+        <p className="text-sm text-slate-600 mb-6">
+          The comprehensive profile of Julio Herrera Velutini has moved to our primary finance analysis.
+        </p>
+        <a
+          href="/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/"
+          className="inline-block bg-[#041f4a] text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-blue-900 transition"
+        >
+          Click here if not redirected &rarr;
+        </a>
+      </main>
+    );
+  }
   const article = findArticle(category, slug);
   if (!article) notFound();
   const isCustom = !!getCustomArticleComponent(article.slug);

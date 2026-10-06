@@ -11,6 +11,7 @@ export const allArticles = Object.values(archiveFiles).flat();
 const slugAliases: Record<string, string> = {
   // short URL → canonical keyword-rich slug
   "julio-herrera-velutini": "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
+  "julio-herrera-velutini-biography-banking-legacy": "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
 };
 
 // Preserve canonical paths as well as legacy /finance/ paths for backwards compatibility.

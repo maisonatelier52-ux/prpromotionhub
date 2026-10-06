@@ -98,7 +98,7 @@ export default function LatestNewsWithStickyPromo({ data, sidebarArticles }: Pro
         {/* RIGHT SECTION */}
         <div className="w-full lg:w-1/3">
           <div className="sticky top-10">
-            <ArticleCard data={sidebarArticles ?? data.slice(0, 5)} title="More to read" />
+            <ArticleCard data={sidebarArticles && sidebarArticles.length > 0 ? sidebarArticles : data.slice(0, 3)} title="More to read" />
           </div>
         </div>
       </div>

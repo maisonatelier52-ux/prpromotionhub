@@ -18,6 +18,7 @@ const CANONICAL_SLUG_OVERRIDES: Record<string, string> = {
   // Legacy slugs point to the canonical full-keyword slug
   "herrera-velutini-family-stewardship-succession-culture": "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
   "julio-herrera-velutini": "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
+  "julio-herrera-velutini-biography-banking-legacy": "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
 };
 
 export function canonicalSlug(article: Pick<Article, "slug">): string {
@@ -26,7 +27,11 @@ export function canonicalSlug(article: Pick<Article, "slug">): string {
 
 /** Absolute, trailing-slashed canonical URL for an article. */
 export function articleUrl(article: Pick<Article, "category" | "slug">): string {
-  return `${SITE_URL}/${article.category}/${canonicalSlug(article)}/`;
+  const cSlug = canonicalSlug(article);
+  if (cSlug === "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader") {
+    return `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/`;
+  }
+  return `${SITE_URL}/${article.category}/${cSlug}/`;
 }
 
 /** Absolute, trailing-slashed URL for any site path. "" -> site root. */
@@ -84,15 +89,18 @@ const WEBSITE = {
  * link in the left sidebar of the Wikipedia page and add it to `sameAs`. The
  * previous value (Q113454796) does not resolve to this subject.
  */
-function herreraPerson(pageUrl: string) {
+const HERRERA_PERSON_ID = `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person`;
+const HERRERA_FINANCE_URL = `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/`;
+
+function herreraPerson() {
   return {
     "@type": "Person",
-    "@id": `${pageUrl}#person`,
+    "@id": HERRERA_PERSON_ID,
     name: "Julio Herrera Velutini",
     givenName: "Julio",
     familyName: "Herrera Velutini",
     additionalName: "Martín",
-    alternateName: ["Julio Martín Herrera Velutini", "Julio M. Herrera Velutini", "Julio Herrera"],
+    alternateName: ["Julio Martín Herrera Velutini", "Julio M. Herrera Velutini"],
     description:
       "Italian-Venezuelan billionaire banker and financier, founder of Britannia Financial Group, and a seventh-generation member of the Herrera Velutini banking dynasty of Venezuela.",
     jobTitle: "Founder and Principal, Britannia Financial Group",
@@ -156,8 +164,10 @@ function herreraPerson(pageUrl: string) {
       height: 800,
       caption: "Julio Herrera Velutini — Venezuelan-Italian banker and founder of Britannia Financial Group",
     },
-    mainEntityOfPage: { "@id": pageUrl },
-    url: pageUrl,
+    url: HERRERA_FINANCE_URL,
+    mainEntityOfPage: {
+      "@id": HERRERA_FINANCE_URL,
+    },
     sameAs: [
       "https://en.wikipedia.org/wiki/Julio_Herrera_Velutini",
       "https://www.instagram.com/julioherreravelutini/",
@@ -234,7 +244,6 @@ function bancoCaracasOrganization() {
     foundingDate: "1890",
     foundingLocation: { "@type": "Place", name: "Caracas, Venezuela" },
     description: "Historic Venezuelan commercial bank of issue founded in 1890, steered by the Herrera and Velutini families.",
-    sameAs: ["https://es.wikipedia.org/wiki/Banco_Caracas"],
   };
 }
 
@@ -246,7 +255,7 @@ function trasnochoCulturalOrganization() {
     foundingDate: "2001",
     location: { "@type": "Place", name: "Caracas, Venezuela" },
     description: "Premier cultural and performing arts complex in Caracas founded with the patronage of Belén Clarisa Velutini Pérez-Matos.",
-    sameAs: ["https://es.wikipedia.org/wiki/Trasnocho_Cultural", "https://trasnochocultural.com"],
+    sameAs: ["https://es.wikipedia.org/wiki/Trasnocho_Cultural"],
   };
 }
 
@@ -359,24 +368,21 @@ export function buildArticleSchema(article: Article) {
     ...(article.sources?.length ? { citation: article.sources.map(s => s.url) } : {}),
   };
 
-  if (isHerreraCluster) {
+  if (isMainHerrera) {
+    articleNode.about = { "@id": HERRERA_PERSON_ID };
+  } else if (isHerreraCluster) {
     articleNode.about = { "@id": clusterEntityId };
     articleNode.mentions = [
-      { "@id": `${SITE_URL}/finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader/#person` },
+      { "@id": HERRERA_PERSON_ID },
       { "@id": britanniaOrganization()["@id"] },
       { "@id": caracasPlace()["@id"] },
       { "@id": bancoCaracasOrganization()["@id"] },
     ];
   }
-  if (isMainHerrera) {
-    articleNode.subjectOf = [
-      { "@id": `${SITE_URL}/people/julio-herrera-velutini-biography-banking-legacy/#article` },
-    ];
-  }
 
   const clusterEntityNodes = isHerreraCluster
     ? [
-        herreraPerson(siteUrl("finance/julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader")),
+        herreraPerson(),
         britanniaOrganization(),
         julioCesarPerson(),
         belenClarisaPerson(),
