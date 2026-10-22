@@ -30,7 +30,7 @@ export default function RelatedArticlesBlock({ relatedArticles, isHerreraCluster
     : "Comprehensive market intelligence, executive coverage, and latest reports from PR Promotion Hub.";
 
   return (
-    <section className="border-t-2 border-[#041f4a] pt-8 mt-12 mb-2">
+    <section className="border-t border-slate-200 pt-8 mt-12 mb-2">
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-6">
         <div>
           <h3 className="font-editorial text-2xl font-bold text-black tracking-tight">
@@ -51,10 +51,10 @@ export default function RelatedArticlesBlock({ relatedArticles, isHerreraCluster
           return (
             <article
               key={art.slug}
-              className="flex flex-col justify-between bg-white border border-slate-200 rounded p-3 transition group shadow-2xs"
+              className="flex flex-col justify-between bg-white border border-slate-200/90 rounded-lg p-3 transition-all duration-200 group hover:border-slate-300 hover:shadow-xs"
             >
               <div>
-                <div className="relative aspect-[16/10] w-full rounded overflow-hidden mb-2 bg-slate-100">
+                <div className="relative aspect-[16/10] w-full rounded-md overflow-hidden mb-2.5 bg-slate-100">
                   <Image
                     src={art.image}
                     alt={art.imageAlt ?? art.title}

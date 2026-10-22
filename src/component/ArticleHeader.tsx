@@ -15,6 +15,65 @@ export default function ArticleHeader({ article }: { article: Article }) {
   const words = textContent.trim().split(/\s+/).filter(Boolean).length;
   const readingMinutes = Math.max(1, Math.ceil(words / 220));
 
+  const isSpecialClassic = article.slug === "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution";
+
+  if (isSpecialClassic) {
+    return (
+      <header className="mx-auto mt-4 mb-5">
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-3 text-xs text-slate-500">
+          <ol className="flex items-center flex-wrap gap-1 sm:gap-1.5">
+            <li>
+              <Link href="/" className="hover:text-[#041f4a] transition-colors">Home</Link>
+            </li>
+            <li className="text-slate-300">/</li>
+            <li>
+              <Link href={`/${article.category}`} className="hover:text-[#041f4a] capitalize transition-colors">{category}</Link>
+            </li>
+            <li className="text-slate-300">/</li>
+            <li className="text-slate-800 font-medium truncate max-w-[220px] sm:max-w-xs md:max-w-md" aria-current="page">
+              {article.title}
+            </li>
+          </ol>
+        </nav>
+
+        {/* US News Standard Editorial Kicker */}
+        <div className="flex items-center gap-2.5 mb-2.5">
+          <Link
+            href={`/${article.category}`}
+            className="inline-block bg-[#041f4a] hover:bg-blue-900 transition-colors uppercase text-white font-bold text-[10.5px] tracking-wider px-2 py-0.5 rounded-xs"
+          >
+            {category}
+          </Link>
+          <span className="text-[11px] font-semibold uppercase tracking-wider text-blue-900/80">
+            Legal Analysis
+          </span>
+        </div>
+
+        {/* Main Title (H1) — Authoritative US News Typography */}
+        <h1 className="text-2xl sm:text-4xl lg:text-[40px] font-bold tracking-tight text-slate-950 leading-[1.14] mb-3">
+          {article.title}
+        </h1>
+
+        {/* Subtitle / Deck — Minimal, Crisp & Clean */}
+        <p className="text-[15.5px] sm:text-[17px] text-slate-600 font-normal leading-relaxed max-w-4xl mb-4">
+          {article.shortdescription}
+        </p>
+
+        {/* Publication Meta — Modern US News Hairline Rule Strip */}
+        <div className="border-y border-slate-200/90 py-2.5 flex items-center text-xs text-slate-500 font-sans">
+          <div className="flex items-center gap-2">
+            <span>
+              Published <time dateTime={toISODate(article.date)} className="font-medium text-slate-800">{dateLabel(article.date)}</time>
+            </span>
+            <span className="text-slate-300">·</span>
+            <span>{readingMinutes} min read</span>
+          </div>
+        </div>
+      </header>
+    );
+  }
+
   return (
     <header className="mx-auto mt-4 mb-3">
       {/* Breadcrumb Navigation */}
@@ -59,9 +118,13 @@ export default function ArticleHeader({ article }: { article: Article }) {
       </div>
 
       {/* Author & Publication Meta */}
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs sm:text-[13px] text-slate-500 pt-0.5 pb-1">
-        <span className="font-semibold text-[#041f4a]">{article.author.name}</span>
-        <span className="text-slate-300">·</span>
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] sm:text-xs text-slate-500 pt-0.5 pb-1">
+        {article.author?.name ? (
+          <>
+            <span className="font-semibold text-[#041f4a]">{article.author.name}</span>
+            <span className="text-slate-300">·</span>
+          </>
+        ) : null}
         <p>
           Published <time dateTime={toISODate(article.date)}>{dateLabel(article.date)}</time>
         </p>

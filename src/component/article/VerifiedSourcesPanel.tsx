@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { ShieldCheck, ExternalLink } from "lucide-react";
 
 interface SourceItem {
   title: string;
   url: string;
-  publisher: string;
+  publisher?: string;
   note?: string;
   accessedAt?: string;
 }
@@ -23,13 +24,14 @@ export default function VerifiedSourcesPanel({ sources }: Props) {
   if (!sources || sources.length === 0) return null;
 
   return (
-    <section className="article-sources border-t-2 border-[#041f4a] pt-6 mt-10 mb-8">
-      <div className="flex items-center justify-between mb-4">
+    <section className="article-sources rounded-xl bg-slate-50/70 border border-slate-200/90 p-5 sm:p-6 shadow-2xs mt-10 mb-8">
+      <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-slate-200">
         <div>
-          <span className="text-[10px] font-bold uppercase tracking-wider text-[#2563eb] block">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-blue-700 block mb-0.5">
             Sources &amp; References
           </span>
-          <h3 className="text-xl font-bold text-[#041f4a]">
+          <h3 className="text-lg sm:text-xl font-bold text-[#041f4a] flex items-center gap-1.5">
+            <ShieldCheck className="w-5 h-5 text-blue-600" />
             Verified Sources
           </h3>
         </div>
@@ -52,9 +54,10 @@ export default function VerifiedSourcesPanel({ sources }: Props) {
               href={source.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-[#041f4a] hover:text-[#2563eb] underline underline-offset-2 transition"
+              className="font-semibold text-[#041f4a] hover:text-[#2563eb] underline underline-offset-2 transition inline-flex items-center gap-1"
             >
-              {source.title}
+              <span>{source.title}</span>
+              <ExternalLink className="w-3 h-3 text-slate-400 shrink-0" />
             </a>
             <div className="text-slate-500 text-[11px] mt-0.5">
               <span className="font-medium text-slate-700">{source.publisher}</span>
@@ -65,7 +68,7 @@ export default function VerifiedSourcesPanel({ sources }: Props) {
         ))}
       </ol>
 
-      <div className="mt-5 p-3 bg-[#F8FAFC] border border-[#E2E8F0] rounded flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-slate-600 gap-2">
+      <div className="mt-5 p-3 bg-white border border-slate-200/90 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-slate-600 gap-2">
         <span>Factual inaccuracy or broken reference?</span>
         <Link
           href="/corrections/"

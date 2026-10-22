@@ -12,6 +12,8 @@ import AuthorBox from "./article/AuthorBox";
 import RelatedArticlesBlock from "./article/RelatedArticlesBlock";
 import VerifiedSourcesPanel from "./article/VerifiedSourcesPanel";
 
+import DedicatedLawyersClassicArticle from "./DedicatedLawyersClassicArticle";
+
 const HERRERA_CLUSTER_SLUGS = new Set([
   "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
   "herrera-velutini-family-stewardship-succession-culture",
@@ -24,6 +26,7 @@ const HERRERA_CLUSTER_SLUGS = new Set([
   "trasnocho-cultural-caracas-arts-patronage",
   "caracas-venezuela-financial-dynasty-origins",
   "2023-death-belen-clarisa-velutini-cultural-legacy",
+  "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution",
 ]);
 
 
@@ -37,6 +40,10 @@ export default function Article({
   popularNews: Post[];
   clusterArticles?: Post[];
 }) {
+  if (article.slug === "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution") {
+    return <DedicatedLawyersClassicArticle article={article} clusterArticles={clusterArticles} />;
+  }
+
   const CustomArticle = getCustomArticleComponent(article.slug);
   const isHerreraCluster = HERRERA_CLUSTER_SLUGS.has(article.slug);
 
@@ -60,7 +67,7 @@ export default function Article({
           </div>
 
           {/* Verified sources panel — only shown on Julio Herrera article and pillar pages */}
-          {isHerreraCluster && (
+          {isHerreraCluster && article.slug !== "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution" && (
             <VerifiedSourcesPanel sources={article.sources} category={article.category} />
           )}
 
@@ -78,7 +85,7 @@ export default function Article({
           </div>
 
         </div>
-        <aside className="w-full lg:w-1/3 lg:pl-8 lg:border-l-2 lg:border-dotted lg:border-gray-200 lg:sticky lg:top-6 lg:self-start">
+        <aside className="w-full lg:w-1/3 lg:pl-8 lg:border-l lg:border-slate-200/90 lg:sticky lg:top-6 lg:self-start">
           <ArticleCard data={popularNews} />
         </aside>
       </div>

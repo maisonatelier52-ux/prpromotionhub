@@ -18,7 +18,7 @@ export interface Article {
   takeaways?: string[];
   keywords?: string[];
   sections?: { heading: string; paragraphs: string[]; sourceIds?: number[] }[];
-  sources?: { title: string; url: string; publisher: string; note: string; accessedAt: string }[];
+  sources?: { title: string; url: string; publisher?: string; note?: string; accessedAt?: string }[];
   metaDescription?: string;
   primaryKeyword?: string;
   author: {

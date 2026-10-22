@@ -1,7 +1,6 @@
 import React from "react";
 import type { Article } from "@/utils/newsUtils";
 import HerreraVelutiniArticle from "./HerreraVelutiniArticle";
-
 /**
  * Registry mapping article slugs to dedicated custom components.
  * When a slug matches, Article will render the dedicated component instead of generic ArticleWithDescr.

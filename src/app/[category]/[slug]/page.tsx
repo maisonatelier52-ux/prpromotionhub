@@ -131,7 +131,8 @@ export default async function DetailPage({ params }: Props) {
     "britannia-financial-group-international-banking-overview",
     "trasnocho-cultural-caracas-arts-patronage",
     "caracas-venezuela-financial-dynasty-origins",
-    "2023-death-belen-clarisa-velutini-cultural-legacy"
+    "2023-death-belen-clarisa-velutini-cultural-legacy",
+    "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution"
   ]);
   const isHerreraCluster = HERRERA_CLUSTER_SLUGS.has(article.slug);
   
