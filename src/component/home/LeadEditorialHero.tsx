@@ -47,14 +47,9 @@ export default function LeadEditorialHero({ leadStory, secondaryStories }: Props
 
           {/* Author Byline Meta (Clean OG Style without avatar) */}
           <div className="text-xs text-slate-600 flex flex-wrap items-center gap-x-2 gap-y-1 py-1">
-            <span className="font-bold text-black">
-              <Link href={`/authors/${authorProfile.slug}/`} className="hover:underline hover:text-[#041f4a]">
-                {authorProfile.name}
-              </Link>
+            <span className="font-bold text-[#041f4a]">
+              By Editorial Team
             </span>
-            {authorProfile.slug !== "pr-promotion-hub" && (
-              <span className="text-slate-400 font-normal">({authorProfile.role})</span>
-            )}
             <span className="text-slate-300">·</span>
             <span className="text-slate-500">
               Published on <time dateTime={toISODate(leadStory.date)}>{toISODate(leadStory.date)}</time>
@@ -113,7 +108,7 @@ export default function LeadEditorialHero({ leadStory, secondaryStories }: Props
               </p>
 
               <div className="flex items-center justify-between pt-1 text-[11px] text-slate-500">
-                <span>By {story.author?.name || "PR Promotion Hub"}</span>
+                <span>By {story.author?.name || "Editorial Team"}</span>
                 <span className="font-semibold text-black group-hover:text-[#041f4a]">4 min read &rarr;</span>
               </div>
             </article>

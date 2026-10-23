@@ -73,7 +73,7 @@ export default function Article({
 
           {/* Author attribution — hidden on cluster/pillar pages */}
           {!isHerreraCluster && (
-            <AuthorBox authorSlug={article.author.slug} fallbackName={article.author.name} />
+            <AuthorBox authorSlug="pr-promotion-hub" fallbackName="Editorial Team" />
           )}
 
           {/* Topic cluster: related articles in the same subject area */}

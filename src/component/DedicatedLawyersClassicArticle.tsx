@@ -80,6 +80,8 @@ export default function DedicatedLawyersClassicArticle({ article, clusterArticle
         {/* Publication Meta Strip — Refined Classic Hairline Bar */}
         <div className="border-y border-slate-200 py-2.5 flex flex-wrap items-center justify-between gap-y-2 text-xs font-serif text-slate-500">
           <div className="flex items-center gap-2.5">
+            <span className="font-sans font-semibold text-[#041f4a]">By Editorial Team</span>
+            <span className="text-slate-300">·</span>
             <span className="font-sans font-medium text-slate-800">Published</span>
             <time dateTime={toISODate(article.date)} className="text-slate-800 font-semibold">
               {dateLabel(article.date)}

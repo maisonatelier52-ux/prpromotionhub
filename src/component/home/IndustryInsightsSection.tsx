@@ -62,7 +62,7 @@ export default function IndustryInsightsSection({ articles }: Props) {
               </div>
 
               <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
-                <span>By {art.author?.name || "Editorial Board"}</span>
+                <span>By {art.author?.name || "Editorial Team"}</span>
                 <span className="text-black font-bold group-hover:underline transition">
                   Read Full Insight &rarr;
                 </span>

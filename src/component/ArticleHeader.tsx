@@ -63,6 +63,8 @@ export default function ArticleHeader({ article }: { article: Article }) {
         {/* Publication Meta — Modern US News Hairline Rule Strip */}
         <div className="border-y border-slate-200/90 py-2.5 flex items-center text-xs text-slate-500 font-sans">
           <div className="flex items-center gap-2">
+            <span className="font-semibold text-[#041f4a]">By Editorial Team</span>
+            <span className="text-slate-300">·</span>
             <span>
               Published <time dateTime={toISODate(article.date)} className="font-medium text-slate-800">{dateLabel(article.date)}</time>
             </span>
@@ -119,12 +121,8 @@ export default function ArticleHeader({ article }: { article: Article }) {
 
       {/* Author & Publication Meta */}
       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] sm:text-xs text-slate-500 pt-0.5 pb-1">
-        {article.author?.name ? (
-          <>
-            <span className="font-semibold text-[#041f4a]">{article.author.name}</span>
-            <span className="text-slate-300">·</span>
-          </>
-        ) : null}
+        <span className="font-semibold text-[#041f4a]">By Editorial Team</span>
+        <span className="text-slate-300">·</span>
         <p>
           Published <time dateTime={toISODate(article.date)}>{dateLabel(article.date)}</time>
         </p>

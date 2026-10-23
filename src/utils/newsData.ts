@@ -6,7 +6,19 @@ import technology from "../../public/data/technology.json";
 import entertainment from "../../public/data/entertainment.json";
 import marketing from "../../public/data/marketing.json";
 import type { Article } from "./newsUtils";
-const archiveFiles: Record<string, Article[]> = { prnews, world, us, finance, technology, entertainment, marketing };
+const rawArchiveFiles: Record<string, Article[]> = { prnews, world, us, finance, technology, entertainment, marketing };
+const archiveFiles: Record<string, Article[]> = Object.fromEntries(
+  Object.entries(rawArchiveFiles).map(([category, list]) => [
+    category,
+    (list as Article[]).map(article => ({
+      ...article,
+      author: {
+        ...(article.author || {}),
+        name: "Editorial Team",
+      },
+    })),
+  ])
+);
 export const allArticles = Object.values(archiveFiles).flat();
 const slugAliases: Record<string, string> = {
   // short URL → canonical keyword-rich slug

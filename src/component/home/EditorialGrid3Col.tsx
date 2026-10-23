@@ -75,7 +75,7 @@ export default function EditorialGrid3Col({ articles }: Props) {
 
               <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
                 <span className="font-medium text-slate-800">
-                  By {art.author?.name || "PR Promotion Hub"}
+                  By {art.author?.name || "Editorial Team"}
                 </span>
                 <span className="text-black font-semibold group-hover:text-[#041f4a]">
                   Read &rarr;

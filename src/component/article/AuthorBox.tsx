@@ -38,7 +38,7 @@ export default function AuthorBox({ authorSlug, fallbackName }: Props) {
               </span>
               <Link href={`/authors/${author.slug}/`} className="group">
                 <h3 className="font-editorial text-lg font-bold text-[#041f4a] group-hover:text-[#2563eb] transition">
-                  {author.name}
+                  {fallbackName || author.name}
                 </h3>
               </Link>
             </div>
