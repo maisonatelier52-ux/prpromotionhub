@@ -293,7 +293,7 @@ export default function DedicatedLawyersClassicArticle({ article, clusterArticle
                 Related Articles
               </h2>
               <p className="text-xs sm:text-sm font-sans text-slate-600 mt-1 max-w-2xl leading-relaxed">
-                In-depth reporting and strategic analysis on Julio Herrera Velutini, his international banking career, and the Herrera Velutini financial legacy.
+                Market intelligence, financial analysis, and strategic economic reports from PR Promotion Hub.
               </p>
             </div>
           </div>

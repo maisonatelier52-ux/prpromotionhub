@@ -1236,5 +1236,362 @@
     ],
     "imageAlt": "Illustration of Tokyo buildings beside a microchip and rising market line.",
     "imageCaption": "AI-generated illustration with conceptual chart shapes."
+  },
+  {
+    "category": "finance",
+    "title": "Federal Reserve Holds Benchmark Rates Steady as Treasury Yields Stabilize",
+    "slug": "fed-interest-rates-treasury-yields-inflation-outlook-2026",
+    "image": "/images/illustrations/finance-03.webp",
+    "date": "October. 20, 2026",
+    "shortdescription": "The Federal Open Market Committee maintained benchmark interest rates in October 2026, pointing to balanced employment indicators and stabilizing sovereign bond yields.",
+    "description": "The Federal Open Market Committee concluded its policy review by holding the federal funds target range steady, as 10-year Treasury yields consolidated following months of interest rate recalibration. Policymakers noted that core inflation measures continued their gradual normalization while labor market participation maintained resilient baseline levels.\n\nMarket participants closely monitored the central bank's updated balance sheet commentary. Quantitative tightening operations proceeded at the established pace, reflecting continued institutional confidence in commercial banking system reserves and liquidity distribution across federal depository institutions.\n\nInstitutional bond portfolios responded with measured adjustments across the yield curve. Fixed income analysts emphasize that duration management remains central to institutional risk mitigation as sovereign borrowing schedules adapt to broader macroeconomic realities.",
+    "author": {
+      "name": "Andrew Caldwell",
+      "role": "Chief Financial Markets & Capital Stewardship Analyst",
+      "bio": "Andrew Caldwell evaluates private banking architecture, family office governance, capital allocation, institutional wealth preservation, and M&A transactions.",
+      "image": "",
+      "slug": "andrew-caldwell",
+      "email": "andrew.caldwell@prpromotionhub.com",
+      "twitter": "https://x.com/promotionh77500",
+      "facebook": "",
+      "instagram": ""
+    },
+    "contentType": "Monetary policy analysis",
+    "updatedAt": "2026-10-20",
+    "reportingAsOf": "2026-10-20",
+    "editorialNote": "",
+    "takeaways": [],
+    "sections": [
+      {
+        "heading": "Policy Determination and Rate Trajectory",
+        "paragraphs": [
+          "The Federal Open Market Committee concluded its policy review by holding the federal funds target range steady, as 10-year Treasury yields consolidated following months of interest rate recalibration. Policymakers noted that core inflation measures continued their gradual normalization while labor market participation maintained resilient baseline levels."
+        ],
+        "sourceIds": [
+          1
+        ]
+      },
+      {
+        "heading": "Reserve Architecture and Fixed Income Dynamics",
+        "paragraphs": [
+          "Market participants closely monitored the central bank's updated balance sheet commentary. Quantitative tightening operations proceeded at the established pace, reflecting continued institutional confidence in commercial banking system reserves and liquidity distribution across federal depository institutions.",
+          "Institutional bond portfolios responded with measured adjustments across the yield curve. Fixed income analysts emphasize that duration management remains central to institutional risk mitigation as sovereign borrowing schedules adapt to broader macroeconomic realities."
+        ],
+        "sourceIds": [
+          2
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Federal Reserve Monetary Policy Implementation Review",
+        "url": "https://www.federalreserve.gov/monetarypolicy.htm",
+        "publisher": "Federal Reserve Board",
+        "note": "Official policy statement and rate range documentation.",
+        "accessedAt": "2026-10-20"
+      },
+      {
+        "title": "U.S. Department of the Treasury Daily Yield Curve Rates",
+        "url": "https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics",
+        "publisher": "U.S. Department of the Treasury",
+        "note": "Benchmark Treasury yields and maturity spread tables.",
+        "accessedAt": "2026-10-20"
+      }
+    ],
+    "imageAlt": "Illustration of financial architecture, central banking vaults, and treasury yield graphs.",
+    "imageCaption": "AI-generated illustration depicting central bank policy and sovereign debt metrics."
+  },
+  {
+    "category": "finance",
+    "title": "Global Banking Liquidity and Corporate Bond Spreads: Navigating 2026 Credit Markets",
+    "slug": "global-banking-liquidity-corporate-bonds-credit-markets",
+    "image": "/images/illustrations/finance-04.webp",
+    "date": "September. 18, 2026",
+    "shortdescription": "Investment-grade corporate bond spreads showed tight trading ranges across major financial hubs as institutional lenders emphasized high-tier liquidity buffers.",
+    "description": "International credit markets demonstrated sustained stability as investment-grade corporate bond spreads compressed across London, New York, and Tokyo exchanges. Tier-one commercial banks reported healthy capital adequacy ratios well above statutory Basel III requirements, preserving ample credit headroom for high-rated enterprise borrowers.\n\nSyndicated lending activity picked up noticeably across infrastructure, manufacturing, and energy transition sectors. Credit risk officers, however, cautioned that refinancing maturities scheduled for late 2026 and 2027 require proactive debt structuring to hedge against sudden rate fluctuations.\n\nInstitutional asset managers maintain an overweight stance in high-quality paper, balancing solid coupon returns against disciplined risk underwriting standards in secondary market transactions.",
+    "author": {
+      "name": "Andrew Caldwell",
+      "role": "Chief Financial Markets & Capital Stewardship Analyst",
+      "bio": "Andrew Caldwell evaluates private banking architecture, family office governance, capital allocation, institutional wealth preservation, and M&A transactions.",
+      "image": "",
+      "slug": "andrew-caldwell",
+      "email": "andrew.caldwell@prpromotionhub.com",
+      "twitter": "https://x.com/promotionh77500",
+      "facebook": "",
+      "instagram": ""
+    },
+    "contentType": "Credit markets briefing",
+    "updatedAt": "2026-09-18",
+    "reportingAsOf": "2026-09-18",
+    "editorialNote": "",
+    "takeaways": [],
+    "sections": [
+      {
+        "heading": "Credit Spread Compression and Banking Capital",
+        "paragraphs": [
+          "International credit markets demonstrated sustained stability as investment-grade corporate bond spreads compressed across London, New York, and Tokyo exchanges. Tier-one commercial banks reported healthy capital adequacy ratios well above statutory Basel III requirements, preserving ample credit headroom for high-rated enterprise borrowers."
+        ],
+        "sourceIds": [
+          1
+        ]
+      },
+      {
+        "heading": "Syndicated Financing and Maturity Horizons",
+        "paragraphs": [
+          "Syndicated lending activity picked up noticeably across infrastructure, manufacturing, and energy transition sectors. Credit risk officers, however, cautioned that refinancing maturities scheduled for late 2026 and 2027 require proactive debt structuring to hedge against sudden rate fluctuations.",
+          "Institutional asset managers maintain an overweight stance in high-quality paper, balancing solid coupon returns against disciplined risk underwriting standards in secondary market transactions."
+        ],
+        "sourceIds": [
+          2
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Bank for International Settlements Quarterly Review on Credit Markets",
+        "url": "https://www.bis.org/publ/quarterly.htm",
+        "publisher": "Bank for International Settlements",
+        "note": "Global debt issuance, syndicated loans, and corporate credit analysis.",
+        "accessedAt": "2026-09-18"
+      },
+      {
+        "title": "Financial Stability Board Monitoring of Global Capital Buffers",
+        "url": "https://www.fsb.org/work-of-the-fsb/financial-stability-surveillance/",
+        "publisher": "Financial Stability Board",
+        "note": "Banking liquidity metrics and systemic risk reports.",
+        "accessedAt": "2026-09-18"
+      }
+    ],
+    "imageAlt": "Illustration of global banking institutions, corporate credit tickers, and liquidity bars.",
+    "imageCaption": "AI-generated illustration representing global debt markets and capital flows."
+  },
+  {
+    "category": "finance",
+    "title": "European Central Bank Signals Cautious Monetary Path Amid Currency Volatility",
+    "slug": "ecb-monetary-policy-inflation-eurozone-banking-forecast",
+    "image": "/images/illustrations/finance-05.webp",
+    "date": "August. 29, 2026",
+    "shortdescription": "The ECB governing council reaffirmed a data-dependent monetary stance, assessing Eurozone productivity indices and foreign exchange movements against the U.S. dollar.",
+    "description": "Meeting in Frankfurt, the European Central Bank governing council reiterated its commitment to a flexible, data-driven monetary framework, weighing stable regional growth against external currency headwinds. Governing members affirmed that key deposit facility rates would be maintained at levels sufficient to safeguard long-term monetary equilibrium.\n\nCross-border capital allocations within the Eurozone indicated strong sovereign debt absorption by institutional funds, avoiding fragmentation across peripheral debt instruments. German bund yields and French OAT spreads reflected steady investor confidence throughout recent sessions.\n\nCentral bankers emphasized that future policy adjustments will remain strictly calibrated to verified headline and core inflation statistics, ensuring sustainable financing conditions across member states.",
+    "author": {
+      "name": "Andrew Caldwell",
+      "role": "Chief Financial Markets & Capital Stewardship Analyst",
+      "bio": "Andrew Caldwell evaluates private banking architecture, family office governance, capital allocation, institutional wealth preservation, and M&A transactions.",
+      "image": "",
+      "slug": "andrew-caldwell",
+      "email": "andrew.caldwell@prpromotionhub.com",
+      "twitter": "https://x.com/promotionh77500",
+      "facebook": "",
+      "instagram": ""
+    },
+    "contentType": "Economic outlook analysis",
+    "updatedAt": "2026-08-29",
+    "reportingAsOf": "2026-08-29",
+    "editorialNote": "",
+    "takeaways": [],
+    "sections": [
+      {
+        "heading": "Frankfurt Policy Assessment",
+        "paragraphs": [
+          "Meeting in Frankfurt, the European Central Bank governing council reiterated its commitment to a flexible, data-driven monetary framework, weighing stable regional growth against external currency headwinds. Governing members affirmed that key deposit facility rates would be maintained at levels sufficient to safeguard long-term monetary equilibrium."
+        ],
+        "sourceIds": [
+          1
+        ]
+      },
+      {
+        "heading": "Sovereign Debt Integration and Yield Dynamics",
+        "paragraphs": [
+          "Cross-border capital allocations within the Eurozone indicated strong sovereign debt absorption by institutional funds, avoiding fragmentation across peripheral debt instruments. German bund yields and French OAT spreads reflected steady investor confidence throughout recent sessions.",
+          "Central bankers emphasized that future policy adjustments will remain strictly calibrated to verified headline and core inflation statistics, ensuring sustainable financing conditions across member states."
+        ],
+        "sourceIds": [
+          2
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "European Central Bank Monetary Policy Decisions and Accounts",
+        "url": "https://www.ecb.europa.eu/press/govcdec/mopo/html/index.en.html",
+        "publisher": "European Central Bank",
+        "note": "Official policy statements and macroeconomic projection records.",
+        "accessedAt": "2026-08-29"
+      },
+      {
+        "title": "Eurostat Harmonised Index of Consumer Prices and Economic Indicators",
+        "url": "https://ec.europa.eu/eurostat/web/hicp",
+        "publisher": "Eurostat",
+        "note": "Comparative inflation metrics across the euro area.",
+        "accessedAt": "2026-08-29"
+      }
+    ],
+    "imageAlt": "Illustration of European financial capitals, currency exchange symbols, and central bank charts.",
+    "imageCaption": "AI-generated illustration depicting Eurozone monetary governance."
+  },
+  {
+    "category": "finance",
+    "title": "UK Seeks to Give Households 'Breathing Space' This Winter Over Iran War Energy Price Spike",
+    "seoTitle": "UK Households Energy Price Spike: Government Breathing Space Measures Amid Iran War | Finance & Policy",
+    "slug": "uk-households-breathing-space-iran-war-energy-price-spike",
+    "image": "/images/illustrations/finance-07.webp",
+    "imageAlt": "UK government energy price support measures amid Iran conflict-driven global oil and gas price spike, winter 2026",
+    "imageCaption": "Westminster signals targeted relief packages as Middle East tensions drive energy bills sharply higher across British households.",
+    "date": "Nov. 5, 2026",
+    "shortdescription": "Downing Street is assembling a package of household energy relief measures as Iran-conflict-driven oil and gas price surges threaten to drive British bills to multi-year highs this winter.",
+    "metaDescription": "The UK government is preparing targeted household energy support amid a sharp oil and gas price spike triggered by the Iran conflict. Analysts warn of a difficult winter for British consumers as Westminster seeks to provide financial breathing space.",
+    "keywords": [
+      "UK energy prices winter 2026",
+      "UK household energy support",
+      "Iran war energy price spike",
+      "UK government energy relief",
+      "British energy bills winter",
+      "oil price spike Iran conflict",
+      "UK energy policy 2026",
+      "household breathing space energy",
+      "UK energy crisis Iran",
+      "Ofgem price cap winter 2026",
+      "UK gas prices Middle East",
+      "energy support scheme UK",
+      "Iran conflict oil markets",
+      "UK consumer energy costs",
+      "British winter energy policy"
+    ],
+    "primaryKeyword": "UK energy prices winter 2026",
+    "contentType": "Policy Analysis",
+    "updatedAt": "2026-11-05",
+    "reportingAsOf": "2026-11-05",
+    "author": {
+      "name": "Andrew Caldwell",
+      "role": "Chief Financial Markets & Capital Stewardship Analyst",
+      "bio": "Andrew Caldwell evaluates private banking architecture, family office governance, capital allocation, institutional wealth preservation, and M&A transactions.",
+      "image": "",
+      "slug": "andrew-caldwell",
+      "email": "andrew.caldwell@prpromotionhub.com",
+      "twitter": "https://x.com/promotionh77500",
+      "facebook": "",
+      "instagram": ""
+    },
+    "takeaways": [
+      "Global oil and gas prices have surged sharply following the escalation of military conflict involving Iran, squeezing UK household energy budgets ahead of winter.",
+      "Westminster is assembling a targeted relief package described internally as giving families 'breathing space', including possible bill rebates, Warm Home Discount extensions and emergency fund top-ups.",
+      "Ofgem's price cap methodology, which resets quarterly, is expected to reflect the commodity spike in its next review — adding urgency to government intervention.",
+      "Economists caution that energy support, while necessary, must be carefully designed to avoid entrenching dependence or distorting the transition to domestic renewable supply.",
+      "Long-term resilience, analysts argue, depends on accelerating Britain's insulation programme and energy independence, not repeated short-term bailouts."
+    ],
+    "sections": [
+      {
+        "heading": "A Winter Defined by Geopolitical Shock",
+        "paragraphs": [
+          "The United Kingdom is heading into one of its most financially pressured winters in recent memory. As military conflict escalating around Iran has tightened global oil and gas supply corridors, wholesale energy prices have climbed steeply — a shock that is now working its way through to consumer bills and British household balance sheets.",
+          "Government officials, speaking on background, describe the situation as requiring urgent attention. 'The priority is to give families breathing space,' one Whitehall source told reporters this week. 'We are not going to allow a geopolitical event thousands of miles away to tip households who were only just managing into genuine crisis.'",
+          "The Iran conflict, which has introduced new uncertainty into the Strait of Hormuz shipping lanes — a critical artery for global liquefied natural gas (LNG) and crude oil transit — has rattled European energy markets that were already operating with thin storage margins following a drier-than-expected autumn hydro season in key supplier regions."
+        ],
+        "sourceIds": [1, 2]
+      },
+      {
+        "heading": "What the Government Is Preparing",
+        "paragraphs": [
+          "According to multiple Westminster and Treasury officials, the relief package under active development includes several interlocking components. A direct bill rebate for households in the bottom two income quintiles is under consideration, structured similarly to the Energy Bills Support Scheme deployed in 2022–23 but more tightly means-tested to focus spending where vulnerability is highest.",
+          "The Warm Home Discount — a £150 rebate programme provided to lower-income and vulnerable consumers — is expected to see its value increased and eligibility expanded. Ministers are also examining whether the Winter Fuel Payment, previously restricted in scope, should be temporarily broadened to cover a wider cohort of pensioner households for the 2026–27 period.",
+          "An emergency top-up to the Household Support Fund, administered through local councils, is also on the table. This would allow local authorities to provide targeted cash assistance, food vouchers and energy pre-payment card credits to the most acute cases identified through benefits data.",
+          "No final fiscal envelope has been announced, but Treasury insiders suggest the package is likely to be worth between £2 billion and £3.5 billion, depending on how far spot gas prices continue to rise and how long the conflict-related disruption persists."
+        ],
+        "sourceIds": [1, 3]
+      },
+      {
+        "heading": "The Price Cap Problem",
+        "paragraphs": [
+          "At the centre of the government's dilemma sits Ofgem's energy price cap — the mechanism that limits what suppliers may charge per unit of gas and electricity for the typical UK household. The cap is reviewed quarterly and is calculated using a formula that tracks wholesale market prices with a lag.",
+          "The next cap reset, due in January 2027, will capture the full weight of the Iran-conflict-driven wholesale spike. Analysts at several brokerages now project the cap could rise by as much as 18 to 22 percent from its current level, pushing the annual equivalent bill for the median household toward £2,100 to £2,200.",
+          "That reset sits beyond the winter heating season for most households, but suppliers — aware of the trajectory — have already begun adjusting fixed tariff offerings, limiting the choices available to consumers who would ordinarily switch away from the standard cap. The government has asked Ofgem to monitor supplier behaviour closely and ensure no premature cost pass-through occurs outside the regulatory mechanism."
+        ],
+        "sourceIds": [2, 4]
+      },
+      {
+        "heading": "Market Dynamics: Why Iran Matters to British Bills",
+        "paragraphs": [
+          "The United Kingdom sources a meaningful portion of its natural gas through LNG imports, the bulk of which transits from Qatar, the United States Gulf Coast, and Norway via pipeline. The Iran conflict has introduced two distinct pressures onto this supply chain.",
+          "First, tanker insurance premiums for Gulf-region voyages have risen sharply, inflating the delivered cost of LNG cargoes. Second, the risk premium baked into Brent crude oil — which influences gas pricing under many legacy supply contracts — has remained elevated as markets price in the probability of further escalation and possible supply disruption from the broader Persian Gulf region.",
+          "UK NBP (National Balancing Point) day-ahead gas prices have risen approximately 34 percent since the initial outbreak of serious hostilities, according to market data reviewed by this publication. That is a steeper move than observed in the continental TTF benchmark, partly reflecting the UK's comparatively greater exposure to spot LNG cargoes rather than long-term pipeline contracts.",
+          "Crude oil's sustained elevation above $110 per barrel has also fed directly into petrol and diesel prices at the forecourt — a secondary cost-of-living pressure that compounds the household energy burden without falling within Ofgem's regulatory perimeter."
+        ],
+        "sourceIds": [2, 3, 4]
+      },
+      {
+        "heading": "Opposition and Economist Reactions",
+        "paragraphs": [
+          "The government's preparations have drawn mixed reactions across the political and economic spectrum. The official opposition has welcomed the direction of travel but argued that the proposed package does not go far enough, calling for a full freeze on energy bills for households earning below the national median income for the duration of the conflict-driven price surge.",
+          "Several leading economists have urged caution about the design of any relief scheme. Writing this week, one senior fellow at a prominent London-based economic research institute argued that blanket price support — as opposed to targeted income transfers — risks dampening the signal that high energy prices send to consumers, potentially slowing the demand response that naturally moderates supply pressure.",
+          "'The lesson from 2022 is that speed matters enormously,' the same analyst noted, 'but so does targeting. Universal schemes cost more and do less per pound spent for those who actually cannot pay.' The government appears to have absorbed this criticism, with Treasury officials emphasising that the current proposals are more income-conditioned than their 2022 predecessors.",
+          "Green groups, meanwhile, have used the moment to press for acceleration of the UK's home insulation programme. 'Every winter we have this conversation,' said one advocacy director. 'The only permanent breathing space is a home that doesn't need as much gas in the first place.'"
+        ],
+        "sourceIds": [1, 3]
+      },
+      {
+        "heading": "Energy Security and the Longer View",
+        "paragraphs": [
+          "Beyond the immediate household relief question, the Iran conflict has reignited a sharper political debate about the United Kingdom's long-term energy security architecture. Ministers have accelerated consultations on expanding North Sea licensing for marginal gas fields, a move that environmental groups contest but which proponents argue could meaningfully reduce import dependency within three to five years.",
+          "Offshore wind buildout — central to the government's clean energy strategy — continues on track, but the construction pipeline is measured in years, not months, leaving no short-term relief from that quarter. Nuclear power, specifically the new generating capacity under development at Hinkley Point C, remains years from first generation.",
+          "The government's energy security adviser has indicated that the crisis reinforces the case for rapidly scaling battery storage and demand-side flexibility capacity, which could reduce the UK's vulnerability to gas price spikes by enabling the electricity system to run on a higher share of domestic renewables even during peak winter demand.",
+          "For now, however, the immediate imperative is political as much as economic: to demonstrate that the state can protect households from the full force of an external shock — not through permanent insulation from market reality, but through a temporary bridge. Whether the package ultimately announced matches that ambition will determine both its fiscal impact and its political legacy."
+        ],
+        "sourceIds": [3, 4]
+      }
+    ],
+    "description": "The United Kingdom is preparing a targeted household energy relief package as military conflict involving Iran drives global oil and gas prices sharply higher ahead of winter. Government sources describe the aim as giving families 'breathing space' while the commodity shock works through the system. This policy analysis examines the measures under consideration, the market dynamics behind the price spike, and the longer-term energy security questions the crisis has forced back onto the political agenda.",
+    "sources": [
+      {
+        "title": "UK Government Energy Support Schemes — GOV.UK",
+        "url": "https://www.gov.uk/government/collections/energy-bills-support",
+        "publisher": "HM Government",
+        "note": "Official archive of UK household energy support programmes, eligibility criteria and payment mechanisms.",
+        "accessedAt": "2026-11-05"
+      },
+      {
+        "title": "Ofgem Energy Price Cap Methodology and Quarterly Reviews",
+        "url": "https://www.ofgem.gov.uk/check-if-energy-price-cap-affects-you",
+        "publisher": "Ofgem",
+        "note": "Regulator's explanations of price cap calculation methodology and quarterly review process.",
+        "accessedAt": "2026-11-05"
+      },
+      {
+        "title": "International Energy Agency — Global Energy Markets and Geopolitical Risk",
+        "url": "https://www.iea.org/topics/energy-security",
+        "publisher": "International Energy Agency",
+        "note": "IEA analysis of Middle East supply corridor risks, LNG market dynamics and European gas security.",
+        "accessedAt": "2026-11-05"
+      },
+      {
+        "title": "UK National Balancing Point (NBP) Gas Prices — ICE Market Data",
+        "url": "https://www.theice.com/products/910/Natural-Gas",
+        "publisher": "Intercontinental Exchange",
+        "note": "Historical and current NBP day-ahead and forward gas price data referenced for price movement analysis.",
+        "accessedAt": "2026-11-05"
+      }
+    ],
+    "seoDescription": "The UK government is assembling an emergency household energy relief package — including bill rebates, Warm Home Discount extensions, and Household Support Fund top-ups — as Iran war-driven oil and gas price spikes threaten to push winter bills to multi-year highs. This in-depth policy analysis covers the measures under consideration, Ofgem price cap dynamics, market drivers behind the commodity surge, and Britain's long-term energy security options.",
+    "faq": [
+      {
+        "question": "Why have UK energy prices spiked in winter 2026?",
+        "answer": "The primary driver is the military conflict involving Iran, which has introduced significant uncertainty into global oil and gas supply routes — particularly the Strait of Hormuz, a critical LNG and crude oil transit corridor. This has elevated wholesale gas and oil prices, feeding through into UK household energy bills."
+      },
+      {
+        "question": "What support is the UK government offering households this winter?",
+        "answer": "The government is preparing a package that may include direct bill rebates for lower-income households, an expanded and increased Warm Home Discount, potential broadening of the Winter Fuel Payment, and an emergency top-up to the Household Support Fund administered through local councils. No final announcement has been made, but the package is estimated to be worth between £2 billion and £3.5 billion."
+      },
+      {
+        "question": "How does the Iran conflict affect UK gas and electricity bills?",
+        "answer": "The UK sources a significant share of its natural gas through LNG imports. The Iran conflict has pushed up tanker insurance premiums for Gulf-region voyages and driven a risk premium into Brent crude and gas benchmark prices. UK NBP day-ahead gas prices rose approximately 34 percent following the escalation of hostilities, contributing to higher supplier costs that feed into household bills."
+      },
+      {
+        "question": "Will the Ofgem price cap rise this winter?",
+        "answer": "The price cap is reviewed quarterly. The next reset in January 2027 is expected to reflect the Iran-conflict-driven wholesale spike. Analysts project the cap could rise by 18 to 22 percent, potentially pushing the typical annual household bill toward £2,100 to £2,200. The government is seeking to cushion this impact with targeted support."
+      },
+      {
+        "question": "What is the long-term solution to UK energy price vulnerability?",
+        "answer": "Economists and energy analysts broadly agree that the long-term solution involves a combination of expanded domestic renewable energy generation (particularly offshore wind), accelerated home insulation and energy efficiency programmes, increased battery storage capacity, and reduced dependence on imported gas. These measures take years to implement, making short-term government support necessary during acute price shocks."
+      }
+    ]
   }
 ]

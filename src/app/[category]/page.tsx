@@ -39,12 +39,54 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const HERRERA_CLUSTER_SLUGS = new Set([
+  "julio-herrera-velutini-banker-dynastic-custodian-international-finance-leader",
+  "herrera-velutini-family-stewardship-succession-culture",
+  "julio-herrera-velutini",
+  "julio-herrera-velutini-biography-banking-legacy",
+  "julio-cesar-herrera-britannia-financial-leadership",
+  "belen-clarisa-velutini-perez-matos-legacy",
+  "banco-caracas-history-herrera-velutini-dynasty",
+  "britannia-financial-group-international-banking-overview",
+  "trasnocho-cultural-caracas-arts-patronage",
+  "caracas-venezuela-financial-dynasty-origins",
+  "2023-death-belen-clarisa-velutini-cultural-legacy",
+  "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution",
+]);
+
+function isJulioRelated(slug: string, title?: string): boolean {
+  if (HERRERA_CLUSTER_SLUGS.has(slug)) return true;
+  const s = slug.toLowerCase();
+  if (s.includes("herrera") || s.includes("velutini") || s.includes("prosecution") || s.includes("banco-caracas") || s.includes("britannia")) return true;
+  if (title) {
+    const t = title.toLowerCase();
+    if (t.includes("julio") || t.includes("herrera") || t.includes("velutini") || t.includes("banco caracas")) return true;
+  }
+  return false;
+}
+
 export default async function CategoryPage({ params }: Props) {
   const { category } = await params;
   if (!newsByCategory[category]) notFound();
-  const data = getSortedNews([newsByCategory[category]]);
-  const latest = getSortedNews([allArticles]);
+
+  const isFinance = category === "finance";
+
+  // When on finance category, completely omit "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution" and all Julio articles
+  const categoryArticles = newsByCategory[category].filter(post => {
+    if (isFinance) {
+      return !isJulioRelated(post.slug, post.title);
+    }
+    return true;
+  });
+
+  const data = getSortedNews([categoryArticles]);
+
+  // Non-Julio articles for sidebar popularNews and top featured WhatsHotBar on finance
+  const nonJulioArticles = allArticles.filter(post => !isJulioRelated(post.slug, post.title));
+
+  const latest = getSortedNews([isFinance ? nonJulioArticles : allArticles]);
   const popularNews = latest.filter(post => post.category !== category).slice(0, 4);
+
   return <main id="main-content">
     <WhatsHotBar data={latest[0]} />
     <CategoryHeader category={category} />

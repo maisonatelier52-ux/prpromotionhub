@@ -131,13 +131,26 @@ export default async function DetailPage({ params }: Props) {
     "britannia-financial-group-international-banking-overview",
     "trasnocho-cultural-caracas-arts-patronage",
     "caracas-venezuela-financial-dynasty-origins",
-    "2023-death-belen-clarisa-velutini-cultural-legacy",
-    "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution"
+    "2023-death-belen-clarisa-velutini-cultural-legacy"
   ]);
   const isHerreraCluster = HERRERA_CLUSTER_SLUGS.has(article.slug);
   
   let clusterArticles: typeof allArticles = [];
-  if (isHerreraCluster) {
+  if (article.slug === "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution") {
+    // Specifically supply non-Julio finance and market intelligence articles
+    const nonJulioArticles = allArticles.filter(
+      item =>
+        item.slug !== article.slug &&
+        !HERRERA_CLUSTER_SLUGS.has(item.slug) &&
+        !item.slug.toLowerCase().includes("herrera") &&
+        !item.slug.toLowerCase().includes("velutini") &&
+        !item.title.toLowerCase().includes("julio") &&
+        !item.title.toLowerCase().includes("herrera")
+    );
+    const financeNonJulio = nonJulioArticles.filter(item => item.category === "finance" || item.category === "marketing");
+    const otherNonJulio = nonJulioArticles.filter(item => item.category !== "finance" && item.category !== "marketing");
+    clusterArticles = [...financeNonJulio, ...otherNonJulio].slice(0, 4);
+  } else if (isHerreraCluster) {
     clusterArticles = allArticles.filter(
       item => item.slug !== article.slug && HERRERA_CLUSTER_SLUGS.has(item.slug)
     ).slice(0, 5);
@@ -146,10 +159,18 @@ export default async function DetailPage({ params }: Props) {
     clusterArticles = sameCategory.slice(0, 5);
   }
 
-  // Ensure sidebar "MORE TO READ" articles are completely distinct from the cluster articles
+  // Ensure sidebar "MORE TO READ" articles and WhatsHotBar are completely distinct and non-Julio for this article
   const clusterSlugs = new Set(clusterArticles.map(c => c.slug));
   const otherPosts = getSortedNews([allArticles]).filter(
-    item => item.slug !== article.slug && !clusterSlugs.has(item.slug)
+    item =>
+      item.slug !== article.slug &&
+      !clusterSlugs.has(item.slug) &&
+      (article.slug !== "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution" ||
+        (!HERRERA_CLUSTER_SLUGS.has(item.slug) &&
+         !item.slug.toLowerCase().includes("herrera") &&
+         !item.slug.toLowerCase().includes("velutini") &&
+         !item.title.toLowerCase().includes("julio") &&
+         !item.title.toLowerCase().includes("herrera")))
   );
   const sidebarArticles = otherPosts.slice(0, 4);
   const schema = buildArticleSchema(article);

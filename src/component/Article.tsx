@@ -26,7 +26,6 @@ const HERRERA_CLUSTER_SLUGS = new Set([
   "trasnocho-cultural-caracas-arts-patronage",
   "caracas-venezuela-financial-dynasty-origins",
   "2023-death-belen-clarisa-velutini-cultural-legacy",
-  "how-lawyers-for-julio-herrera-velutini-challenged-the-prosecution",
 ]);
 
 
