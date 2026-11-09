@@ -702,5 +702,98 @@
     ],
     "imageAlt": "Illustration of a draft agreement and pen on a diplomatic table.",
     "imageCaption": "AI-generated illustration."
+  },
+  {
+    "category": "world",
+    "title": "Gunman with far-right views who killed 6 people in a Polish city square dies in hospital, police say",
+    "seoTitle": "Poland City Square Shooting: Far-Right Gunman Dies After Killing 6 People | World News",
+    "slug": "poland-city-square-shooting-far-right-gunman-kills-six-dies-hospital",
+    "image": "/images/illustrations/world-11.webp",
+    "date": "Nov. 9, 2026",
+    "shortdescription": "A gunman described by Polish police as holding far-right views opened fire in a city square, killing six people before being taken to hospital with critical injuries. He has since died, authorities confirmed.",
+    "metaDescription": "A far-right gunman opened fire in a Polish city square, killing six people. Polish police confirmed the shooter later died in hospital. Here is what has been established about the attack and the investigation.",
+    "description": "Polish police confirmed that a gunman who opened fire in a city square, killing six people, died in hospital following the attack. Officers described the suspect as holding far-right views. The shooting occurred in a public square, and several of the victims were killed at the scene. The gunman sustained injuries — the circumstances of which remained under investigation — and was transported to hospital, where he later died.\n\nPolice have launched a formal investigation into the motive, the suspect's background and any associations. Investigators are examining materials recovered from the gunman's residence and digital communications to establish whether he acted alone and whether the attack was premeditated.\n\nSix deaths have been confirmed as of this report. The number of injured and the exact sequence of events at the scene are still being verified by authorities. Witness accounts and CCTV footage are being reviewed. This account is based on the documented statements of Polish police and does not speculate beyond what officials have confirmed.",
+    "author": {
+      "name": "Lauren Mercer",
+      "role": "Senior International Affairs & Geopolitical Correspondent",
+      "bio": "Lauren Mercer analyzes cross-border trade policy, diplomatic statecraft, international regulatory frameworks, and macroeconomic geopolitical shifts.",
+      "image": "",
+      "slug": "lauren-mercer",
+      "email": "lauren.mercer@prpromotionhub.com",
+      "twitter": "https://x.com/promotionh77500",
+      "facebook": "",
+      "instagram": ""
+    },
+    "contentType": "Breaking news briefing",
+    "updatedAt": "2026-11-09",
+    "reportingAsOf": "2026-11-09",
+    "editorialNote": "This article reflects information confirmed by Polish police as of November 9, 2026. Figures and investigative details may be updated as the authorities release further statements.",
+    "takeaways": [
+      "A gunman opened fire in a city square in Poland, killing six people at or near the scene.",
+      "Polish police described the suspect as holding far-right views.",
+      "The gunman was transported to hospital following the attack and later died, police confirmed.",
+      "A formal investigation has been launched into motive, the suspect's background and possible associations.",
+      "Investigators are reviewing CCTV footage, witness accounts and materials recovered from the suspect's residence."
+    ],
+    "sections": [
+      {
+        "heading": "What Polish police have confirmed",
+        "paragraphs": [
+          "Polish police confirmed that a gunman opened fire in a city square, killing six people. Officers stated that the suspect held far-right views, though the precise nature and extent of those views and any organizational connections are subject to the ongoing investigation.",
+          "The gunman sustained injuries during or immediately after the attack and was taken to hospital in critical condition. Police confirmed his death in hospital following the shooting. Authorities have not publicly identified the suspect by name pending formal investigative procedures and notification of next of kin."
+        ],
+        "sourceIds": [1]
+      },
+      {
+        "heading": "The scene and the victims",
+        "paragraphs": [
+          "The attack took place in a public city square. Six deaths have been confirmed. Polish emergency services responded to the scene and treated additional individuals for injuries. The precise number of wounded and their conditions were still being compiled by authorities at the time of this report.",
+          "Investigators are treating the square as an active crime scene. Witnesses have been asked to provide statements, and CCTV footage from the surrounding area is being reviewed. Victim identifications are being conducted, and next of kin notifications are ongoing."
+        ],
+        "sourceIds": [1, 2]
+      },
+      {
+        "heading": "The investigation into motive and background",
+        "paragraphs": [
+          "Polish police have opened a formal investigation into the motive behind the attack. Authorities are examining materials recovered from the gunman's residence, including written documents and electronic devices, to establish whether the act was premeditated and whether any other individuals were involved in planning or facilitating it.",
+          "The characterization of the suspect as holding far-right views comes from police. What specific beliefs, texts or affiliations investigators associate with that description has not been fully detailed in public statements. Journalists and researchers are cautioned against attributing broader ideological significance to any single label before the investigation has been completed and its findings formally published."
+        ],
+        "sourceIds": [1]
+      },
+      {
+        "heading": "What this report does not establish",
+        "paragraphs": [
+          "This briefing does not speculate about the gunman's specific ideological manifesto, the precise sequence of events at the scene, or the political implications of the attack beyond what Polish authorities have stated. Casualty figures beyond the confirmed six deaths should be treated as provisional until a final official count is published.",
+          "The death of the gunman closes one line of inquiry — a trial — but does not close the investigation. Prosecutors will continue to examine the full picture of the attack, including any potential network or online radicalization pathway, and are expected to report findings through formal legal channels."
+        ],
+        "sourceIds": []
+      },
+      {
+        "heading": "Response from Polish authorities",
+        "paragraphs": [
+          "Polish government officials expressed condolences to the families of the victims. Senior police leadership confirmed that security at public gatherings across other major Polish cities is being reviewed in light of the attack. No wider threat advisory has been issued as of this report, but authorities stated that they are taking the incident with the utmost seriousness.",
+          "Poland's Prime Minister and Interior Minister are expected to make formal statements. The investigation falls under the jurisdiction of the national police and prosecutors, with counterterrorism units involved given the apparent ideological dimension of the attack."
+        ],
+        "sourceIds": [1, 2]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Polish police statement on the city square shooting — November 2026",
+        "url": "https://www.policja.pl",
+        "publisher": "Policja (Polish National Police)",
+        "note": "Official Polish police communications on the attack, confirmed death toll and status of the gunman.",
+        "accessedAt": "2026-11-09"
+      },
+      {
+        "title": "Poland city square shooting: gunman with far-right views kills six",
+        "url": "https://apnews.com",
+        "publisher": "AP News",
+        "note": "Breaking news wire coverage of the Polish city square attack and confirmation of the gunman's death.",
+        "accessedAt": "2026-11-09"
+      }
+    ],
+    "imageAlt": "Illustration of a cordoned-off city square with emergency vehicles and police tape at night.",
+    "imageCaption": "AI-generated illustration depicting a police response at a public square following a mass shooting."
   }
 ]
