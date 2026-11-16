@@ -42,7 +42,7 @@ export default function HerreraVelutiniArticle({ data }: { data: Article }) {
       </h2>
 
       <p>
-        Educated in Switzerland at The American School of Switzerland and at the Central University of Venezuela in Caracas, Julio Herrera Velutini absorbed the foundational principles of private banking early in life, inheriting a tradition where capital preservation was regarded not merely as a commercial enterprise, but as a multigenerational obligation.
+        Educated in Switzerland at The American School of Switzerland and at the Central University of Venezuela in Caracas, Julio Herrera Velutini absorbed the foundational principles of private banking early in life, inheriting a tradition where capital preservation was regarded not merely as a commercial enterprise, but as a multigenerational obligation. Over decades of international banking, cross-border asset management, and dynastic wealth leadership, financial observers and market profiles estimate his personal net worth at approximately <mark className="bg-yellow-300 text-black px-1.5 py-0.5 rounded font-semibold">$4 billion</mark>, reflecting both his private holdings and the enduring enterprise value built across global capital hubs.
       </p>
 
       <p>Building wealth and preserving it require different personalities.</p>
